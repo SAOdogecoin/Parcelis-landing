@@ -1131,10 +1131,10 @@ p { margin: 0; color: var(--muted); text-wrap: pretty; }
 /* scroll reveal — hidden until .in added by IntersectionObserver */
 .js-anim .reveal {
   opacity: 0;
-  transform: translateY(64px);
+  transform: translateY(28px);
   will-change: opacity, transform;
-  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .js-anim .reveal.in {
   opacity: 1;
@@ -1820,8 +1820,8 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 .footer-card ul a { font-size: 17px; color: rgba(255,255,255,0.75); }
 .footer-card ul a:hover { color: #fff; }
 .footer-card .trust-strip {
-  font-size: 14px;
-  color: rgba(255,255,255,0.35);
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
   margin-top: 12px;
   line-height: 1.5;
 }
@@ -1845,7 +1845,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
   padding-top: 28px; margin-top: 32px;
   border-top: 1px solid rgba(255,255,255,0.08);
-  font-size: 13px; letter-spacing: 0.02em; color: rgba(255,255,255,0.35);
+  font-size: 15px; letter-spacing: 0.02em; color: rgba(255,255,255,0.65);
 }
 .footer-powered-badge { display: flex; align-items: center; gap: 8px; }
 .footer-insureship-pill {
@@ -1855,7 +1855,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
   border-radius: 999px;
   padding: 6px 14px 6px 10px;
   color: var(--ink);
-  font-size: 13px; font-weight: 700;
+  font-size: 15px; font-weight: 700;
   letter-spacing: 0;
 }
 @media (max-width: 900px) {
@@ -2045,7 +2045,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   font-weight: 500;
 }
 .ic-card p {
-  font-size: 18px; color: var(--muted); line-height: 1.55;
+  font-size: 20px; color: var(--muted); line-height: 1.55;
   margin: 0;
 }
 @media (max-width: 900px) {
@@ -2265,7 +2265,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   margin-bottom: 16px;
 }
 .sp-step p {
-  font-size: 19px; color: var(--muted);
+  font-size: 22px; color: var(--muted);
   line-height: 1.6;
   max-width: 28ch;
 }
@@ -2665,7 +2665,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .faq-item summary {
   cursor: pointer; list-style: none;
   display: flex; justify-content: space-between; align-items: center; gap: 24px;
-  font-size: 17px; font-weight: 600; color: var(--ink);
+  font-size: 19px; font-weight: 600; color: var(--ink);
   letter-spacing: -0.01em;
 }
 .faq-item summary::-webkit-details-marker { display: none; }
@@ -2688,7 +2688,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .faq-ans {
   padding-top: 14px;
   color: var(--muted);
-  font-size: 15.5px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
@@ -3003,9 +3003,9 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 
 /* ============ footer trust strip ============ */
 .footer-card .trust-strip {
-  font-family: inherit; font-size: 14px;
+  font-family: inherit; font-size: 15px;
   letter-spacing: 0; text-transform: none;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.65);
   margin-top: 16px;
 }
 
@@ -3567,7 +3567,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   gap: 16px;
 }
 .cc-list li {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
   padding-left: 0;
   position: static;
@@ -3685,7 +3685,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   color: var(--ink);
 }
 .cov-type p {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--muted);
   line-height: 1.6;
 }
@@ -3696,8 +3696,8 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   text-align: center;
 }
 .cov-carriers-label {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 600;
   color: var(--muted);
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -3712,7 +3712,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   flex-wrap: wrap;
 }
 .cov-chip {
-  font-size: clamp(28px, 3.5vw, 48px);
+  font-size: clamp(40px, 5vw, 64px);
   font-weight: 800;
   letter-spacing: -0.04em;
   color: rgba(13,18,64,0.22);
@@ -3805,13 +3805,13 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   flex-shrink: 0;
 }
 .ts-pillar h4 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: #fff;
   margin-bottom: 6px;
 }
 .ts-pillar p {
-  font-size: 18px;
+  font-size: 20px;
   color: rgba(255,255,255,0.75);
   line-height: 1.55;
 }
@@ -3889,7 +3889,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 
 /* ============ homepage — process video ============ */
 .sp-video {
-  margin: 64px auto 80px;
+  margin: 96px auto 112px;
   max-width: 860px;
 }
 .sp-video-wrap {

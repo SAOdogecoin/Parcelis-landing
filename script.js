@@ -10,43 +10,36 @@ document.documentElement.classList.add('js-anim');
   window.addEventListener('scroll', onScroll, { passive: true });
 })();
 
-// --- reveal on scroll — all elements per section trigger at once ---
+// --- reveal on scroll — per element, triggers as each enters view ---
 (() => {
   const els = document.querySelectorAll('.reveal');
   if (!els.length) return;
 
-  // group .reveal elements by their nearest section/article ancestor
-  const groups = new Map();
-  els.forEach(el => {
-    const parent = el.closest('section, article') || document.body;
-    if (!groups.has(parent)) groups.set(parent, []);
-    groups.get(parent).push(el);
-  });
-
-  const revealGroup = (group) => group.forEach(el => el.classList.add('in'));
+  const reveal = (el) => el.classList.add('in');
+  const inView = (el) => {
+    const r = el.getBoundingClientRect();
+    return r.bottom > 0 && r.top < (window.innerHeight || document.documentElement.clientHeight);
+  };
 
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        revealGroup(groups.get(e.target) || []);
+        reveal(e.target);
         io.unobserve(e.target);
       }
     });
   }, { threshold: 0, rootMargin: '0px 0px -20% 0px' });
 
   setTimeout(() => {
-    // Force layout commit so opacity:0 is registered
-    document.querySelectorAll('.reveal').forEach(el => el.getBoundingClientRect());
+    // Force layout commit so opacity:0 is painted before any reveal fires
+    els.forEach(el => el.getBoundingClientRect());
 
-    groups.forEach((group, parent) => {
-      const rect = parent.getBoundingClientRect();
-      const vh = window.innerHeight || document.documentElement.clientHeight;
-      // Section already on screen when page loads → reveal instantly, no animation
-      if (rect.top < vh && rect.bottom > 0) {
-        revealGroup(group);
+    els.forEach(el => {
+      if (inView(el)) {
+        // Already on screen at load — show instantly, no animation
+        reveal(el);
       } else {
-        // Section is off-screen → animate when scrolled to
-        io.observe(parent);
+        io.observe(el);
       }
     });
   }, 200);
