@@ -1327,12 +1327,12 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 }
 .product-block .stat .v .unit { font-size: 0.6em; color: var(--ink); }
 .product-block .stat .l {
-  font-family: var(--font-mono); font-size: 11px;
-  letter-spacing: 0.14em; text-transform: uppercase;
+  font-family: var(--font-base); font-size: 13px;
+  letter-spacing: 0; font-weight: 500;
   color: var(--muted);
-  margin-top: 10px;
-  max-width: 14ch;
-  line-height: 1.35;
+  margin-top: 8px;
+  max-width: 18ch;
+  line-height: 1.4;
 }
 @media (max-width: 640px) {
   .product-block .stats { flex-wrap: wrap; }
@@ -3296,3 +3296,20 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .roi-meta b { color: #fff; font-weight: 500; font-family: var(--font-mono); }
 @media (max-width: 900px) { .roi-card { grid-template-columns: 1fr; } }
 @media (max-width: 900px) { .features-grid { grid-template-columns: 1fr !important; } }
+
+/* center-align non-grid product blocks */
+#protection > .wrap > div:first-child,
+#revenue > .wrap > div:first-child {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 640px;
+}
+#protection .cta-row,
+#revenue .cta-row {
+  justify-content: center;
+}
+#protection .features-grid {
+  margin-left: auto;
+  margin-right: auto;
+}
