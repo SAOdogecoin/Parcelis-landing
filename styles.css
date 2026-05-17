@@ -98,7 +98,7 @@ section.page-hero-short { padding-top: clamp(160px, 16vw, 220px) !important; pad
 section.page-hero-plain {
   background: #fff !important;
 }
-section.page-hero-plain h1 { color: var(--ink) !important; }
+section.page-hero-plain h1 { color: var(--ink) !important; font-size: clamp(38px, 5vw, 68px) !important; }
 section.page-hero-plain .sub { color: var(--muted) !important; }
 section.hero-v2 + section,
 section.page-hero-v2 + section { padding-top: calc(120px * var(--density)); }
@@ -1210,7 +1210,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
   -webkit-backdrop-filter: none !important;
 }
 .nav-v2.nav-opaque {
-  background: #0a0d3a !important;
+  background: var(--navy-800) !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 }
@@ -1811,12 +1811,12 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 .footer-powered-badge { display: flex; align-items: center; gap: 8px; }
 .footer-insureship-pill {
   display: inline-flex; align-items: center; gap: 6px;
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: #fff;
+  border: none;
   border-radius: 999px;
-  padding: 5px 12px 5px 8px;
-  color: rgba(255,255,255,0.8);
-  font-size: 13px; font-weight: 600;
+  padding: 6px 14px 6px 10px;
+  color: var(--ink);
+  font-size: 13px; font-weight: 700;
   letter-spacing: 0;
 }
 @media (max-width: 900px) {
@@ -4066,18 +4066,20 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 /* ============ pricing calculator v2 ============ */
 .pricing-calc { background: var(--surface); }
-.pcalc-headline {
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto 56px;
+.pcalc-headline { display: none; }
+.pcalc-inner-head {
+  text-align: left;
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--hair);
 }
-.pcalc-headline h2 {
-  font-size: clamp(36px, 4.8vw, 64px);
-  font-weight: 600; letter-spacing: -0.03em;
-  color: var(--ink); line-height: 1.05; margin-bottom: 18px;
+.pcalc-inner-head h2 {
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 600; letter-spacing: -0.02em;
+  color: var(--ink); line-height: 1.2; margin-bottom: 8px;
 }
-.pcalc-headline p {
-  font-size: clamp(17px, 1.5vw, 20px); color: var(--muted); line-height: 1.6;
+.pcalc-inner-head p {
+  font-size: clamp(14px, 1.2vw, 16px); color: var(--muted); line-height: 1.5;
 }
 .pcalc-stats {
   display: grid;
@@ -4088,19 +4090,20 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 .pcalc-stat {
   background: #fff;
-  border-radius: 16px;
-  padding: 40px 28px;
+  border-radius: 20px;
+  padding: 48px 32px;
   text-align: center;
-  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
   box-shadow: 0 1px 4px rgba(13,18,64,0.05), 0 12px 32px -12px rgba(13,18,64,0.1);
 }
 .pcalc-stat-ic { color: var(--navy-800); }
+.pcalc-stat-ic svg { width: 36px; height: 36px; }
 .pcalc-stat-val {
-  font-size: clamp(28px, 3.5vw, 44px);
-  font-weight: 700; letter-spacing: -0.03em;
+  font-size: clamp(36px, 4.5vw, 56px);
+  font-weight: 700; letter-spacing: -0.04em;
   color: var(--navy-800); line-height: 1;
 }
-.pcalc-stat-lbl { font-size: 15px; color: var(--muted); line-height: 1.4; }
+.pcalc-stat-lbl { font-size: 17px; color: var(--muted); line-height: 1.4; }
 @media (max-width: 640px) { .pcalc-stats { grid-template-columns: 1fr; } }
 .pcalc-v2 {
   background: #fff;
@@ -4117,8 +4120,8 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 .pcalc-v2-left { flex: 1; min-width: 0; }
 .pcalc-v2-lbl {
-  font-size: 17px; font-weight: 500;
-  color: var(--muted); margin-bottom: 14px; display: block;
+  font-size: clamp(18px, 2vw, 24px); font-weight: 600;
+  color: var(--muted); margin-bottom: 16px; display: block;
 }
 .pcalc-v2-lbl-accent { color: var(--navy-800); font-weight: 600; }
 .pcalc-v2-input-wrap {
@@ -4153,8 +4156,16 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   color: var(--ink); line-height: 1; white-space: nowrap;
 }
 .pcalc-v2-divider { height: 1px; background: var(--hair); margin: 44px 0 32px; }
-.pcalc-v2-feats { display: flex; justify-content: center; gap: clamp(20px, 4vw, 48px); flex-wrap: wrap; }
-.pcalc-v2-feats span { display: flex; align-items: center; gap: 9px; font-size: 16px; color: var(--muted); }
+.pcalc-v2-feats { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.pcalc-v2-feats span {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 15px; font-weight: 500; color: var(--ink);
+  background: #fff;
+  border: 1.5px solid var(--hair-2);
+  border-radius: 999px;
+  padding: 8px 18px;
+  box-shadow: 0 1px 3px rgba(13,18,64,0.05);
+}
 .pcalc-v2-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--navy-600); flex-shrink: 0; display: inline-block; }
 @media (max-width: 640px) {
   .pcalc-v2-main { flex-direction: column; align-items: flex-start; gap: 32px; }
