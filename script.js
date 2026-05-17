@@ -187,10 +187,10 @@ document.documentElement.classList.add('js-anim');
       }, 160);
     };
 
-    // Parent .reveal fades in over 1.1s — if not yet fully visible, wait it out then count
+    // Always wait for parent .reveal transition (1.1s) before counting
+    // getComputedStyle returns end-state opacity immediately — unreliable, so unconditional delay
     const parent = el.closest('.reveal');
-    const notVisible = parent && parseFloat(window.getComputedStyle(parent).opacity) < 0.99;
-    setTimeout(startCountdown, notVisible ? 1200 : 0);
+    setTimeout(startCountdown, parent ? 1200 : 0);
   };
   const io = new IntersectionObserver(
     (entries) => entries.forEach(e => { if (e.isIntersecting) { run(); io.unobserve(el); } }),

@@ -1797,7 +1797,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 /* dark footer */
 .footer-v2 {
   background:
-    radial-gradient(380px 240px at 88% 50%, rgba(100,120,240,0.22) 0%, transparent 100%),
+    radial-gradient(320px 200px at 88% 50%, rgba(80,95,200,0.13) 0%, transparent 100%),
     #0a0d3a;
   padding: 80px 0 40px;
   border-top: none;
@@ -3674,7 +3674,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .cov-ic {
   display: flex;
   align-items: center;
-  color: var(--cyan);
+  color: var(--ink);
   flex-shrink: 0;
   margin-bottom: 4px;
 }
@@ -3712,12 +3712,12 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 .cov-chip {
   font-size: clamp(36px, 4.5vw, 58px);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.02em;
-  color: rgba(13,18,64,0.28);
+  color: rgba(13,18,64,0.45);
   transition: color 0.15s;
 }
-.cov-chip:hover { color: rgba(13,18,64,0.6); }
+.cov-chip:hover { color: rgba(13,18,64,0.75); }
 @media (max-width: 900px) {
   .cov-types { grid-template-columns: repeat(2, 1fr); }
 }
