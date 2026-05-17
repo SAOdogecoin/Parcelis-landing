@@ -3305,6 +3305,16 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   margin-left: auto;
   margin-right: auto;
 }
+#protection h2,
+#revenue h2 {
+  text-align: center;
+}
+#protection .body,
+#revenue .body {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 #protection .cta-row,
 #revenue .cta-row {
   justify-content: center;
