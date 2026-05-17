@@ -3303,6 +3303,8 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 #protection h2,
 #revenue h2 {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 #protection .body,
 #revenue .body {
