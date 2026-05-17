@@ -32,13 +32,23 @@ document.documentElement.classList.add('js-anim');
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.2 });
 
-  // Wait for paint, then force a layout commit on all .reveal elements
-  // so the browser registers opacity:0 before any IO fires.
   setTimeout(() => {
+    // Force layout commit so opacity:0 is registered
     document.querySelectorAll('.reveal').forEach(el => el.getBoundingClientRect());
-    groups.forEach((_, parent) => io.observe(parent));
+
+    groups.forEach((group, parent) => {
+      const rect = parent.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      // Section already on screen when page loads → reveal instantly, no animation
+      if (rect.top < vh && rect.bottom > 0) {
+        revealGroup(group);
+      } else {
+        // Section is off-screen → animate when scrolled to
+        io.observe(parent);
+      }
+    });
   }, 200);
 })();
 
