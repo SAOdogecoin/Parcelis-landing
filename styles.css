@@ -2210,6 +2210,12 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   min-width: 120px;
   transition: color 0.15s, box-shadow 0.15s;
 }
+.cr-logo svg {
+  height: 40px;
+  width: 40px;
+  color: rgba(13,18,64,0.6);
+  transition: color 0.15s;
+}
 .cr-logo img {
   height: 40px;
   width: 40px;
@@ -2222,6 +2228,9 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .cr-logo:hover {
   color: rgba(13,18,64,1);
   box-shadow: 0 2px 8px rgba(13,18,64,0.1), 0 16px 32px -12px rgba(13,18,64,0.14);
+}
+.cr-logo:hover svg {
+  color: rgba(13,18,64,0.8);
 }
 .cr-row {
   background: var(--surface);
