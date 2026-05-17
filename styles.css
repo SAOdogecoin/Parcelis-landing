@@ -4231,11 +4231,12 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 .pcalc-stat-ic { color: var(--navy-800); }
 .pcalc-stat-val {
-  font-size: clamp(44px, 5.5vw, 72px);
+  font-size: clamp(30px, 3.8vw, 52px);
   font-weight: 700; letter-spacing: -0.04em;
   color: var(--navy-800); line-height: 1;
+  white-space: nowrap;
 }
-.pcalc-stat-lbl { font-size: 18px; color: var(--muted); line-height: 1.5; max-width: 18ch; margin: 0 auto; }
+.pcalc-stat-lbl { font-size: 15px; color: var(--muted); line-height: 1.5; max-width: 18ch; margin: 0 auto; }
 @media (max-width: 640px) { .pcalc-stats { grid-template-columns: 1fr; } }
 .pcalc-v2 {
   background: #fff;
