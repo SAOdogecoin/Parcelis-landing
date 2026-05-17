@@ -2342,7 +2342,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--ink);
-  margin-bottom: 28px;
+  margin-bottom: 48px;
 }
 .pr-card.after .pr-tag { color: #fff; }
 .pr-card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
