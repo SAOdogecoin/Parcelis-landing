@@ -3719,43 +3719,40 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 .cov-chip:hover { color: rgba(13,18,64,0.75); }
 .cov-chip-logo {
-  height: clamp(40px, 5vw, 64px);
+  height: clamp(52px, 6.5vw, 80px);
   width: auto;
-  max-width: 160px;
+  max-width: 200px;
   object-fit: contain;
-  opacity: 0.45;
-  transition: opacity 0.15s;
+  /* flat #ABABAB grey — same tone as sc2 logo strip */
+  filter: grayscale(1) brightness(1.4) opacity(0.55);
+  transition: filter 0.2s ease;
 }
-.cov-chip-logo:hover { opacity: 0.75; }
-/* integration card logos */
+.cov-chip-logo:hover { filter: grayscale(0) brightness(1) opacity(1); }
+/* integration card logos — grey by default, brand color on hover */
 .ic-logo {
   height: 26px;
   width: auto;
-  max-width: 130px;
+  max-width: 140px;
   object-fit: contain;
-  filter: grayscale(1) opacity(0.55);
+  filter: grayscale(1) brightness(1.3) opacity(0.6) !important;
   transition: filter 0.2s ease;
 }
-.ic-logo:hover { filter: grayscale(0) opacity(1); }
-.ic-logo-woo { height: 36px; }
-.ic-logo-wide { height: 22px; max-width: 150px; }
-.ic-logo-magento { height: 30px; filter: grayscale(1) opacity(0.55); }
-.ic-logo-magento:hover { filter: grayscale(0) opacity(1); }
+.ic-logo:hover { filter: grayscale(0) brightness(1) opacity(1) !important; }
+.ic-logo-woo { height: 38px; }
+.ic-logo-wide { height: 22px; max-width: 155px; }
 .ig-logo {
   height: 34px;
   width: auto;
-  max-width: 150px;
+  max-width: 155px;
   object-fit: contain;
   margin-bottom: 12px;
   display: block;
-  filter: grayscale(1) opacity(0.55);
+  filter: grayscale(1) brightness(1.3) opacity(0.6) !important;
   transition: filter 0.2s ease;
 }
-.ig-logo:hover { filter: grayscale(0) opacity(1); }
-.ig-logo-woo { height: 44px; }
-.ig-logo-wide { height: 26px; max-width: 170px; }
-.ig-logo-magento { height: 36px; filter: grayscale(1) opacity(0.55); }
-.ig-logo-magento:hover { filter: grayscale(0) opacity(1); }
+.ig-logo:hover { filter: grayscale(0) brightness(1) opacity(1) !important; }
+.ig-logo-woo { height: 46px; }
+.ig-logo-wide { height: 26px; max-width: 175px; }
 @media (max-width: 900px) {
   .cov-types { grid-template-columns: repeat(2, 1fr); }
 }
