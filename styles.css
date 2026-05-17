@@ -1131,9 +1131,9 @@ p { margin: 0; color: var(--muted); text-wrap: pretty; }
 /* scroll reveal — hidden until .in added by IntersectionObserver */
 .js-anim .reveal {
   opacity: 0;
-  transform: translateY(52px);
-  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(64px);
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .js-anim .reveal.in {
   opacity: 1;

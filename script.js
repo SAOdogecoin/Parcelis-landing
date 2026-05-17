@@ -34,14 +34,12 @@ document.documentElement.classList.add('js-anim');
     });
   }, { threshold: 0, rootMargin: '0px' });
 
-  // Double rAF: lets browser paint the initial opacity:0 state first,
-  // then start observing — so the transition actually plays for
-  // sections that are already in the viewport on load.
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      groups.forEach((_, parent) => io.observe(parent));
-    });
-  });
+  // setTimeout gives the browser time to paint the initial opacity:0 state
+  // before the IO fires — ensures the transition plays even for sections
+  // that are already visible on page load.
+  setTimeout(() => {
+    groups.forEach((_, parent) => io.observe(parent));
+  }, 150);
 })();
 
 // --- animated count-up ---
