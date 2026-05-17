@@ -3487,19 +3487,26 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   justify-content: center;
   max-width: 600px;
   margin: 0 auto;
-  border-top: 1px solid var(--hair);
-  border-bottom: 1px solid var(--hair);
 }
 .cc-metric {
   flex: 1;
   text-align: center;
-  padding: 36px 24px;
-  border-right: 1px solid var(--hair);
+  padding: 40px 24px;
+  position: relative;
 }
-.cc-metric:last-child { border-right: none; }
+.cc-metric + .cc-metric::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 48px;
+  width: 1px;
+  background: var(--hair);
+}
 .cc-mv {
-  font-size: clamp(40px, 5vw, 64px);
-  font-weight: 600;
+  font-size: clamp(56px, 7vw, 88px);
+  font-weight: 700;
   letter-spacing: -0.04em;
   color: var(--ink);
   line-height: 1;
@@ -3513,8 +3520,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 @media (max-width: 640px) {
   .cc-grid { grid-template-columns: 1fr; }
   .cc-metrics { flex-direction: column; }
-  .cc-metric { border-right: none; border-bottom: 1px solid var(--hair); }
-  .cc-metric:last-child { border-bottom: none; }
+  .cc-metric + .cc-metric::before { width: 48px; height: 1px; top: 0; left: 50%; transform: translateX(-50%); }
 }
 
 /* ============ coverage section ============ */
@@ -3574,33 +3580,36 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   line-height: 1.6;
 }
 .cov-carriers {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin-top: 48px;
-  padding: 32px 36px;
-  background: var(--surface);
-  border-radius: 16px;
-  border: 1px solid var(--hair);
+  margin-top: 56px;
+  border-top: 1px solid var(--hair);
+  padding-top: 40px;
 }
 .cov-carriers-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--ink);
-  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  display: block;
 }
-.cov-chips { display: flex; gap: 10px; flex-wrap: wrap; }
+.cov-chips {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
 .cov-chip {
-  background: #fff;
-  border: 1px solid var(--hair);
-  border-radius: 100px;
-  padding: 10px 22px;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: clamp(22px, 2.8vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
   color: var(--ink);
-  box-shadow: 0 1px 3px rgba(13,18,64,0.06);
+  opacity: 0.55;
+  padding: 0 32px 0 0;
+  transition: opacity 0.15s;
 }
+.cov-chip:hover { opacity: 0.9; }
+.cov-chip:first-child { padding-left: 0; }
 @media (max-width: 900px) {
   .cov-types { grid-template-columns: repeat(2, 1fr); }
 }
