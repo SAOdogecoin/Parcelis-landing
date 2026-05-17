@@ -1128,17 +1128,6 @@ p { margin: 0; color: var(--muted); text-wrap: pretty; }
   opacity: 1;
   transform: none;
 }
-.js-anim .reveal[data-delay="1"] { transition-delay: 0.08s; }
-.js-anim .reveal[data-delay="2"] { transition-delay: 0.16s; }
-.js-anim .reveal[data-delay="3"] { transition-delay: 0.24s; }
-.js-anim .reveal[data-delay="4"] { transition-delay: 0.32s; }
-.js-anim .reveal[data-delay="5"] { transition-delay: 0.40s; }
-.js-anim .reveal[data-delay="6"] { transition-delay: 0.48s; }
-
-/* step stagger — more pronounced spacing for numbered steps */
-.js-anim .reveal[data-step="1"] { transition-delay: 0.15s; }
-.js-anim .reveal[data-step="2"] { transition-delay: 0.35s; }
-.js-anim .reveal[data-step="3"] { transition-delay: 0.55s; }
 
 /* zero-word span */
 #zero-word {

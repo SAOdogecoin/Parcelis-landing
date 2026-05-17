@@ -10,29 +10,35 @@ document.documentElement.classList.add('js-anim');
   window.addEventListener('scroll', onScroll, { passive: true });
 })();
 
-// --- reveal on scroll ---
+// --- reveal on scroll — all elements per section trigger at once ---
 (() => {
   const els = document.querySelectorAll('.reveal');
   if (!els.length) return;
-  const reveal = (el) => el.classList.add('in');
-  // Anything already on-screen at load gets revealed immediately.
-  const inView = (el) => {
-    const r = el.getBoundingClientRect();
-    return r.top < (window.innerHeight || document.documentElement.clientHeight);
-  };
-  const initial = [...els].filter(inView);
-  initial.forEach((el, i) => setTimeout(() => reveal(el), i * 60));
-  const remaining = [...els].filter((e) => !initial.includes(e));
-  if (!remaining.length) return;
+
+  // group .reveal elements by their nearest section/article ancestor
+  const groups = new Map();
+  els.forEach(el => {
+    const parent = el.closest('section, article') || document.body;
+    if (!groups.has(parent)) groups.set(parent, []);
+    groups.get(parent).push(el);
+  });
+
+  const revealGroup = (group) => group.forEach(el => el.classList.add('in'));
+  const inView = (el) => el.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight);
+
+  // reveal sections already visible on load immediately
+  groups.forEach((group, parent) => { if (inView(parent)) revealGroup(group); });
+
   const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
+    entries.forEach(e => {
       if (e.isIntersecting) {
-        reveal(e.target);
+        revealGroup(groups.get(e.target) || []);
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-  remaining.forEach((el) => io.observe(el));
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  groups.forEach((group, parent) => { if (!inView(parent)) io.observe(parent); });
 })();
 
 // --- animated count-up ---
