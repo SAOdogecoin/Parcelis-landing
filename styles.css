@@ -2964,9 +2964,9 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 
 /* ============ footer trust strip ============ */
 .footer-card .trust-strip {
-  font-family: var(--font-mono); font-size: 11px;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  font-family: inherit; font-size: 14px;
+  letter-spacing: 0; text-transform: none;
+  color: rgba(255,255,255,0.45);
   margin-top: 16px;
 }
 
@@ -3899,12 +3899,12 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .nav-dropdown-menu .dd-divider { height: 1px; background: var(--hair); margin: 6px 0; }
 
 /* ============ how-it-works — hero ============ */
-.hiw-hero { padding-top: clamp(160px, 16vw, 220px) !important; padding-bottom: 0 !important; }
+.hiw-hero { padding-top: clamp(220px, 24vw, 340px) !important; padding-bottom: 0 !important; }
 .hiw-hero h1 { font-size: clamp(36px, 4.8vw, 68px) !important; }
 
 /* ============ how-it-works — steps dark (extends hero bg) ============ */
 .hiw-steps-dark {
-  background: var(--navy-950);
+  background: #14157a;
   padding: clamp(60px, 7vw, 100px) 0 clamp(80px, 9vw, 130px);
 }
 .hiw-steps-dark .hiw-steps-grid {
@@ -3925,10 +3925,13 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   margin-bottom: 16px;
 }
 .hiw-steps-dark .hiw-step-ic {
+  background: none !important;
+  border-radius: 0 !important;
+  width: auto !important; height: auto !important;
+  display: block !important;
   color: var(--navy-800);
   margin-bottom: 24px;
 }
-.hiw-steps-dark .hiw-step-ic svg { display: block; }
 .hiw-steps-dark .hiw-step-card h3 {
   font-size: 20px; font-weight: 600;
   color: var(--ink); line-height: 1.25; letter-spacing: -0.01em;
