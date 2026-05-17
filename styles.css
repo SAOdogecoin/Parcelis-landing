@@ -3299,11 +3299,16 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 @media (max-width: 900px) { .features-grid { grid-template-columns: 1fr !important; } }
 
 /* center-align non-grid product blocks */
-#protection > .wrap > div:first-child,
-#revenue > .wrap > div:first-child {
+#protection > .wrap,
+#revenue > .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#protection > .wrap > div,
+#revenue > .wrap > div {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 #protection h2,
 #revenue h2 {
@@ -3314,6 +3319,15 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+#protection .stats,
+#revenue .stats {
+  justify-content: center;
+}
+#protection .product-block .stat:first-child,
+#revenue .product-block .stat:first-child {
+  padding-left: clamp(20px, 2.4vw, 40px);
+  border-left: 1px solid var(--hair-2);
 }
 #protection .cta-row,
 #revenue .cta-row {
