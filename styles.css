@@ -94,11 +94,11 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 section { padding: calc(220px * var(--density)) 0; position: relative; }
 section.tight { padding: calc(64px * var(--density)) 0; }
 section.hero-v2, section.page-hero-v2 { padding-top: clamp(412px, 36vw, 576px); padding-bottom: clamp(200px, 26vw, 380px); }
-section.page-hero-short { padding-top: clamp(160px, 16vw, 220px) !important; padding-bottom: clamp(80px, 8vw, 120px) !important; }
+section.page-hero-short { padding-top: clamp(100px, 10vw, 140px) !important; padding-bottom: clamp(40px, 4vw, 60px) !important; }
 section.page-hero-plain {
-  background: #fff !important;
+  background: var(--surface) !important;
 }
-section.page-hero-plain h1 { color: var(--ink) !important; font-size: clamp(38px, 5vw, 68px) !important; }
+section.page-hero-plain h1 { color: var(--ink) !important; font-size: clamp(38px, 5vw, 68px) !important; margin-top: 48px; }
 section.page-hero-plain .sub { color: var(--muted) !important; }
 section.hero-v2 + section,
 section.page-hero-v2 + section { padding-top: calc(120px * var(--density)); }
@@ -4062,13 +4062,13 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 /* ============ pricing calculator ============ */
 .pricing-calc {
   background: var(--surface);
-  padding: clamp(96px, 10vw, 140px) 0;
+  padding: clamp(40px, 5vw, 72px) 0 clamp(96px, 10vw, 140px) !important;
 }
 /* ============ pricing calculator v2 ============ */
 .pricing-calc { background: var(--surface); }
 .pcalc-headline { display: none; }
 .pcalc-inner-head {
-  text-align: left;
+  text-align: center;
   margin-bottom: 40px;
   padding-bottom: 32px;
   border-bottom: 1px solid var(--hair);
