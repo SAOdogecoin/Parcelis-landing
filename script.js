@@ -144,3 +144,24 @@ document.documentElement.classList.add('js-anim');
   }
   update();
 })();
+
+// --- nav dropdown (click to toggle) ---
+(() => {
+  const wraps = document.querySelectorAll('.nav-dropdown-wrap');
+  if (!wraps.length) return;
+  wraps.forEach(wrap => {
+    const trigger = wrap.querySelector('.nav-dropdown-trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isOpen = wrap.classList.contains('open');
+      wraps.forEach(w => w.classList.remove('open'));
+      if (!isOpen) wrap.classList.add('open');
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-dropdown-wrap')) {
+      wraps.forEach(w => w.classList.remove('open'));
+    }
+  });
+})();
