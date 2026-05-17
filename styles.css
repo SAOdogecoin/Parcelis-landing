@@ -1941,14 +1941,11 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   box-shadow: 0 2px 4px rgba(13,18,64,0.06), 0 30px 60px -20px rgba(13,18,64,0.22);
 }
 .tg-ic {
-  background: var(--surface);
-  border-radius: 10px;
-  padding: 12px;
   display: inline-flex;
   color: var(--ink);
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
-.tg-ic svg { width: 22px; height: 22px; stroke-width: 1.8; }
+.tg-ic svg { width: 40px; height: 40px; stroke-width: 1.5; }
 .tg-card h3 {
   font-size: clamp(20px, 1.8vw, 24px); font-weight: 600;
   letter-spacing: -0.01em; color: var(--ink);
@@ -2184,7 +2181,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 
 
 /* ============ pricing cards v2 ============ */
-.pricing-cards { background: #fff; }
+.pricing-cards { background: #fff; padding-top: 32px; }
 .pc-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2787,52 +2784,45 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .cmp-table th,
 .cmp-table td {
   text-align: left;
-  padding: 16px 20px;
+  padding: 18px 24px;
   border-bottom: 1px solid var(--hair);
-  font-size: 14.5px;
+  font-size: 16px;
   vertical-align: middle;
   background: transparent;
-  border-radius: 0;
-  box-shadow: none;
-  height: 56px;
   line-height: 1.4;
 }
 .cmp-table thead th {
-  height: 64px;
-  background: var(--surface);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 500;
+  height: 72px;
+  font-family: var(--font-base);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
 .cmp-table thead th.cmp-feat {
   background: var(--navy-800);
   color: #fff;
-  font-weight: 600;
+  border-radius: 12px 12px 0 0;
 }
 .cmp-table td.cmp-feat {
-  background: rgba(30,32,153,0.05);
-  font-weight: 500;
-  color: var(--ink);
+  background: rgba(30,32,153,0.04);
 }
 .cmp-table tr.cmp-cat td {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--muted);
   background: var(--surface);
-  padding: 10px 20px;
-  height: 40px;
+  padding: 12px 24px;
 }
 .cmp-table tr:last-child td { border-bottom: none; }
 .cmp-table thead th:first-child,
 .cmp-table tbody td:first-child { font-weight: 500; color: var(--ink); width: 36%; }
 .cmp-table thead th:not(:first-child),
 .cmp-table tbody td:not(:first-child) { text-align: center; width: 21.33%; }
-.cmp-table tr.cmp-cat td:first-child { font-weight: 500; width: auto; }
+.cmp-table tr.cmp-cat td:first-child { font-weight: 600; width: auto; }
+.cmp-table tbody td:not(:first-child) { font-size: 18px; color: var(--ink); }
 
 /* hide the original broken compare-table block so we don't render two */
 .compare-table { display: none; }
@@ -3218,7 +3208,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 @media (max-width: 700px) { .hc-card { flex-direction: column; align-items: flex-start; } }
 
 /* ============ free to install callout (pricing) ============ */
-.free-callout { background: #fff; padding: 0 0 32px 0; }
+.free-callout { background: #fff; padding: 0 0 16px 0; }
 .fc-row {
   display: flex; align-items: center; gap: 16px;
   padding: 18px 28px;
