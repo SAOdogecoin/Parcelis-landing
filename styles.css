@@ -3868,8 +3868,38 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   border: 0;
 }
 
+/* ============ nav dropdown ============ */
+.nav-dropdown-wrap { position: relative; display: flex; align-items: center; }
+.nav-dropdown-trigger {
+  display: flex; align-items: center; gap: 5px; cursor: pointer;
+}
+.nav-chevron { transition: transform .2s ease; flex-shrink: 0; }
+.nav-dropdown-wrap:hover .nav-chevron { transform: rotate(180deg); }
+.nav-dropdown-menu {
+  position: absolute; top: calc(100% + 14px); left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  background: #fff; border-radius: 14px;
+  padding: 8px;
+  box-shadow: 0 4px 6px rgba(13,18,64,0.06), 0 16px 48px -8px rgba(13,18,64,0.18);
+  min-width: 200px;
+  opacity: 0; pointer-events: none; visibility: hidden;
+  transition: opacity .18s ease, transform .18s ease;
+  z-index: 200;
+}
+.nav-dropdown-wrap:hover .nav-dropdown-menu {
+  opacity: 1; pointer-events: all; visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown-menu a {
+  display: block; padding: 10px 14px; border-radius: 8px;
+  font-size: 14.5px; color: var(--ink) !important;
+  transition: background .12s; white-space: nowrap;
+}
+.nav-dropdown-menu a:hover { background: var(--surface); }
+.nav-dropdown-menu .dd-divider { height: 1px; background: var(--hair); margin: 6px 0; }
+
 /* ============ how-it-works — hero ============ */
-.hiw-hero { padding-bottom: 0 !important; }
+.hiw-hero { padding-top: clamp(160px, 16vw, 220px) !important; padding-bottom: 0 !important; }
 .hiw-hero h1 { font-size: clamp(36px, 4.8vw, 68px) !important; }
 
 /* ============ how-it-works — steps dark (extends hero bg) ============ */
@@ -3882,29 +3912,29 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   gap: 16px;
 }
 .hiw-steps-dark .hiw-step-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: #fff;
   border-radius: 20px;
-  padding: 36px 28px;
+  padding: 40px 32px;
   display: flex; flex-direction: column; gap: 20px;
+  box-shadow: 0 2px 8px rgba(13,18,64,0.06), 0 12px 40px -8px rgba(13,18,64,0.14);
 }
 .hiw-steps-dark .hiw-step-card h3 {
   font-size: 19px; font-weight: 600;
-  color: #fff; line-height: 1.25; letter-spacing: -0.01em;
+  color: var(--ink); line-height: 1.25; letter-spacing: -0.01em;
 }
 .hiw-steps-dark .hiw-step-card p {
-  font-size: 16px; color: rgba(255,255,255,0.55); line-height: 1.65;
+  font-size: 16px; color: var(--muted); line-height: 1.65;
 }
 .hiw-step-num-lg {
-  font-size: 13px; font-weight: 700; letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.3); font-family: var(--font-mono);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+  color: var(--muted); font-family: var(--font-mono);
 }
 .hiw-steps-dark .hiw-step-ic {
-  width: 44px; height: 44px;
-  background: rgba(255,255,255,0.1);
+  width: 48px; height: 48px;
+  background: var(--navy-800);
   border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
-  color: rgba(255,255,255,0.85);
+  color: #fff;
   flex-shrink: 0;
 }
 @media (max-width: 960px) { .hiw-steps-dark .hiw-steps-grid { grid-template-columns: repeat(2, 1fr); } }
