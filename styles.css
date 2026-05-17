@@ -1375,6 +1375,34 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 .feature-card .fc-body { font-size: 16px; color: rgba(255,255,255,0.78); line-height: 1.55; }
 .feature-card .fc-foot { margin-top: auto; padding-top: 20px; }
 
+/* light feature cards — white, minimal, left-aligned */
+.feature-card-light {
+  background: #fff;
+  border: 1px solid var(--hair);
+  border-radius: 14px;
+  padding: 32px 28px;
+  display: flex; flex-direction: column; gap: 14px;
+  box-shadow: 0 1px 3px rgba(13,18,64,0.05), 0 8px 24px -8px rgba(13,18,64,0.10);
+  text-align: left;
+}
+.feature-card-light .fcl-ic {
+  width: 40px; height: 40px;
+  background: var(--navy-50);
+  border-radius: 10px;
+  display: grid; place-items: center;
+  color: var(--navy-800);
+  flex-shrink: 0;
+}
+.feature-card-light h3 {
+  font-size: 18px; font-weight: 600;
+  letter-spacing: -0.01em; color: var(--ink);
+  margin: 0;
+}
+.feature-card-light p {
+  font-size: 15px; color: var(--muted);
+  line-height: 1.6; margin: 0;
+}
+
 /* smaller feature cards for grid layout */
 .feature-card-sm {
   background: var(--navy-800);
