@@ -145,7 +145,7 @@ document.documentElement.classList.add('js-anim');
   update();
 })();
 
-// --- zero-word: count 9→0 then crossfade to "zero" ---
+// --- zero-word: subtle 3→2→1→0 then crossfade to "zero" ---
 (() => {
   const el = document.getElementById('zero-word');
   if (!el) return;
@@ -153,30 +153,30 @@ document.documentElement.classList.add('js-anim');
   const run = () => {
     if (triggered) return;
     triggered = true;
-    let n = 9;
-    el.textContent = n;
+    const steps = [3, 2, 1, 0];
+    let i = 0;
+    el.textContent = steps[i];
     const tick = setInterval(() => {
-      n--;
-      if (n > 0) {
-        el.textContent = n;
+      i++;
+      if (i < steps.length) {
+        el.textContent = steps[i];
       } else {
         clearInterval(tick);
-        el.textContent = '0';
-        // brief pause then crossfade to word "zero"
+        // crossfade 0 → "zero"
         setTimeout(() => {
-          el.style.transition = 'opacity 0.5s ease';
+          el.style.transition = 'opacity 0.45s ease';
           el.style.opacity = '0';
           setTimeout(() => {
             el.textContent = 'zero';
             el.style.opacity = '1';
-          }, 500);
-        }, 380);
+          }, 450);
+        }, 200);
       }
-    }, 90);
+    }, 110);
   };
   const io = new IntersectionObserver(
     (entries) => entries.forEach(e => { if (e.isIntersecting) { run(); io.unobserve(el); } }),
-    { threshold: 0.6 }
+    { threshold: 0.5 }
   );
   io.observe(el);
 })();
