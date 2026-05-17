@@ -2118,11 +2118,31 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   flex-wrap: wrap;
 }
 .cr-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 32px;
+  background: #fff;
+  border: 1px solid rgba(13,18,64,0.08);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(13,18,64,0.06), 0 8px 24px -8px rgba(13,18,64,0.08);
   font-family: var(--font-display);
-  font-weight: 700; font-style: italic;
-  font-size: clamp(20px, 2vw, 28px);
-  letter-spacing: -0.02em;
-  color: rgba(13,18,64,0.4);
+  font-weight: 800;
+  font-size: clamp(18px, 2.2vw, 28px);
+  letter-spacing: -0.03em;
+  color: rgba(13,18,64,0.28);
+  min-width: 100px;
+  transition: color 0.15s, box-shadow 0.15s;
+}
+.cr-logo:hover {
+  color: rgba(13,18,64,0.5);
+  box-shadow: 0 2px 8px rgba(13,18,64,0.1), 0 16px 32px -12px rgba(13,18,64,0.14);
+}
+.cr-row {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 40px clamp(24px, 4vw, 56px);
+  gap: 16px;
 }
 
 
@@ -3615,11 +3635,19 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 .cov-chip {
-  font-size: clamp(26px, 3.2vw, 44px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 28px;
+  background: #fff;
+  border: 1px solid rgba(13,18,64,0.08);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(13,18,64,0.06), 0 8px 24px -8px rgba(13,18,64,0.08);
+  font-size: clamp(18px, 2vw, 26px);
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--ink);
@@ -3773,25 +3801,25 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   padding-top: 32px;
 }
 .testi-avatar {
-  width: 48px; height: 48px;
+  width: 72px; height: 72px;
   border-radius: 50%;
   background: var(--ink);
   color: #fff;
-  font-size: 18px;
+  font-size: 26px;
   font-weight: 600;
   display: grid; place-items: center;
   flex-shrink: 0;
   letter-spacing: 0;
 }
 .testi-featured-footer strong {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--ink);
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 .testi-featured-footer span {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
 }
 
