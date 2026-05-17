@@ -1117,6 +1117,17 @@ p { margin: 0; color: var(--muted); text-wrap: pretty; }
 }
 
 
+/* hero — CSS-only fade-up on page load */
+.js-anim .hero-v2 h1 {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.js-anim .hero-v2 .sub {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+}
+.js-anim .hero-v2 .hero-cta {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+}
+
 /* scroll reveal — hidden until .in added by IntersectionObserver */
 .js-anim .reveal {
   opacity: 0;

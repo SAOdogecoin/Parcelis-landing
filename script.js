@@ -36,7 +36,7 @@ document.documentElement.classList.add('js-anim');
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0, rootMargin: '0px' });
 
   groups.forEach((group, parent) => { if (!inView(parent)) io.observe(parent); });
 })();
@@ -151,7 +151,7 @@ document.documentElement.classList.add('js-anim');
   update();
 })();
 
-// --- zero-word: subtle 3→2→1→0 then crossfade to "zero" ---
+// --- zero-word: count 9→0 then crossfade to "zero" ---
 (() => {
   const el = document.getElementById('zero-word');
   if (!el) return;
@@ -159,30 +159,30 @@ document.documentElement.classList.add('js-anim');
   const run = () => {
     if (triggered) return;
     triggered = true;
-    const steps = [3, 2, 1, 0];
-    let i = 0;
-    el.textContent = steps[i];
+    let n = 9;
+    el.textContent = n;
     const tick = setInterval(() => {
-      i++;
-      if (i < steps.length) {
-        el.textContent = steps[i];
+      n--;
+      if (n > 0) {
+        el.textContent = n;
       } else {
         clearInterval(tick);
-        // crossfade 0 → "zero"
+        el.textContent = '0';
+        // brief pause then crossfade to word "zero"
         setTimeout(() => {
-          el.style.transition = 'opacity 0.45s ease';
+          el.style.transition = 'opacity 0.5s ease';
           el.style.opacity = '0';
           setTimeout(() => {
             el.textContent = 'zero';
             el.style.opacity = '1';
-          }, 450);
-        }, 200);
+          }, 500);
+        }, 350);
       }
-    }, 110);
+    }, 160);
   };
   const io = new IntersectionObserver(
     (entries) => entries.forEach(e => { if (e.isIntersecting) { run(); io.unobserve(el); } }),
-    { threshold: 0.5 }
+    { threshold: 0 }
   );
   io.observe(el);
 })();
