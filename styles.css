@@ -1111,7 +1111,39 @@ p { margin: 0; color: var(--muted); text-wrap: pretty; }
 }
 
 /* ============ reveal animations ============ */
-.reveal { opacity: 1; transform: none; }
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(36px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* hero — CSS-only, fires on page load */
+.js-anim .hero-v2 h1 {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.js-anim .hero-v2 .sub {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+}
+.js-anim .hero-v2 .hero-cta {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+}
+
+/* scroll reveal — hidden until .in added by IntersectionObserver */
+.js-anim .reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.js-anim .reveal.in {
+  opacity: 1;
+  transform: none;
+}
+.js-anim .reveal[data-delay="1"] { transition-delay: 0.08s; }
+.js-anim .reveal[data-delay="2"] { transition-delay: 0.16s; }
+.js-anim .reveal[data-delay="3"] { transition-delay: 0.24s; }
+.js-anim .reveal[data-delay="4"] { transition-delay: 0.32s; }
+.js-anim .reveal[data-delay="5"] { transition-delay: 0.40s; }
+.js-anim .reveal[data-delay="6"] { transition-delay: 0.48s; }
 
 /* ============ utility ============ */
 .divider { height: 1px; background: var(--hair); margin: 0; }
