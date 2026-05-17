@@ -7,12 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=62" />
+<link rel="stylesheet" href="styles.css?v=63" />
 </head>
 <body>
 
 <!-- =================== NAV =================== -->
-<header class="nav nav-v2">
+<header class="nav nav-v2 nav-opaque">
   <div class="wrap nav-inner">
     <a class="brand" href="index.html" aria-label="Parcelis home">
       <img class="brand-logo" src="assets/parcelis-logo-white.png" alt="Parcelis" />
@@ -41,6 +41,10 @@
 <!-- =================== PRICING CALCULATOR =================== -->
 <section class="pricing-calc">
   <div class="wrap">
+    <div class="pcalc-headline">
+      <h2>Transparent Pricing Calculator</h2>
+      <p>See exactly what comprehensive package protection costs for your shipment values.</p>
+    </div>
     <div class="pcalc-v2">
       <div class="pcalc-v2-main">
         <div class="pcalc-v2-left">
@@ -61,6 +65,29 @@
         <span><span class="pcalc-v2-dot"></span>Per-package pricing</span>
         <span><span class="pcalc-v2-dot"></span>Full coverage</span>
         <span><span class="pcalc-v2-dot"></span>No contracts or fees</span>
+      </div>
+    </div>
+    <div class="pcalc-stats">
+      <div class="pcalc-stat">
+        <div class="pcalc-stat-ic">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <div class="pcalc-stat-val">$2,500</div>
+        <div class="pcalc-stat-lbl">maximum coverage per box</div>
+      </div>
+      <div class="pcalc-stat">
+        <div class="pcalc-stat-ic">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <div class="pcalc-stat-val">$25,000</div>
+        <div class="pcalc-stat-lbl">maximum coverage per shipment</div>
+      </div>
+      <div class="pcalc-stat">
+        <div class="pcalc-stat-ic">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <div class="pcalc-stat-val">All Carriers</div>
+        <div class="pcalc-stat-lbl">USPS, UPS, FedEx, DHL, international</div>
       </div>
     </div>
   </div>
