@@ -187,18 +187,10 @@ document.documentElement.classList.add('js-anim');
       }, 160);
     };
 
-    // Parent .reveal fades in over ~1.1s — wait for it before counting so digits are visible
+    // Parent .reveal fades in over 1.1s — if not yet fully visible, wait it out then count
     const parent = el.closest('.reveal');
-    if (parent && parseFloat(window.getComputedStyle(parent).opacity) < 0.99) {
-      parent.addEventListener('transitionend', function handler(e) {
-        if (e.propertyName === 'opacity') {
-          parent.removeEventListener('transitionend', handler);
-          startCountdown();
-        }
-      });
-    } else {
-      startCountdown();
-    }
+    const notVisible = parent && parseFloat(window.getComputedStyle(parent).opacity) < 0.99;
+    setTimeout(startCountdown, notVisible ? 1200 : 0);
   };
   const io = new IntersectionObserver(
     (entries) => entries.forEach(e => { if (e.isIntersecting) { run(); io.unobserve(el); } }),

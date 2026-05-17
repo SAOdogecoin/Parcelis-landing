@@ -3512,7 +3512,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 /* ============ claims comparison ============ */
 .claims-compare {
   padding: clamp(96px, 10vw, 140px) 0;
-  background: var(--surface);
+  background: #fff;
 }
 .cc-head {
   text-align: center;
@@ -3544,7 +3544,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   padding: 40px 36px;
 }
 .cc-bad {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--hair);
 }
 .cc-good {
@@ -3697,7 +3697,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   text-align: center;
 }
 .cov-carriers-label {
-  font-size: 17px;
+  font-size: clamp(20px, 2vw, 26px);
   font-weight: 600;
   color: var(--muted);
   letter-spacing: 0.06em;
@@ -3713,13 +3713,13 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   flex-wrap: wrap;
 }
 .cov-chip {
-  font-size: clamp(40px, 5vw, 64px);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: var(--ink);
+  font-size: clamp(36px, 4.5vw, 58px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: rgba(13,18,64,0.28);
   transition: color 0.15s;
 }
-.cov-chip:hover { color: var(--navy-600); }
+.cov-chip:hover { color: rgba(13,18,64,0.6); }
 @media (max-width: 900px) {
   .cov-types { grid-template-columns: repeat(2, 1fr); }
 }
