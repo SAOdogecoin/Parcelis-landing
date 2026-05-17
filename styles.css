@@ -3313,3 +3313,15 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* center feature card in revenue section */
+#revenue .feature-card {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 560px;
+  text-align: center;
+}
+#revenue .feature-card .fc-ic {
+  margin-left: auto;
+  margin-right: auto;
+}
