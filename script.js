@@ -32,7 +32,7 @@ document.documentElement.classList.add('js-anim');
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0, rootMargin: '0px 0px -20% 0px' });
 
   setTimeout(() => {
     // Force layout commit so opacity:0 is registered
