@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "mcp__Claude_in_Chrome__tabs_context_mcp",
-      "mcp__Claude_in_Chrome__browser_batch"
+      "mcp__Claude_in_Chrome__browser_batch",
+      "Bash(sed -i 's/<h5>Product<\\\\/h5>/<h3>Product<\\\\/h3>/g' 'E:\\\\Downloads\\\\Sample website  funnel-handoff\\\\sample-website-funnel\\\\project$file')",
+      "Bash(sed -i 's/<h5>Integrations<\\\\/h5>/<h3>Integrations<\\\\/h3>/g' 'E:\\\\Downloads\\\\Sample website  funnel-handoff\\\\sample-website-funnel\\\\project$file')",
+      "Bash(sed -i 's/<h5>Pricing<\\\\/h5>/<h3>Pricing<\\\\/h3>/g' 'E:\\\\Downloads\\\\Sample website  funnel-handoff\\\\sample-website-funnel\\\\project$file')",
+      "Bash(sed -i 's/<h5>Resources<\\\\/h5>/<h3>Resources<\\\\/h3>/g' 'E:\\\\Downloads\\\\Sample website  funnel-handoff\\\\sample-website-funnel\\\\project$file')"
     ]
   }
 }
