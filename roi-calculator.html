@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ROI Calculator — Parcelis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=56" />
+</head>
+<body>
+
+<header class="nav nav-v2">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="Parcelis home">
+      <img class="brand-logo" src="assets/parcelis-logo-white.png" alt="Parcelis" />
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="how-it-works.html">Product</a>
+      <a href="integrations.html">Integrations</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-link btn-sm" href="#">Log in</a>
+      <a class="btn btn-primary btn-sm" href="#">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<!-- =================== PAGE HERO =================== -->
+<section class="page-hero-v2">
+  <div class="wrap">
+    <h1>How much could you add to your bottom line?</h1>
+    <p class="sub">Use real numbers — your order volume, AOV, and opt-in rate — to see your monthly margin impact.</p>
+  </div>
+</section>
+
+<!-- =================== ROI CALCULATOR =================== -->
+<section class="tight" style="padding-top: 80px; padding-bottom: 120px;">
+  <div class="wrap">
+    <div class="roi-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;">
+
+      <!-- Left: Inputs -->
+      <div>
+        <!-- Orders per month -->
+        <div class="roi-field">
+          <div class="roi-label-row">
+            <label for="orders">Monthly orders</label>
+            <span class="roi-v" id="orders-display">2,000</span>
+          </div>
+          <input type="range" id="orders" min="100" max="100000" value="2000" step="100" />
+          <p style="font-size: 13px; color: var(--muted); margin-top: 4px;">Current: <strong id="orders-range">100–100,000</strong></p>
+        </div>
+
+        <!-- AOV -->
+        <div class="roi-field" style="margin-top: 32px;">
+          <div class="roi-label-row">
+            <label for="aov">Average order value</label>
+            <span class="roi-v">$<span id="aov-display">85</span></span>
+          </div>
+          <input type="range" id="aov" min="25" max="500" value="85" step="5" />
+          <p style="font-size: 13px; color: var(--muted); margin-top: 4px;">$25–$500</p>
+        </div>
+
+        <!-- Opt-in rate -->
+        <div class="roi-field" style="margin-top: 32px;">
+          <div class="roi-label-row">
+            <label for="optin">Estimated opt-in rate</label>
+            <span class="roi-v"><span id="optin-display">73</span>%</span>
+          </div>
+          <input type="range" id="optin" min="0" max="100" value="73" step="1" />
+          <p style="font-size: 13px; color: var(--muted); margin-top: 4px;">0–100%</p>
+        </div>
+      </div>
+
+      <!-- Right: Results -->
+      <div class="roi-right">
+        <div>
+          <div class="roi-lbl">Estimated added margin / mo</div>
+          <div class="roi-big"><span class="roi-cur">$</span><span id="result-margin">12,774</span></div>
+        </div>
+
+        <div class="roi-meta">
+          <div>
+            <span>Protected orders / mo</span>
+            <b id="result-protected">1,460</b>
+          </div>
+          <div>
+            <span>Avg protection premium</span>
+            <b id="result-premium">$8.74</b>
+          </div>
+          <div>
+            <span>Parcelis share (per order)</span>
+            <b id="result-share">$1.59</b>
+          </div>
+          <div>
+            <span>Your margin (per order)</span>
+            <b id="result-your-share">$7.15</b>
+          </div>
+          <div>
+            <span>Typical merchant plan</span>
+            <b id="result-plan">Growth</b>
+          </div>
+        </div>
+
+        <p style="font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 12px; line-height: 1.6;">Estimates based on average Parcelis performance data. Actual results depend on your store, product mix, and customer base. This is not a guarantee.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== COMPARISON =================== -->
+<section>
+  <div class="wrap">
+    <div class="section-head center">
+      <h2>What shipping protection costs you <em>without</em> Parcelis.</h2>
+    </div>
+    <div class="pe-list" style="margin-top: 56px;">
+      <div class="pe-item">
+        <div class="pe-ic">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Lost margin on chargebacks.</h3>
+        <p>Customers dispute carriers. You refund. Every lost package is absorbed cost.</p>
+      </div>
+      <div class="pe-item">
+        <div class="pe-ic">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Support cost per claim.</h3>
+        <p>Your team handles every "where is my package?" ticket. That's 15–30 min per inquiry.</p>
+      </div>
+      <div class="pe-item">
+        <div class="pe-ic">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>Delayed payout on carrier claims.</h3>
+        <p>Carrier insurance takes 30–60 days. Cash flow hit. Unhappy customers in the meantime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ASSUMPTIONS =================== -->
+<section class="tight">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How we calculate this.</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 48px;">
+      <div>
+        <h3 style="font-size: 18px;">Protection premium</h3>
+        <p style="margin-top: 12px;">We charge a dynamic premium based on order value. For a $85 AOV order, the average protection premium is $8.74. This increases linearly with order value.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 18px;">Merchant margin</h3>
+        <p style="margin-top: 12px;">Growth plan merchants keep 73% of protection premium. That's $6.38 per order on average. Your actual margin depends on plan tier, order volume, and negotiated terms.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 18px;">Opt-in rate</h3>
+        <p style="margin-top: 12px;">Most Parcelis merchants see 65–80% opt-in at checkout. We default to 73% based on aggregate performance, but your rate depends on offer clarity, messaging, and trust signals.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 18px;">Plan recommendations</h3>
+        <p style="margin-top: 12px;">Starter (under 1k orders), Growth (1–25k orders), Scale (25k+). Margins improve with volume. High-volume merchants get better rates and a dedicated CSM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CTA =================== -->
+<section class="cta-big">
+  <div class="wrap">
+    <h2>Ready to turn lost packages into margin?</h2>
+    <p class="sub">Free until your 1,001st order. No card required to test.</p>
+    <a class="pill" href="#">Get Parcelis <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer class="footer-v2">
+  <div class="wrap">
+    <div class="footer-card">
+      <div>
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="assets/parcelis-logo-white.png" alt="Parcelis" />
+        </a>
+        <p class="blurb">Licensed shipping protection that pays for itself.</p>
+        <p class="trust-strip">Powered by InsureShip · Licensed reinsurance · Coverage in 50 states</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="how-it-works.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Integrations</h5>
+        <ul>
+          <li><a href="integrations.html">All integrations</a></li>
+          <li><a href="integrations.html">Shopify</a></li>
+          <li><a href="integrations.html">WooCommerce</a></li>
+          <li><a href="integrations.html">Custom API</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Pricing</h5>
+        <ul>
+          <li><a href="pricing.html">Plans</a></li>
+          <li><a href="roi-calculator.html">ROI calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="resources.html">Blog</a></li>
+          <li><a href="resources.html">Case studies</a></li>
+          <li><a href="resources.html">Help center</a></li>
+        </ul>
+      </div>
+      <div class="legal">
+        <span>© 2026 Parcelis Insurance Services, Inc. Powered by InsureShip.</span>
+        <span class="links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Licensing disclosures</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ROI calculator
+const ordersSlider = document.getElementById('orders');
+const aovSlider = document.getElementById('aov');
+const optinSlider = document.getElementById('optin');
+
+const ordersDisplay = document.getElementById('orders-display');
+const aovDisplay = document.getElementById('aov-display');
+const optinDisplay = document.getElementById('optin-display');
+
+const resultMargin = document.getElementById('result-margin');
+const resultProtected = document.getElementById('result-protected');
+const resultPremium = document.getElementById('result-premium');
+const resultShare = document.getElementById('result-share');
+const resultYourShare = document.getElementById('result-your-share');
+const resultPlan = document.getElementById('result-plan');
+
+// Format number with commas
+function formatNumber(n) {
+  return n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+}
+
+// Format currency
+function formatCurrency(n) {
+  return n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+// Calculate ROI
+function updateROI() {
+  const orders = parseInt(ordersSlider.value);
+  const aov = parseInt(aovSlider.value);
+  const optin = parseInt(optinSlider.value) / 100;
+
+  // Premium calculation: scales from ~$2.50 for $25 orders to ~$35 for $500 orders
+  const basePremium = 2.50 + (aov - 25) * 0.0684; // ~$8.74 at $85 AOV
+
+  // Merchant share: 73% on Growth plan
+  const merchantShare = basePremium * 0.73;
+  const parcelisShare = basePremium * 0.27;
+
+  // Calculate totals
+  const protectedOrders = Math.round(orders * optin);
+  const monthlyMargin = protectedOrders * merchantShare;
+
+  // Determine plan
+  let plan = 'Starter';
+  if (orders > 1000 && orders <= 25000) plan = 'Growth';
+  if (orders > 25000) plan = 'Scale';
+
+  // Update displays
+  ordersDisplay.textContent = formatNumber(orders);
+  aovDisplay.textContent = aov;
+  optinDisplay.textContent = optin * 100;
+
+  resultMargin.textContent = formatNumber(Math.round(monthlyMargin));
+  resultProtected.textContent = formatNumber(protectedOrders);
+  resultPremium.textContent = '$' + formatCurrency(basePremium);
+  resultShare.textContent = '$' + formatCurrency(parcelisShare);
+  resultYourShare.textContent = '$' + formatCurrency(merchantShare);
+  resultPlan.textContent = plan;
+}
+
+// Event listeners
+ordersSlider.addEventListener('input', updateROI);
+aovSlider.addEventListener('input', updateROI);
+optinSlider.addEventListener('input', updateROI);
+
+// Initial calculation
+updateROI();
+</script>
+
+<script src="script.js?v=9"></script>
+</body>
+</html>
