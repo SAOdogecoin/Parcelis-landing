@@ -61,6 +61,8 @@
   --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --font-display: "Geist", "Söhne", system-ui, sans-serif;
 
+  --cyan: #22d3ee;
+
   --density: 1;
 }
 
@@ -1269,6 +1271,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 /* ============ hero v2 — centered ============ */
 .hero-v2 {
   background:
+    radial-gradient(ellipse 100% 55% at 50% 0%, rgba(0,210,255,0.22) 0%, transparent 60%),
     linear-gradient(90deg, #1e2099 0%, rgba(30,32,153,0.4) 60%, rgba(30,32,153,0.1) 100%),
     url("assets/hero-truck.jpg") right 40% / cover no-repeat,
     #1e2099;
@@ -1793,7 +1796,9 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 /* dark footer card */
 /* dark footer */
 .footer-v2 {
-  background: #0a0d3a;
+  background:
+    radial-gradient(700px 600px at 115% 50%, rgba(69,100,230,0.35) 0%, transparent 60%),
+    #0a0d3a;
   padding: 80px 0 40px;
   border-top: none;
 }
@@ -1821,11 +1826,18 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 .footer-card ul a:hover { color: #fff; }
 .footer-card .trust-strip {
   font-size: 15px;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.85);
   margin-top: 12px;
   line-height: 1.5;
 }
 .footer-social { margin-top: 24px; display: flex; gap: 10px; }
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
 .footer-social-link {
   display: grid; place-items: center;
   width: 36px; height: 36px;
@@ -1840,23 +1852,12 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
   color: rgba(255,255,255,0.75) !important; font-size: 17px;
 }
 .footer-email-link svg { opacity: 0.6; flex-shrink: 0; }
+/* .footer-card .legal — removed on main pages, kept on secondary pages for legal links */
 .footer-card .legal {
   grid-column: 1 / -1;
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
-  padding-top: 28px; margin-top: 32px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  font-size: 15px; letter-spacing: 0.02em; color: rgba(255,255,255,0.65);
-}
-.footer-powered-badge { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.8); }
-.footer-insureship-pill {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: #fff;
-  border: none;
-  border-radius: 999px;
-  padding: 6px 14px 6px 10px;
-  color: var(--ink);
-  font-size: 15px; font-weight: 700;
-  letter-spacing: 0;
+  padding-top: 24px; margin-top: 24px;
+  font-size: 14px; letter-spacing: 0.02em; color: rgba(255,255,255,0.5);
 }
 @media (max-width: 900px) {
   .footer-card { grid-template-columns: 1fr 1fr; gap: 36px; }
@@ -3005,7 +3006,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .footer-card .trust-strip {
   font-family: inherit; font-size: 15px;
   letter-spacing: 0; text-transform: none;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.85);
   margin-top: 16px;
 }
 
@@ -3674,7 +3675,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .cov-ic {
   display: flex;
   align-items: center;
-  color: var(--ink);
+  color: var(--cyan);
   flex-shrink: 0;
   margin-bottom: 4px;
 }
