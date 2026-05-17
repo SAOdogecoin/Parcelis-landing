@@ -1757,17 +1757,17 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
   gap: 56px;
 }
 .footer-card .brand { color: #fff; font-size: 22px; font-weight: 600; }
-.footer-card .brand-logo { filter: none; height: 40px; }
+.footer-card .brand-logo { filter: none; height: 56px; }
 .footer-card .blurb { color: rgba(255,255,255,0.55); margin-top: 20px; font-size: 15px; max-width: 26ch; line-height: 1.55; }
 .footer-card h3 {
-  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em;
-  text-transform: uppercase; color: rgba(255,255,255,0.4);
-  margin: 0 0 20px; font-weight: 500;
-  line-height: 1;
+  font-size: 18px; letter-spacing: -0.01em;
+  color: rgba(255,255,255,0.95);
+  margin: 0 0 20px; font-weight: 600;
+  line-height: 1.2;
 }
-.footer-card h5 { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin: 0 0 20px; font-weight: 500; }
-.footer-card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-.footer-card ul a { font-size: 15px; color: rgba(255,255,255,0.7); }
+.footer-card h5 { font-size: 18px; letter-spacing: -0.01em; color: rgba(255,255,255,0.95); margin: 0 0 20px; font-weight: 600; }
+.footer-card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.footer-card ul a { font-size: 17px; color: rgba(255,255,255,0.7); }
 .footer-card ul a:hover { color: #fff; }
 .footer-card .trust-strip {
   font-family: var(--font-mono); font-size: 11px;
@@ -3644,18 +3644,18 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .ts-powered-by {
-  font-size: clamp(16px, 1.6vw, 22px);
-  font-weight: 500;
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 600;
   color: rgba(255,255,255,0.55);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   white-space: nowrap;
 }
 .ts-powered-name {
-  font-size: clamp(48px, 6vw, 88px);
+  font-size: clamp(32px, 3.6vw, 52px);
   font-weight: 700;
   letter-spacing: -0.04em;
   color: #fff;
-  line-height: 0.9;
+  line-height: 1;
   display: block;
 }
 
