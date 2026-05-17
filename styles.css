@@ -1797,7 +1797,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 /* dark footer */
 .footer-v2 {
   background:
-    radial-gradient(900px 800px at 110% 50%, rgba(110,130,255,0.55) 0%, transparent 65%),
+    radial-gradient(380px 240px at 88% 50%, rgba(100,120,240,0.22) 0%, transparent 100%),
     #0a0d3a;
   padding: 80px 0 40px;
   border-top: none;
@@ -3545,7 +3545,6 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 .cc-bad {
   background: var(--surface);
-  border: 1px solid var(--hair);
 }
 .cc-good {
   background: var(--navy-800);
