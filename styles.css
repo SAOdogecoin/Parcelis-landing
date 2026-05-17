@@ -1319,6 +1319,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
   border-left: 1px solid var(--hair-2);
   border-top: none;
   border-bottom: none;
+  text-align: center;
 }
 .product-block .stat:first-child { border-left: none; padding-left: 0; }
 .product-block .stat .v {
@@ -3303,15 +3304,10 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  max-width: 640px;
 }
 #protection .cta-row,
 #revenue .cta-row {
   justify-content: center;
-}
-#protection .features-grid {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* center feature card in revenue section */
