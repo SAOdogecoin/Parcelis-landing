@@ -3729,19 +3729,33 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .cov-chip-logo:hover { opacity: 0.75; }
 /* integration card logos */
 .ic-logo {
-  height: 28px;
+  height: 26px;
   width: auto;
-  max-width: 120px;
+  max-width: 130px;
   object-fit: contain;
+  filter: grayscale(1) opacity(0.55);
+  transition: filter 0.2s ease;
 }
+.ic-logo:hover { filter: grayscale(0) opacity(1); }
+.ic-logo-woo { height: 36px; }
+.ic-logo-wide { height: 22px; max-width: 150px; }
+.ic-logo-magento { height: 30px; filter: grayscale(1) opacity(0.55); }
+.ic-logo-magento:hover { filter: grayscale(0) opacity(1); }
 .ig-logo {
-  height: 32px;
+  height: 34px;
   width: auto;
-  max-width: 140px;
+  max-width: 150px;
   object-fit: contain;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   display: block;
+  filter: grayscale(1) opacity(0.55);
+  transition: filter 0.2s ease;
 }
+.ig-logo:hover { filter: grayscale(0) opacity(1); }
+.ig-logo-woo { height: 44px; }
+.ig-logo-wide { height: 26px; max-width: 170px; }
+.ig-logo-magento { height: 36px; filter: grayscale(1) opacity(0.55); }
+.ig-logo-magento:hover { filter: grayscale(0) opacity(1); }
 @media (max-width: 900px) {
   .cov-types { grid-template-columns: repeat(2, 1fr); }
 }

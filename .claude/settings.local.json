@@ -10,7 +10,17 @@
       "WebFetch(domain:www.myparcelis.com)",
       "mcp__Claude_in_Chrome__navigate",
       "mcp__Claude_in_Chrome__get_page_text",
-      "mcp__Claude_in_Chrome__read_page"
+      "mcp__Claude_in_Chrome__read_page",
+      "Bash(cp \"E:\\\\Downloads\\\\download.svg\" \"E:\\\\Downloads\\\\Sample website  funnel-handoff\\\\sample-website-funnel\\\\project\\\\assets\\\\logo-shopify.svg\")",
+      "Bash(cp \"E:\\\\Downloads\\\\download \\(1\\).svg\" \"E:\\\\Downloads\\\\Sample website  funnel-handoff\\\\sample-website-funnel\\\\project\\\\assets\\\\logo-woocommerce.svg\")",
+      "Bash(cp \"E:\\\\Downloads\\\\bigcommerce-BfmKkgTx.svg\" \"E:\\\\Downloads\\\\Sample website  funnel-handoff\\\\sample-website-funnel\\\\project\\\\assets\\\\logo-bigcommerce.svg\")",
+      "Read(//mnt/e/**)",
+      "Bash(cp download.svg \"Sample website  funnel-handoff/sample-website-funnel/project/assets/logo-shopify.svg\")",
+      "Bash(cp \"download \\(1\\).svg\" \"Sample website  funnel-handoff/sample-website-funnel/project/assets/logo-woocommerce.svg\")",
+      "Bash(cp bigcommerce-BfmKkgTx.svg \"Sample website  funnel-handoff/sample-website-funnel/project/assets/logo-bigcommerce.svg\")",
+      "Bash(cp \"E:/Downloads/download.svg\" \"E:/Downloads/Sample website  funnel-handoff/sample-website-funnel/project/assets/logo-shopify.svg\")",
+      "Bash(cp \"E:/Downloads/download \\(1\\).svg\" \"E:/Downloads/Sample website  funnel-handoff/sample-website-funnel/project/assets/logo-woocommerce.svg\")",
+      "Bash(cp \"E:/Downloads/bigcommerce-BfmKkgTx.svg\" \"E:/Downloads/Sample website  funnel-handoff/sample-website-funnel/project/assets/logo-bigcommerce.svg\")"
     ]
   }
 }
