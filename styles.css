@@ -1291,7 +1291,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
   display: grid; place-items: center;
 }
 .product-block h2 {
-  font-size: clamp(40px, 4.8vw, 64px);
+  font-size: clamp(48px, 5.6vw, 72px);
   font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.0;
@@ -1300,10 +1300,10 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 }
 .product-block h2 em { color: var(--ink); font-style: italic; font-weight: 600; }
 .product-block .body {
-  font-size: 17px;
+  font-size: 19px;
   color: var(--muted);
-  margin-top: 28px;
-  line-height: 1.55;
+  margin-top: 32px;
+  line-height: 1.6;
   max-width: 52ch;
 }
 .product-block .body p + p { margin-top: 16px; }
@@ -1323,17 +1323,17 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 }
 .product-block .stat:first-child { border-left: none; padding-left: 0; }
 .product-block .stat .v {
-  font-size: clamp(32px, 3.2vw, 44px);
+  font-size: clamp(36px, 3.8vw, 52px);
   font-weight: 600; letter-spacing: -0.03em; color: var(--ink); line-height: 1;
 }
 .product-block .stat .v .unit { font-size: 0.6em; color: var(--ink); }
 .product-block .stat .l {
-  font-family: var(--font-base); font-size: 13px;
+  font-family: var(--font-base); font-size: 14px;
   letter-spacing: 0; font-weight: 500;
   color: var(--muted);
-  margin-top: 8px;
+  margin-top: 10px;
   max-width: 18ch;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 @media (max-width: 640px) {
   .product-block .stats { flex-wrap: wrap; }
