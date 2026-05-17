@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=60" />
+<link rel="stylesheet" href="styles.css?v=62" />
 </head>
 <body>
 
@@ -31,7 +31,7 @@
 </header>
 
 <!-- =================== HERO =================== -->
-<section class="page-hero-v2">
+<section class="page-hero-v2 page-hero-short page-hero-plain">
   <div class="wrap">
     <h1>Simple,<br/>transparent<br/>pricing.</h1>
     <p class="sub">No hidden fees. No surprises. Customers pay the premium at checkout — you keep a share on every protected order.</p>
@@ -41,43 +41,26 @@
 <!-- =================== PRICING CALCULATOR =================== -->
 <section class="pricing-calc">
   <div class="wrap">
-    <div class="pcalc-head">
-      <h2>See what coverage costs.</h2>
-      <p>Enter a package value to see the customer-paid premium. You earn margin on every protected order.</p>
-    </div>
-    <div class="pcalc-card">
-      <div class="pcalc-left">
-        <div class="pcalc-field">
-          <div class="pcalc-label-row">
-            <label for="pkg-value">Package value</label>
-            <span class="pcalc-v" id="pkg-display">$150</span>
+    <div class="pcalc-v2">
+      <div class="pcalc-v2-main">
+        <div class="pcalc-v2-left">
+          <span class="pcalc-v2-lbl">Package value</span>
+          <div class="pcalc-v2-input-wrap">
+            <span class="pcalc-v2-cur">$</span>
+            <input type="number" id="pkg-value" min="100" max="25000" value="100" class="pcalc-v2-input" />
           </div>
-          <input type="range" id="pkg-value" min="10" max="2500" value="150" step="10" />
         </div>
-        <div class="pcalc-limits">
-          <div class="pcalc-limit">
-            <div class="pcalc-lv">$2,500</div>
-            <div class="pcalc-ll">Max coverage per box</div>
-          </div>
-          <div class="pcalc-limit">
-            <div class="pcalc-lv">$25,000</div>
-            <div class="pcalc-ll">Max coverage per shipment</div>
-          </div>
-          <div class="pcalc-limit">
-            <div class="pcalc-lv">All major</div>
-            <div class="pcalc-ll">Carriers covered</div>
-          </div>
+        <div class="pcalc-v2-arrow">→</div>
+        <div class="pcalc-v2-right">
+          <span class="pcalc-v2-lbl pcalc-v2-lbl-accent">Your cost</span>
+          <div class="pcalc-v2-big">$<span id="calc-out">2.50</span></div>
         </div>
       </div>
-      <div class="pcalc-right">
-        <div class="pcalc-rlbl">Customer pays</div>
-        <div class="pcalc-rbig"><span class="pcalc-rcur">$</span><span id="calc-out">3.75</span></div>
-        <div class="pcalc-rrate">2.5% of package value</div>
-        <div class="pcalc-rmeta">
-          <div><span>Coverage amount</span><b id="calc-cov">$150.00</b></div>
-          <div><span>Your setup cost</span><b>$0</b></div>
-          <div><span>Merchant margin</span><b>Earned per order</b></div>
-        </div>
+      <div class="pcalc-v2-divider"></div>
+      <div class="pcalc-v2-feats">
+        <span><span class="pcalc-v2-dot"></span>Per-package pricing</span>
+        <span><span class="pcalc-v2-dot"></span>Full coverage</span>
+        <span><span class="pcalc-v2-dot"></span>No contracts or fees</span>
       </div>
     </div>
   </div>
@@ -108,154 +91,6 @@
         <h3>Brand Reputation Protection</h3>
         <p>When packages go missing, your brand takes the hit. Parcelis absorbs the friction — customers get resolved fast and keep buying from you.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- =================== WHAT'S COVERED / EXCLUSIONS =================== -->
-<section class="coverage-detail">
-  <div class="wrap">
-    <div class="cd-head">
-      <h2>What's covered.</h2>
-    </div>
-    <div class="cd-grid">
-      <div class="cd-col">
-        <h3>Covered</h3>
-        <ul class="cd-list cd-yes">
-          <li>Loss or theft in transit</li>
-          <li>Damage during shipping</li>
-          <li>Porch piracy and stolen packages</li>
-          <li>Weather-related damage</li>
-          <li>Carrier misdelivery</li>
-          <li>International shipping incidents</li>
-        </ul>
-      </div>
-      <div class="cd-col">
-        <h3>Standard exclusions</h3>
-        <ul class="cd-list cd-no">
-          <li>Perishables without cold chain documentation</li>
-          <li>Pre-existing damage at time of shipment</li>
-          <li>Fragile items not packed to carrier standards</li>
-          <li>Delays without documented damage or loss</li>
-          <li>Fraudulent claims</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =================== CLAIMS PROCESS =================== -->
-<section class="claim-flow">
-  <div class="wrap">
-    <div class="cf-head">
-      <h2>How claims work.</h2>
-      <p>From filing to resolution — handled end to end by Parcelis. You are not in the loop unless you want to be.</p>
-    </div>
-    <div class="cf-steps">
-      <div class="cf-step">
-        <div class="cf-n">01</div>
-        <h3>Customer files</h3>
-        <p>Via the Parcelis claims portal — branded to your store. Takes under 2 minutes. No merchant involvement required.</p>
-      </div>
-      <div class="cf-step">
-        <div class="cf-n">02</div>
-        <h3>Professional review</h3>
-        <p>A licensed claims adjuster reviews within 24 hours. Carrier data is pulled automatically — no documentation chase.</p>
-      </div>
-      <div class="cf-step">
-        <div class="cf-n">03</div>
-        <h3>Resolution confirmed</h3>
-        <p>Refund or replacement paid directly to the customer in 5–7 business days. You receive a notification when it closes.</p>
-      </div>
-      <div class="cf-step">
-        <div class="cf-n">04</div>
-        <h3>Customer satisfied</h3>
-        <p>No back-and-forth. No carrier paperwork. Your inbox stays clear and your customer comes back.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =================== ALL MAJOR CARRIERS =================== -->
-<section class="carriers">
-  <div class="wrap">
-    <div class="cr-head">
-      <h2>All major carriers covered.</h2>
-      <p>Coverage is detected automatically at checkout based on the shipping method selected. No manual configuration required.</p>
-    </div>
-    <div class="cr-row">
-      <span class="cr-logo">USPS</span>
-      <span class="cr-logo">UPS</span>
-      <span class="cr-logo">FedEx</span>
-      <span class="cr-logo">DHL</span>
-      <span class="cr-logo">Regional+</span>
-    </div>
-  </div>
-</section>
-
-<!-- =================== PLATFORM INTEGRATIONS =================== -->
-<section class="integrations-compact">
-  <div class="wrap">
-    <div class="ic-head">
-      <h2>Works with your platform.</h2>
-    </div>
-    <div class="ic-grid">
-      <div class="ic-card">
-        <div class="ic-row">
-          <span class="ic-name">Shopify</span>
-          <span class="ic-live">● Live</span>
-        </div>
-        <p>Install from the Shopify App Store. One-click setup, no code required. Works on all Shopify plans.</p>
-      </div>
-      <div class="ic-card">
-        <div class="ic-row">
-          <span class="ic-name">WooCommerce</span>
-          <span class="ic-live">● Live</span>
-        </div>
-        <p>Plugin available for WordPress + WooCommerce stores. Install in minutes from your dashboard.</p>
-      </div>
-      <div class="ic-card">
-        <div class="ic-row">
-          <span class="ic-name">Custom API</span>
-          <span class="ic-live ic-avail">● Available</span>
-        </div>
-        <p>Full REST API for headless and custom checkout flows. Detailed docs and sandbox environment included.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =================== FAQ =================== -->
-<section class="faq-v2" id="faq">
-  <div class="wrap">
-    <div class="faq-head">
-      <h2>Pricing questions.</h2>
-    </div>
-    <div class="faq-list">
-      <details class="faq-item" open>
-        <summary>Who pays the premium?<span class="faq-x"></span></summary>
-        <div class="faq-ans">Your customer. The premium — 2.5% of the package value — is added to their order at checkout as an optional line item. You pay nothing.</div>
-      </details>
-      <details class="faq-item">
-        <summary>What does it cost me?<span class="faq-x"></span></summary>
-        <div class="faq-ans">Nothing. No setup fees, no platform fees, no minimums. Customers pay the premium at checkout — Parcelis takes a flat cut and you keep the merchant margin.</div>
-      </details>
-      <details class="faq-item">
-        <summary>How does my merchant margin work?<span class="faq-x"></span></summary>
-        <div class="faq-ans">You earn a share of every premium collected on your store. The margin share depends on your plan and order volume. Contact us for specifics on your tier.</div>
-      </details>
-      <details class="faq-item">
-        <summary>What's the maximum coverage per shipment?<span class="faq-x"></span></summary>
-        <div class="faq-ans">$2,500 per box and $25,000 per shipment. Coverage limits are automatically applied at checkout based on declared package value.</div>
-      </details>
-      <details class="faq-item">
-        <summary>Can I disable it?<span class="faq-x"></span></summary>
-        <div class="faq-ans">Yes, anytime. You can disable the checkout widget from your dashboard. Any existing claims continue to resolve normally — your customers are not affected.</div>
-      </details>
-      <details class="faq-item">
-        <summary>What carriers are covered?<span class="faq-x"></span></summary>
-        <div class="faq-ans">All major carriers — USPS, UPS, FedEx, DHL — plus regional and international carriers. Coverage is detected automatically at checkout based on the shipping method selected.</div>
-      </details>
     </div>
   </div>
 </section>
@@ -336,20 +171,17 @@
 <script src="script.js?v=9"></script>
 <script>
 (() => {
-  const slider = document.getElementById('pkg-value');
-  const display = document.getElementById('pkg-display');
+  const input = document.getElementById('pkg-value');
   const calcOut = document.getElementById('calc-out');
-  const calcCov = document.getElementById('calc-cov');
-  if (!slider) return;
-  const fmt = (n, d = 2) => n.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+  if (!input) return;
+  const fmt = (n) => n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const update = () => {
-    const val = +slider.value;
-    const premium = val * 0.025;
-    display.textContent = '$' + fmt(val, 0);
-    calcOut.textContent = fmt(premium);
-    calcCov.textContent = '$' + fmt(val);
+    const val = Math.max(100, +input.value || 100);
+    const tier = Math.floor(val / 100);
+    const cost = 2.50 + (tier - 1) * 1.25;
+    calcOut.textContent = fmt(cost);
   };
-  slider.addEventListener('input', update);
+  input.addEventListener('input', update);
   update();
 })();
 </script>
