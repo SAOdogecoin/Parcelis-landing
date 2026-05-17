@@ -2208,21 +2208,20 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   right: 28px;
   background: #fff;
   color: var(--navy-800);
-  font-family: var(--font-mono);
-  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-weight: 600;
+  font-family: var(--font-base);
+  font-size: 12px; letter-spacing: 0; font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(13,18,64,0.18);
 }
 .pc-head h3 {
-  font-size: 24px; font-weight: 600; letter-spacing: -0.01em;
+  font-size: 28px; font-weight: 600; letter-spacing: -0.02em;
   color: var(--ink);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 .pc-card.featured .pc-head h3 { color: #fff; }
 .pc-head p {
-  font-size: 14px; color: var(--muted);
+  font-size: 15px; color: var(--muted);
 }
 .pc-card.featured .pc-head p { color: rgba(255,255,255,0.7); }
 .pc-price {
@@ -2232,24 +2231,25 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 .pc-card.featured .pc-price { border-bottom-color: rgba(255,255,255,0.12); }
 .pc-price .pv {
-  font-size: 48px; font-weight: 600;
+  font-size: 52px; font-weight: 600;
   letter-spacing: -0.03em;
   color: var(--ink);
   line-height: 1;
 }
 .pc-card.featured .pc-price .pv { color: #fff; }
 .pc-price .pu {
-  font-size: 14px; color: var(--muted);
+  font-size: 16px; color: var(--muted);
 }
 .pc-card.featured .pc-price .pu { color: rgba(255,255,255,0.65); }
 .pc-list {
   list-style: none; padding: 0; margin: 0;
-  display: grid; gap: 14px;
+  display: grid; gap: 16px;
 }
 .pc-list li {
-  font-size: 14.5px;
+  font-size: 16px;
   color: var(--text);
-  display: flex; align-items: flex-start; gap: 10px;
+  display: flex; align-items: flex-start; gap: 12px;
+  line-height: 1.5;
 }
 .pc-list li::before {
   content: "";
@@ -3217,23 +3217,23 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 @media (max-width: 700px) { .hc-card { flex-direction: column; align-items: flex-start; } }
 
 /* ============ free to install callout (pricing) ============ */
-.free-callout { background: #fff; padding: 24px 0; }
+.free-callout { background: #fff; padding: 0 0 32px 0; }
 .fc-row {
-  display: flex; align-items: center; gap: 14px;
-  padding: 16px 24px;
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 28px;
   background: var(--navy-50);
-  border-radius: 10px;
+  border-radius: 12px;
   margin: 0 24px;
   max-width: 900px; margin: 0 auto;
 }
 .fc-ic {
-  width: 32px; height: 32px;
+  width: 40px; height: 40px;
   background: var(--navy-800); color: #fff;
   border-radius: 8px;
   display: grid; place-items: center;
   flex-shrink: 0;
 }
-.fc-t { font-size: 15px; color: var(--ink); }
+.fc-t { font-size: 16px; color: var(--ink); line-height: 1.5; }
 .fc-t b { font-weight: 600; }
 
 /* ============ ROI calculator ============ */
