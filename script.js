@@ -24,10 +24,6 @@ document.documentElement.classList.add('js-anim');
   });
 
   const revealGroup = (group) => group.forEach(el => el.classList.add('in'));
-  const inView = (el) => el.getBoundingClientRect().top < (window.innerHeight || document.documentElement.clientHeight);
-
-  // reveal sections already visible on load immediately
-  groups.forEach((group, parent) => { if (inView(parent)) revealGroup(group); });
 
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -38,7 +34,14 @@ document.documentElement.classList.add('js-anim');
     });
   }, { threshold: 0, rootMargin: '0px' });
 
-  groups.forEach((group, parent) => { if (!inView(parent)) io.observe(parent); });
+  // Double rAF: lets browser paint the initial opacity:0 state first,
+  // then start observing — so the transition actually plays for
+  // sections that are already in the viewport on load.
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      groups.forEach((_, parent) => io.observe(parent));
+    });
+  });
 })();
 
 // --- animated count-up ---
