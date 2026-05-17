@@ -94,6 +94,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 section { padding: calc(220px * var(--density)) 0; position: relative; }
 section.tight { padding: calc(64px * var(--density)) 0; }
 section.hero-v2, section.page-hero-v2 { padding-top: clamp(412px, 36vw, 576px); padding-bottom: clamp(200px, 26vw, 380px); }
+section.page-hero-short { padding-top: clamp(160px, 16vw, 220px) !important; padding-bottom: clamp(80px, 8vw, 120px) !important; }
 section.hero-v2 + section,
 section.page-hero-v2 + section { padding-top: calc(120px * var(--density)); }
 
@@ -3857,10 +3858,25 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   border: 0;
 }
 
-/* ============ how-it-works — video section ============ */
-.hiw-video-section {
-  padding: clamp(64px, 7vw, 96px) 0;
-  background: var(--surface);
+/* ============ how-it-works — main section (video + steps) ============ */
+.hiw-main { background: var(--surface); }
+.hiw-main-head {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 56px;
+}
+.hiw-main-head h2 {
+  font-size: clamp(36px, 4.5vw, 60px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  line-height: 1.05;
+  margin: 0 0 16px;
+}
+.hiw-main-head p {
+  font-size: 19px;
+  color: var(--muted);
+  line-height: 1.6;
 }
 .hiw-video-wrap {
   position: relative;
@@ -3880,6 +3896,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 
 /* ============ how-it-works — 4-step cards ============ */
+.hiw-main .hiw-steps-grid { margin-top: 64px; }
 .hiw-steps-section {
   padding: clamp(96px, 10vw, 140px) 0;
   background: #fff;
@@ -3908,7 +3925,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   gap: 16px;
 }
 .hiw-step-card {
-  background: var(--surface);
+  background: #fff;
   border: 1px solid var(--hair);
   border-radius: 16px;
   padding: 28px 24px 32px;
@@ -3923,10 +3940,10 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 .hiw-step-ic {
   width: 44px; height: 44px;
-  background: var(--navy-50);
+  background: var(--navy-800);
   border-radius: 12px;
   display: grid; place-items: center;
-  color: var(--navy-800);
+  color: #fff;
   flex-shrink: 0;
 }
 .hiw-step-num {

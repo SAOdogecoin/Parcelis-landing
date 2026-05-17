@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=60" />
+<link rel="stylesheet" href="styles.css?v=61" />
 </head>
 <body>
 
@@ -31,7 +31,7 @@
 </header>
 
 <!-- =================== HERO =================== -->
-<section class="page-hero-v2">
+<section class="page-hero-v2 page-hero-short">
   <div class="wrap">
     <h1>Protection that works —<br/>so you don't have to.</h1>
     <p class="sub">Integrate Parcelis into your store, offer coverage at checkout, and let us handle every claim from start to finish.</p>
@@ -42,21 +42,15 @@
   </div>
 </section>
 
-<!-- =================== VIDEO =================== -->
-<section class="hiw-video-section">
+<!-- =================== HOW IT WORKS (VIDEO + STEPS) =================== -->
+<section class="hiw-main">
   <div class="wrap">
-    <div class="hiw-video-wrap">
-      <iframe src="https://www.youtube.com/embed/TkN1HsoIGhc" title="Parcelis — How it works" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- =================== 4-STEP HOW IT WORKS =================== -->
-<section class="hiw-steps-section">
-  <div class="wrap">
-    <div class="hiw-steps-head">
+    <div class="hiw-main-head">
       <h2>How Parcelis works.</h2>
       <p>From install to first payout — shipping protection that runs itself.</p>
+    </div>
+    <div class="hiw-video-wrap">
+      <iframe src="https://www.youtube.com/embed/TkN1HsoIGhc" title="Parcelis — How it works" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div class="hiw-steps-grid">
       <div class="hiw-step-card">
@@ -103,93 +97,42 @@
   </div>
 </section>
 
-<!-- =================== CHECKOUT WIDGET =================== -->
-<section class="widget-show">
+<!-- =================== INTEGRATIONS =================== -->
+<section class="integrations-compact">
   <div class="wrap">
-    <div class="ws-head">
-      <h2>This is what your customer sees.</h2>
-      <p>One opt-in at checkout — your colors, your copy. Customers stay in your flow.</p>
-      <p style="font-size: 12px; color: var(--muted); margin-top: 16px; font-family: var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase;">Example</p>
+    <div class="ic-head">
+      <h2>Plugs into every store.</h2>
     </div>
-    <div class="ws-card">
-      <div class="ws-row"><span class="ws-l">Cart subtotal</span><span class="ws-r ws-mono">$118.00</span></div>
-      <div class="ws-row"><span class="ws-l">Shipping (Ground)</span><span class="ws-r ws-mono">$9.00</span></div>
-      <div class="ws-row ws-protect">
-        <div class="ws-pl">
-          <span class="ws-shield"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span>
-          <div>
-            <div class="ws-pt">Protected by Parcelis</div>
-            <div class="ws-ps">Covers loss, damage, and porch piracy</div>
-          </div>
-        </div>
-        <div class="ws-pr">
-          <span class="ws-mono">$1.98</span>
-          <span class="ws-switch" aria-hidden="true"></span>
-        </div>
+    <div class="ic-grid">
+      <div class="ic-card">
+        <div class="ic-row"><div class="ic-name">Shopify</div><span class="ic-live">● Live</span></div>
+        <p>One-click via Shopify App Store.</p>
+        <a class="ic-link" href="#">Install app →</a>
       </div>
-      <div class="ws-total"><span class="ws-l">Order total</span><span class="ws-r ws-mono">$128.98</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- =================== CLAIM FLOW =================== -->
-<section class="claim-flow">
-  <div class="wrap">
-    <div class="cf-head">
-      <h2>What happens when a package goes missing.</h2>
-      <p>The entire claims process — handled by Parcelis. You are not in the loop unless you want to be.</p>
-    </div>
-    <div class="cf-steps">
-      <div class="cf-step">
-        <div class="cf-n">01</div>
-        <div class="cf-c">
-          <h3>Customer reports the issue</h3>
-          <p>Via the Parcelis claims portal — branded to your store. Takes under 2 minutes.</p>
-        </div>
+      <div class="ic-card">
+        <div class="ic-row"><div class="ic-name">WooCommerce</div><span class="ic-live">● Live</span></div>
+        <p>Plugin for WordPress.</p>
+        <a class="ic-link" href="#">Get plugin →</a>
       </div>
-      <div class="cf-step">
-        <div class="cf-n">02</div>
-        <div class="cf-c">
-          <h3>Adjuster reviews within 24 hours</h3>
-          <p>A licensed claims professional, not an algorithm. Carrier data verified automatically.</p>
-        </div>
+      <div class="ic-card">
+        <div class="ic-row"><div class="ic-name">BigCommerce</div><span class="ic-live">● Live</span></div>
+        <p>Native integration.</p>
+        <a class="ic-link" href="#">Install →</a>
       </div>
-      <div class="cf-step">
-        <div class="cf-n">03</div>
-        <div class="cf-c">
-          <h3>Resolution issued in 5–7 days</h3>
-          <p>Refund or replacement paid directly to the customer. You receive merchant margin on the premium.</p>
-        </div>
+      <div class="ic-card">
+        <div class="ic-row"><div class="ic-name">Magento</div><span class="ic-live">● Live</span></div>
+        <p>Adobe Commerce extension.</p>
+        <a class="ic-link" href="#">Install extension →</a>
       </div>
-      <div class="cf-step">
-        <div class="cf-n">04</div>
-        <div class="cf-c">
-          <h3>Zero involvement required from you</h3>
-          <p>You get a notification when it's done. No back-and-forth, no carrier paperwork.</p>
-        </div>
+      <div class="ic-card">
+        <div class="ic-row"><div class="ic-name">NEXT Commerce</div><span class="ic-live">● Live</span></div>
+        <p>Checkout-level integration.</p>
+        <a class="ic-link" href="#">Install →</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- =================== WHO IT'S FOR =================== -->
-<section class="roles">
-  <div class="wrap">
-    <div class="hr-head">
-      <h2>Built for the people who already do the work.</h2>
-    </div>
-    <div class="roles-grid">
-      <div class="role-card">
-        <h3>The founder</h3>
-        <p>Clean P&amp;L impact. Easy to integrate. No long-term commitment or setup cost.</p>
-      </div>
-      <div class="role-card">
-        <h3>The ops lead</h3>
-        <p>Claims handled by professional adjusters. You stay focused on operations, not disputes.</p>
-      </div>
-      <div class="role-card">
-        <h3>The CX lead</h3>
-        <p>Self-service claims portal reduces inbound support tickets on your most frustrating issue.</p>
+      <div class="ic-card">
+        <div class="ic-row"><div class="ic-name">Custom API</div><span class="ic-live ic-avail">● Available</span></div>
+        <p>REST + webhooks for any storefront.</p>
+        <a class="ic-link" href="#">View docs →</a>
       </div>
     </div>
   </div>
