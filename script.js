@@ -163,26 +163,42 @@ document.documentElement.classList.add('js-anim');
   const run = () => {
     if (triggered) return;
     triggered = true;
-    let n = 9;
-    el.textContent = n;
-    const tick = setInterval(() => {
-      n--;
-      if (n > 0) {
-        el.textContent = n;
-      } else {
-        clearInterval(tick);
-        el.textContent = '0';
-        // brief pause then crossfade to word "zero"
-        setTimeout(() => {
-          el.style.transition = 'opacity 0.5s ease';
-          el.style.opacity = '0';
+
+    const startCountdown = () => {
+      let n = 9;
+      el.textContent = n;
+      const tick = setInterval(() => {
+        n--;
+        if (n > 0) {
+          el.textContent = n;
+        } else {
+          clearInterval(tick);
+          el.textContent = '0';
+          // brief pause then crossfade to word "zero"
           setTimeout(() => {
-            el.textContent = 'zero';
-            el.style.opacity = '1';
-          }, 500);
-        }, 350);
-      }
-    }, 160);
+            el.style.transition = 'opacity 0.5s ease';
+            el.style.opacity = '0';
+            setTimeout(() => {
+              el.textContent = 'zero';
+              el.style.opacity = '1';
+            }, 500);
+          }, 350);
+        }
+      }, 160);
+    };
+
+    // Parent .reveal fades in over ~1.1s — wait for it before counting so digits are visible
+    const parent = el.closest('.reveal');
+    if (parent && parseFloat(window.getComputedStyle(parent).opacity) < 0.99) {
+      parent.addEventListener('transitionend', function handler(e) {
+        if (e.propertyName === 'opacity') {
+          parent.removeEventListener('transitionend', handler);
+          startCountdown();
+        }
+      });
+    } else {
+      startCountdown();
+    }
   };
   const io = new IntersectionObserver(
     (entries) => entries.forEach(e => { if (e.isIntersecting) { run(); io.unobserve(el); } }),
