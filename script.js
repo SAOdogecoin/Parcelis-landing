@@ -145,6 +145,76 @@ document.documentElement.classList.add('js-anim');
   update();
 })();
 
+// --- zero-word: count 9→0 then crossfade to "zero" ---
+(() => {
+  const el = document.getElementById('zero-word');
+  if (!el) return;
+  let triggered = false;
+  const run = () => {
+    if (triggered) return;
+    triggered = true;
+    let n = 9;
+    el.textContent = n;
+    const tick = setInterval(() => {
+      n--;
+      if (n > 0) {
+        el.textContent = n;
+      } else {
+        clearInterval(tick);
+        el.textContent = '0';
+        // brief pause then crossfade to word "zero"
+        setTimeout(() => {
+          el.style.transition = 'opacity 0.5s ease';
+          el.style.opacity = '0';
+          setTimeout(() => {
+            el.textContent = 'zero';
+            el.style.opacity = '1';
+          }, 500);
+        }, 380);
+      }
+    }, 90);
+  };
+  const io = new IntersectionObserver(
+    (entries) => entries.forEach(e => { if (e.isIntersecting) { run(); io.unobserve(el); } }),
+    { threshold: 0.6 }
+  );
+  io.observe(el);
+})();
+
+// --- claim-days counter: shows 30–60 first, counts down to 5–7 ---
+(() => {
+  const el = document.getElementById('claim-days');
+  if (!el) return;
+  let triggered = false;
+  const run = () => {
+    if (triggered) return;
+    triggered = true;
+    const from = [30, 60], to = [5, 7];
+    el.textContent = from[0] + '–7';
+    el.textContent = from[0] + '–' + from[1];
+    // pause on 30-60 then count down
+    setTimeout(() => {
+      const duration = 1400;
+      const start = performance.now();
+      const tick = (now) => {
+        const t = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const v1 = Math.round(from[0] + (to[0] - from[0]) * eased);
+        const v2 = Math.round(from[1] + (to[1] - from[1]) * eased);
+        el.textContent = v1 + '–' + v2;
+        if (t < 1) requestAnimationFrame(tick);
+        else el.textContent = to[0] + '–' + to[1];
+      };
+      requestAnimationFrame(tick);
+    }, 500);
+  };
+  const io = new IntersectionObserver(
+    (entries) => entries.forEach(e => { if (e.isIntersecting) { run(); io.unobserve(el); } }),
+    { threshold: 0.4 }
+  );
+  io.observe(el);
+})();
+
 // --- nav dropdown (click to toggle) ---
 (() => {
   const wraps = document.querySelectorAll('.nav-dropdown-wrap');

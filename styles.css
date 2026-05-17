@@ -1145,6 +1145,18 @@ p { margin: 0; color: var(--muted); text-wrap: pretty; }
 .js-anim .reveal[data-delay="5"] { transition-delay: 0.40s; }
 .js-anim .reveal[data-delay="6"] { transition-delay: 0.48s; }
 
+/* step stagger — more pronounced spacing for numbered steps */
+.js-anim .reveal[data-step="1"] { transition-delay: 0.15s; }
+.js-anim .reveal[data-step="2"] { transition-delay: 0.35s; }
+.js-anim .reveal[data-step="3"] { transition-delay: 0.55s; }
+
+/* zero-word span */
+#zero-word {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  min-width: 0.7ch;
+}
+
 /* ============ utility ============ */
 .divider { height: 1px; background: var(--hair); margin: 0; }
 
