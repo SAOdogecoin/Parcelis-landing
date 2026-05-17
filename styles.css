@@ -1132,6 +1132,7 @@ p { margin: 0; color: var(--muted); text-wrap: pretty; }
 .js-anim .reveal {
   opacity: 0;
   transform: translateY(64px);
+  will-change: opacity, transform;
   transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1),
               transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }

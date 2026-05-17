@@ -34,12 +34,12 @@ document.documentElement.classList.add('js-anim');
     });
   }, { threshold: 0, rootMargin: '0px' });
 
-  // setTimeout gives the browser time to paint the initial opacity:0 state
-  // before the IO fires — ensures the transition plays even for sections
-  // that are already visible on page load.
+  // Wait for paint, then force a layout commit on all .reveal elements
+  // so the browser registers opacity:0 before any IO fires.
   setTimeout(() => {
+    document.querySelectorAll('.reveal').forEach(el => el.getBoundingClientRect());
     groups.forEach((_, parent) => io.observe(parent));
-  }, 150);
+  }, 200);
 })();
 
 // --- animated count-up ---
