@@ -3899,15 +3899,16 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .nav-dropdown-menu .dd-divider { height: 1px; background: var(--hair); margin: 6px 0; }
 
 /* ============ how-it-works — hero ============ */
-.hiw-hero { padding-top: clamp(180px, 20vw, 280px) !important; padding-bottom: 0 !important; }
+.hiw-hero {
+  background: var(--navy-800) !important;
+  padding-top: clamp(180px, 20vw, 280px) !important;
+  padding-bottom: 0 !important;
+}
 .hiw-hero h1 { font-size: clamp(36px, 4.8vw, 68px) !important; }
 
 /* ============ how-it-works — steps dark (extends hero bg) ============ */
 .hiw-steps-dark {
-  background:
-    radial-gradient(1100px 800px at 85% -60%, #4548d9 0%, transparent 60%),
-    radial-gradient(700px 600px at 5% 150%, #0a0d3a 0%, transparent 60%),
-    linear-gradient(180deg, #14157a 0%, #0f1268 50%, #0a0d3a 100%);
+  background: var(--navy-800);
   padding: clamp(60px, 7vw, 100px) 0 clamp(80px, 9vw, 130px);
 }
 .hiw-steps-dark-head {
