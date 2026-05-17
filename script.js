@@ -165,7 +165,7 @@ document.documentElement.classList.add('js-anim');
     triggered = true;
 
     const startCountdown = () => {
-      let n = 9;
+      let n = 3;
       el.textContent = n;
       const tick = setInterval(() => {
         n--;
