@@ -3914,28 +3914,28 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .hiw-steps-dark .hiw-step-card {
   background: #fff;
   border-radius: 20px;
-  padding: 40px 32px;
-  display: flex; flex-direction: column; gap: 20px;
+  padding: 40px 32px 44px;
+  display: flex; flex-direction: column; gap: 0;
   box-shadow: 0 2px 8px rgba(13,18,64,0.06), 0 12px 40px -8px rgba(13,18,64,0.14);
 }
+.hiw-step-num-lg {
+  font-size: clamp(64px, 7vw, 96px);
+  font-weight: 700; letter-spacing: -0.05em; line-height: 1;
+  color: var(--navy-100);
+  margin-bottom: 16px;
+}
+.hiw-steps-dark .hiw-step-ic {
+  color: var(--navy-800);
+  margin-bottom: 24px;
+}
+.hiw-steps-dark .hiw-step-ic svg { display: block; }
 .hiw-steps-dark .hiw-step-card h3 {
-  font-size: 19px; font-weight: 600;
+  font-size: 20px; font-weight: 600;
   color: var(--ink); line-height: 1.25; letter-spacing: -0.01em;
+  margin-bottom: 12px;
 }
 .hiw-steps-dark .hiw-step-card p {
   font-size: 16px; color: var(--muted); line-height: 1.65;
-}
-.hiw-step-num-lg {
-  font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
-  color: var(--muted); font-family: var(--font-mono);
-}
-.hiw-steps-dark .hiw-step-ic {
-  width: 48px; height: 48px;
-  background: var(--navy-800);
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  color: #fff;
-  flex-shrink: 0;
 }
 @media (max-width: 960px) { .hiw-steps-dark .hiw-steps-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .hiw-steps-dark .hiw-steps-grid { grid-template-columns: 1fr; } }
