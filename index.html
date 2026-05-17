@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=56" />
+<link rel="stylesheet" href="styles.css?v=57" />
 <link rel="preload" as="image" href="assets/hero-truck.jpg" />
 </head>
 <body>
@@ -53,8 +53,8 @@
         <div class="pe-ic">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
         </div>
-        <h3>Carrier insurance takes 30–60 days.</h3>
-        <p>Customers wait. You eat the refund. Everyone loses.</p>
+        <h3>Carrier claims drag for weeks.</h3>
+        <p>Customers wait without answers. You absorb the cost while the carrier stalls.</p>
       </div>
       <div class="pe-item">
         <div class="pe-ic">
@@ -74,152 +74,218 @@
   </div>
 </section>
 
-<!-- =================== PROTECTION =================== -->
-<section class="product-block" id="protection">
+<!-- =================== HOW IT WORKS =================== -->
+<section class="simple-process" id="process">
   <div class="wrap">
-    <div>
+    <div class="sp-head">
+      <h2>Simple process, zero hassle.</h2>
+    </div>
+    <div class="sp-video">
+      <div class="sp-video-wrap">
+        <iframe src="https://www.youtube.com/embed/TkN1HsoIGhc" title="Parcelis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="sp-row">
+      <div class="sp-step">
+        <div class="sp-num">1</div>
+        <h3>Integrate</h3>
+        <p>Connect via Shopify app or other platform integrations in minutes.</p>
+      </div>
+      <div class="sp-arrow" aria-hidden="true">
+        <svg viewBox="0 0 60 20" fill="none"><line x1="2" y1="10" x2="50" y2="10" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 4" stroke-linecap="round"/><path d="m48 4 8 6-8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="sp-step">
+        <div class="sp-num">2</div>
+        <h3>Sell</h3>
+        <p>Insurance option appears at checkout automatically — customers opt in.</p>
+      </div>
+      <div class="sp-arrow" aria-hidden="true">
+        <svg viewBox="0 0 60 20" fill="none"><line x1="2" y1="10" x2="50" y2="10" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 4" stroke-linecap="round"/><path d="m48 4 8 6-8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="sp-step">
+        <div class="sp-num">3</div>
+        <h3>Relax</h3>
+        <p>Claims go directly to Parcelis — you stay focused on growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CLAIMS COMPARISON =================== -->
+<section class="claims-compare" id="claims">
+  <div class="wrap">
+    <div class="cc-head">
+      <h2>Claims resolved in 5–7 days.</h2>
+      <p>Carrier insurance takes 30–60 days. Parcelis handles the entire process — professionally adjusted, start to finish — with zero involvement from you.</p>
+    </div>
+    <div class="cc-grid">
+      <div class="cc-col cc-bad">
+        <div class="cc-col-label">Without Parcelis</div>
+        <ul class="cc-list">
+          <li>30–60 day resolution timeline</li>
+          <li>You file claims with the carrier yourself</li>
+          <li>Customers chase updates for weeks</li>
+          <li>You refund while waiting on reimbursement</li>
+          <li>Full support burden on your team</li>
+        </ul>
+      </div>
+      <div class="cc-col cc-good">
+        <div class="cc-col-label">With Parcelis</div>
+        <ul class="cc-list">
+          <li>5–7 day resolution guaranteed</li>
+          <li>Professional adjusters handle it end-to-end</li>
+          <li>Customer files directly with Parcelis</li>
+          <li>Parcelis pays — not you</li>
+          <li>Zero support burden on your team</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cc-metrics">
+      <div class="cc-metric">
+        <div class="cc-mv">5–7</div>
+        <div class="cc-ml">days to resolve</div>
+      </div>
+      <div class="cc-metric">
+        <div class="cc-mv">0</div>
+        <div class="cc-ml">hours of your time</div>
+      </div>
+      <div class="cc-metric">
+        <div class="cc-mv">4–8×</div>
+        <div class="cc-ml">faster than carriers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== COVERAGE =================== -->
+<section class="coverage-section" id="coverage">
+  <div class="wrap">
+    <div class="cov-head">
       <h2>Every shipment, covered.</h2>
-      <div class="body">
-        <p>Coverage runs across every major carrier. Customers opt in at checkout with one tap. Lost, damaged, or stolen packages all handled by Parcelis.</p>
+      <p>From porch piracy to transit damage — Parcelis covers the full range of shipping failures across every major carrier. Auto-detected at checkout, no manual setup.</p>
+    </div>
+    <div class="cov-types">
+      <div class="cov-type">
+        <div class="cov-ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Porch piracy</h3>
+        <p>Delivered but stolen — covered and resolved the same as any other claim.</p>
       </div>
-      <div class="stat-cards">
-        <div class="stat-card">
-          <div class="sc-l">Carriers</div>
-          <div class="sc-v">USPS · UPS · FedEx · DHL</div>
+      <div class="cov-type">
+        <div class="cov-ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
         </div>
-        <div class="stat-card">
-          <div class="sc-l">What's covered</div>
-          <div class="sc-v">Lost · Damaged · Stolen</div>
-        </div>
-        <div class="stat-card">
-          <div class="sc-l">Underwritten by</div>
-          <div class="sc-v">InsureShip</div>
-        </div>
+        <h3>Lost in transit</h3>
+        <p>Never arrives, declared missing by carrier, or stuck with no movement — covered.</p>
       </div>
-      <div class="features-grid" style="margin-top: 56px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-        <aside class="feature-card-light">
-          <div class="fcl-ic">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+      <div class="cov-type">
+        <div class="cov-ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+        </div>
+        <h3>Damaged goods</h3>
+        <p>Broken, crushed, or unusable items from transit mishandling — documented and paid.</p>
+      </div>
+      <div class="cov-type">
+        <div class="cov-ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>International orders</h3>
+        <p>Global coverage across regional and international carriers — auto-detected, no setup needed.</p>
+      </div>
+    </div>
+    <div class="cov-carriers">
+      <span class="cov-carriers-label">Covered carriers</span>
+      <div class="cov-chips">
+        <span class="cov-chip">USPS</span>
+        <span class="cov-chip">UPS</span>
+        <span class="cov-chip">FedEx</span>
+        <span class="cov-chip">DHL</span>
+        <span class="cov-chip">Regional</span>
+        <span class="cov-chip">International</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== INSURESHIP TRUST =================== -->
+<section class="trust-section" id="insureship">
+  <div class="wrap">
+    <div class="ts-inner">
+      <div class="ts-left">
+        <div class="ts-eyebrow">Powered by InsureShip</div>
+        <h2>Real insurance.<br/>Not a workaround.</h2>
+        <p>Most checkout protection is a tech wrapper — a money-back guarantee in disguise. Parcelis is licensed, regulated by the DOI, and underwritten as actual insurance. Same standard as carrier coverage. Significantly faster claims.</p>
+      </div>
+      <div class="ts-pillars">
+        <div class="ts-pillar">
+          <div class="ts-pillar-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
           </div>
-          <h3>Licensed coverage</h3>
-          <p>Real insurance in all operating states. Full DOI oversight, real payouts.</p>
-        </aside>
-        <aside class="feature-card-light">
-          <div class="fcl-ic">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div>
+            <h4>Licensed reinsurance</h4>
+            <p>Full Department of Insurance oversight in every operating state.</p>
           </div>
-          <h3>Fast resolution</h3>
-          <p>Claims handled in 5–7 days by professional adjusters, not 30–60.</p>
-        </aside>
-        <aside class="feature-card-light">
-          <div class="fcl-ic">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div class="ts-pillar">
+          <div class="ts-pillar-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
           </div>
-          <h3>Customer trust</h3>
-          <p>Protected badge at checkout builds confidence and drives repeat buyers.</p>
-        </aside>
+          <div>
+            <h4>State regulated</h4>
+            <p>Licensed in all operating states. Compliant, transparent, real coverage.</p>
+          </div>
+        </div>
+        <div class="ts-pillar">
+          <div class="ts-pillar-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <h4>Professional adjusters</h4>
+            <p>Claims handled by licensed claim professionals — not an algorithm.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =================== CLAIMS =================== -->
-<section class="product-block reverse" id="claims">
+<!-- =================== SOCIAL PROOF =================== -->
+<section class="social-proof" id="testimonials">
   <div class="wrap">
-    <div class="grid">
-      <div>
-        <h2>Claims resolved in 5–7 days.</h2>
-        <div class="body">
-          <p>Carrier insurance can take 30–60 days. Parcelis resolves claims in 5–7 — handled by professional adjusters, with zero merchant involvement.</p>
-        </div>
-      </div>
-      <aside class="feature-card">
-        <div class="fc-ic">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        </div>
-        <h3>Hands-off for<br/>your team.</h3>
-        <div class="fc-body">Customers file claims through our self-service portal. Parcelis handles resolution end-to-end — you stay focused on growth.</div>
-        <div class="fc-foot">Zero merchant involvement.</div>
-      </aside>
+    <div class="soc-head">
+      <h2>What merchants say.</h2>
+    </div>
+    <div class="testi-grid">
+      <blockquote class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"We used to spend hours each week handling lost package emails. Since Parcelis, our shipping-related support tickets have nearly disappeared."</p>
+        <footer class="testi-footer">
+          <strong>Sarah M.</strong>
+          <span>Home goods brand · 2,000+ orders/mo</span>
+        </footer>
+      </blockquote>
+      <blockquote class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"The 5–7 day claim resolution is real. Customers are resolved before we even notice there was an issue. Completely hands-off."</p>
+        <footer class="testi-footer">
+          <strong>James T.</strong>
+          <span>Apparel brand · Shopify Plus</span>
+        </footer>
+      </blockquote>
+      <blockquote class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Free to install with no out-of-pocket cost made it an easy yes. The real win is we've fully eliminated our shipping dispute workflow."</p>
+        <footer class="testi-footer">
+          <strong>Annika L.</strong>
+          <span>Wellness brand · WooCommerce</span>
+        </footer>
+      </blockquote>
     </div>
   </div>
 </section>
 
-<!-- =================== REVENUE =================== -->
-<section class="product-block" id="revenue">
-  <div class="wrap">
-    <div>
-      <h2>Trust at checkout.</h2>
-      <div class="body">
-        <p>When customers see "Protected by Parcelis" at checkout, they feel secure completing their purchase — leading to higher conversion and repeat buyers.</p>
-      </div>
-      <div class="stats">
-        <div class="stat"><div class="v">"Protected"</div><div class="l">Checkout badge</div></div>
-        <div class="stat"><div class="v">Opt-in</div><div class="l">Customer choice</div></div>
-        <div class="stat"><div class="v">Repeat buyers</div><div class="l">Loyalty lift</div></div>
-      </div>
-    </div>
-    <aside class="feature-card" style="margin-top: 48px;">
-      <div class="fc-ic">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-      </div>
-      <h3>Happier customers.</h3>
-      <div class="fc-body">Eliminate the back-and-forth over missing or damaged shipments. Parcelis keeps customers satisfied and protects your bottom line.</div>
-      <div class="fc-foot">Built-in trust.</div>
-    </aside>
-  </div>
-</section>
-
-<!-- =================== POWERED BY INSURESHIP =================== -->
-<section class="product-block reverse" id="insureship">
-  <div class="wrap">
-    <div class="grid">
-      <div>
-        <h2>Powered by InsureShip.</h2>
-        <div class="body">
-          <p>Industry-leading insurance infrastructure. Real underwriting, real coverage, real payouts.</p>
-        </div>
-        <div class="stats">
-          <div class="stat"><div class="l">Licensed in</div><div class="v">All states</div></div>
-          <div class="stat"><div class="l">Regulated by</div><div class="v">DOI</div></div>
-          <div class="stat"><div class="l">Underwritten by</div><div class="v">InsureShip</div></div>
-        </div>
-      </div>
-      <aside class="feature-card">
-        <div class="fc-ic">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
-        </div>
-        <h3>Real insurance,<br/>not a workaround.</h3>
-        <div class="fc-body">Most checkout protection on Shopify is a tech wrapper. Parcelis is licensed, regulated, and underwritten — same standard as carrier insurance, faster claims.</div>
-        <div class="fc-foot">Licensed reinsurance.</div>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- =================== SPEED COMPARISON =================== -->
-<section class="speed" id="speed">
-  <div class="wrap">
-    <div class="sp-head" style="margin-bottom:64px;">
-      <h2>5–7 days. Not 30–60.</h2>
-      <p>Carrier claims drag on for weeks. Parcelis resolves them in under a week, professionally adjusted, no merchant involvement.</p>
-    </div>
-    <div class="sd-bars">
-      <div class="sd-row">
-        <div class="sd-label">Parcelis</div>
-        <div class="sd-bar"><span class="sd-fill parcelis" style="width:14%;"></span></div>
-        <div class="sd-val">5–7 days</div>
-      </div>
-      <div class="sd-row">
-        <div class="sd-label">Carrier insurance</div>
-        <div class="sd-bar"><span class="sd-fill carrier" style="width:100%;"></span></div>
-        <div class="sd-val">30–60 days</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =================== PLATFORMS / INTEGRATIONS =================== -->
+<!-- =================== INTEGRATIONS =================== -->
 <section class="integrations-compact" id="integrations">
   <div class="wrap">
     <div class="ic-head">
@@ -256,88 +322,6 @@
         <p>REST + webhooks for any storefront.</p>
         <a class="ic-link" href="#">View docs →</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- =================== SIMPLE PROCESS, ZERO HASSLE =================== -->
-<section class="simple-process" id="process">
-  <div class="wrap">
-    <div class="sp-head">
-      <h2>Simple process, zero hassle.</h2>
-    </div>
-    <div class="sp-row">
-      <div class="sp-step">
-        <div class="sp-num">1</div>
-        <h3>Integrate</h3>
-        <p>Connect via Shopify app or other platform integrations in minutes.</p>
-      </div>
-      <div class="sp-arrow" aria-hidden="true">
-        <svg viewBox="0 0 60 20" fill="none"><line x1="2" y1="10" x2="50" y2="10" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 4" stroke-linecap="round"/><path d="m48 4 8 6-8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <div class="sp-step">
-        <div class="sp-num">2</div>
-        <h3>Sell</h3>
-        <p>Insurance option appears at checkout automatically — customers opt in.</p>
-      </div>
-      <div class="sp-arrow" aria-hidden="true">
-        <svg viewBox="0 0 60 20" fill="none"><line x1="2" y1="10" x2="50" y2="10" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 4" stroke-linecap="round"/><path d="m48 4 8 6-8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <div class="sp-step">
-        <div class="sp-num">3</div>
-        <h3>Relax</h3>
-        <p>Claims go directly to Parcelis — you stay focused on growth.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =================== LICENSED / LEGITIMATE =================== -->
-<section class="licensed" id="trust">
-  <div class="wrap">
-    <div class="lc-head">
-      <h2>Powered by InsureShip.</h2>
-      <p class="lc-sub">Industry-leading insurance infrastructure. Real underwriting, real coverage, real payouts. Licensed in all 50 states.</p>
-    </div>
-    <div class="lc-grid">
-      <article class="lc-card">
-        <div class="lc-ic">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
-        </div>
-        <h3>Licensed Reinsurance</h3>
-        <p>Full DOI oversight in every operating state. Not a tech workaround.</p>
-      </article>
-      <article class="lc-card">
-        <div class="lc-ic">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-        </div>
-        <h3>State-Regulated</h3>
-        <p>Licensed in all operating states. Real insurance, not a deductible workaround.</p>
-      </article>
-      <article class="lc-card">
-        <div class="lc-ic">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        </div>
-        <h3>5–7 Day Claims</h3>
-        <p>Professional claim adjusters. Faster than carrier insurance, zero merchant involvement.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- =================== TRUSTED BY GROWING BRANDS =================== -->
-<section class="brands" id="brands">
-  <div class="wrap">
-    <div class="br-head">
-      <h2>Trusted by growing brands.</h2>
-    </div>
-    <div class="br-row">
-      <div class="br-brand">Growing Brand</div>
-      <div class="br-brand">Growing Brand</div>
-      <div class="br-brand">Growing Brand</div>
-      <div class="br-brand">Growing Brand</div>
-      <div class="br-brand">Growing Brand</div>
-      <div class="br-brand">Growing Brand</div>
     </div>
   </div>
 </section>
