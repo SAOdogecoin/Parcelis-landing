@@ -1951,7 +1951,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   box-shadow: 0 2px 4px rgba(13,18,64,0.06), 0 24px 48px -20px rgba(13,18,64,0.22);
 }
 .ic-row { display: flex; align-items: center; justify-content: space-between; }
-.ic-name { font-weight: 600; font-size: 17px; color: var(--ink); letter-spacing: -0.01em; }
+.ic-name { font-weight: 700; font-size: 22px; color: var(--ink); letter-spacing: -0.02em; }
 .ic-live {
   font-family: var(--font-mono);
   font-size: 12px;
@@ -1959,7 +1959,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   font-weight: 500;
 }
 .ic-card p {
-  font-size: 14px; color: var(--muted); line-height: 1.5;
+  font-size: 16px; color: var(--muted); line-height: 1.5;
   margin: 0;
 }
 @media (max-width: 900px) {
@@ -3442,15 +3442,15 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   background: var(--ink);
 }
 .cc-col-label {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: none;
   margin-bottom: 28px;
   display: block;
 }
-.cc-bad .cc-col-label { color: var(--muted); }
-.cc-good .cc-col-label { color: rgba(255,255,255,0.45); }
+.cc-bad .cc-col-label { color: var(--ink); }
+.cc-good .cc-col-label { color: rgba(255,255,255,0.9); }
 .cc-list {
   list-style: none;
   padding: 0; margin: 0;
