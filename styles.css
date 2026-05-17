@@ -4238,7 +4238,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   margin-bottom: 64px;
 }
 .coverage-stats-head h2 {
-  font-size: clamp(44px, 6vw, 80px);
+  font-size: clamp(38px, 5vw, 68px);
   font-weight: 700; letter-spacing: -0.04em;
   color: var(--ink); line-height: 1.0; margin-bottom: 20px;
 }
