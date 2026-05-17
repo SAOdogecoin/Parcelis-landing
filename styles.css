@@ -3868,6 +3868,65 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   border: 0;
 }
 
+/* ============ how-it-works — hero ============ */
+.hiw-hero { padding-bottom: 0 !important; }
+.hiw-hero h1 { font-size: clamp(36px, 4.8vw, 68px) !important; }
+
+/* ============ how-it-works — steps dark (extends hero bg) ============ */
+.hiw-steps-dark {
+  background: var(--navy-950);
+  padding: clamp(60px, 7vw, 100px) 0 clamp(80px, 9vw, 130px);
+}
+.hiw-steps-dark .hiw-steps-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.hiw-steps-dark .hiw-step-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 36px 28px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.hiw-steps-dark .hiw-step-card h3 {
+  font-size: 19px; font-weight: 600;
+  color: #fff; line-height: 1.25; letter-spacing: -0.01em;
+}
+.hiw-steps-dark .hiw-step-card p {
+  font-size: 16px; color: rgba(255,255,255,0.55); line-height: 1.65;
+}
+.hiw-step-num-lg {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.3); font-family: var(--font-mono);
+}
+.hiw-steps-dark .hiw-step-ic {
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.85);
+  flex-shrink: 0;
+}
+@media (max-width: 960px) { .hiw-steps-dark .hiw-steps-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .hiw-steps-dark .hiw-steps-grid { grid-template-columns: 1fr; } }
+
+/* ============ how-it-works — video section (white) ============ */
+.hiw-video-section {
+  background: #fff;
+  padding: clamp(80px, 9vw, 130px) 0;
+}
+.hiw-video-head {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 56px;
+}
+.hiw-video-head h2 {
+  font-size: clamp(36px, 4.5vw, 60px);
+  font-weight: 600; letter-spacing: -0.03em;
+  color: var(--ink); line-height: 1.05; margin: 0 0 16px;
+}
+.hiw-video-head p { font-size: 19px; color: var(--muted); line-height: 1.6; }
+
 /* ============ how-it-works — main section (video + steps) ============ */
 .hiw-main { background: var(--surface); }
 .hiw-main-head {
