@@ -1753,38 +1753,61 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
   border-radius: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1.6fr repeat(4, 1fr);
+  grid-template-columns: 2fr repeat(3, 1fr);
   gap: 56px;
 }
 .footer-card .brand { color: #fff; font-size: 22px; font-weight: 600; }
 .footer-card .brand-logo { filter: none; height: 56px; }
-.footer-card .blurb { color: rgba(255,255,255,0.55); margin-top: 20px; font-size: 15px; max-width: 26ch; line-height: 1.55; }
+.footer-card .blurb { color: rgba(255,255,255,0.75); margin-top: 20px; font-size: 16px; max-width: 30ch; line-height: 1.6; }
 .footer-card h3 {
-  font-size: 18px; letter-spacing: -0.01em;
-  color: rgba(255,255,255,0.95);
-  margin: 0 0 20px; font-weight: 600;
+  font-size: 12px; letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.4);
+  margin: 0 0 20px; font-weight: 500;
+  text-transform: uppercase;
   line-height: 1.2;
 }
-.footer-card h5 { font-size: 18px; letter-spacing: -0.01em; color: rgba(255,255,255,0.95); margin: 0 0 20px; font-weight: 600; }
 .footer-card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
-.footer-card ul a { font-size: 17px; color: rgba(255,255,255,0.7); }
+.footer-card ul a { font-size: 17px; color: rgba(255,255,255,0.75); }
 .footer-card ul a:hover { color: #fff; }
 .footer-card .trust-strip {
-  font-family: var(--font-mono); font-size: 11px;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
-  margin-top: 16px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.35);
+  margin-top: 12px;
+  line-height: 1.5;
 }
+.footer-social { margin-top: 24px; display: flex; gap: 10px; }
+.footer-social-link {
+  display: grid; place-items: center;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.5);
+  transition: background .15s, color .15s;
+}
+.footer-social-link:hover { background: rgba(255,255,255,0.14); color: #fff; }
+.footer-email-link {
+  display: flex; align-items: center; gap: 8px;
+  color: rgba(255,255,255,0.75) !important; font-size: 17px;
+}
+.footer-email-link svg { opacity: 0.6; flex-shrink: 0; }
 .footer-card .legal {
   grid-column: 1 / -1;
-  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
   padding-top: 28px; margin-top: 32px;
   border-top: 1px solid rgba(255,255,255,0.08);
-  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; color: rgba(255,255,255,0.35);
+  font-size: 13px; letter-spacing: 0.02em; color: rgba(255,255,255,0.35);
 }
-.footer-card .legal .links { display: flex; gap: 18px; }
-.footer-card .legal .links a { color: rgba(255,255,255,0.4); }
-.footer-card .legal .links a:hover { color: #fff; }
+.footer-powered-badge { display: flex; align-items: center; gap: 8px; }
+.footer-insureship-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 999px;
+  padding: 5px 12px 5px 8px;
+  color: rgba(255,255,255,0.8);
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0;
+}
 @media (max-width: 900px) {
   .footer-card { grid-template-columns: 1fr 1fr; gap: 36px; }
 }
