@@ -93,7 +93,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 
 section { padding: calc(220px * var(--density)) 0; position: relative; }
 section.tight { padding: calc(64px * var(--density)) 0; }
-section.hero-v2, section.page-hero-v2 { padding-top: clamp(412px, 36vw, 576px); padding-bottom: clamp(200px, 26vw, 380px); }
+section.hero-v2, section.page-hero-v2 { padding-top: clamp(340px, 30vw, 480px); padding-bottom: clamp(220px, 28vw, 400px); }
 section.page-hero-short { padding-top: clamp(160px, 16vw, 240px) !important; padding-bottom: clamp(40px, 4vw, 60px) !important; }
 section.page-hero-plain {
   background: var(--surface) !important;
@@ -1116,16 +1116,6 @@ p { margin: 0; color: var(--muted); text-wrap: pretty; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* hero — CSS-only, fires on page load */
-.js-anim .hero-v2 h1 {
-  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-.js-anim .hero-v2 .sub {
-  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
-}
-.js-anim .hero-v2 .hero-cta {
-  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
-}
 
 /* scroll reveal — hidden until .in added by IntersectionObserver */
 .js-anim .reveal {
@@ -1283,7 +1273,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
     #1e2099;
   color: #fff;
   position: relative;
-  padding: clamp(412px, 36vw, 576px) 0 clamp(200px, 26vw, 380px);
+  padding: clamp(340px, 30vw, 480px) 0 clamp(220px, 28vw, 400px);
   margin-top: -96px;
   overflow: hidden;
   isolation: isolate;
