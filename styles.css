@@ -3666,11 +3666,10 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   align-items: flex-start;
 }
 .ts-pillar-ic {
-  width: 40px; height: 40px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 10px;
-  display: grid; place-items: center;
-  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+  color: rgba(255,255,255,0.7);
   flex-shrink: 0;
 }
 .ts-pillar h4 {
@@ -3704,26 +3703,17 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   color: var(--ink);
 }
 .testi-featured {
-  max-width: 780px;
+  max-width: 820px;
   margin: 0 auto;
   background: var(--surface);
   border-radius: 24px;
-  padding: clamp(48px, 6vw, 80px) clamp(40px, 6vw, 80px);
-  position: relative;
-  overflow: hidden;
+  padding: clamp(48px, 6vw, 72px) clamp(48px, 6vw, 80px);
 }
 .testi-quote-mark {
-  font-size: 160px;
-  font-weight: 700;
-  line-height: 0.8;
   color: var(--ink);
-  opacity: 0.06;
-  position: absolute;
-  top: 32px;
-  left: 40px;
-  font-family: Georgia, serif;
-  pointer-events: none;
-  user-select: none;
+  opacity: 0.12;
+  display: block;
+  margin-bottom: 28px;
 }
 .testi-quote-text {
   font-size: clamp(20px, 2.2vw, 26px);
