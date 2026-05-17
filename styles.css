@@ -3635,26 +3635,17 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: clamp(40px, 7vw, 88px);
   flex-wrap: wrap;
 }
 .cov-chip {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 18px 28px;
-  background: #fff;
-  border: 1px solid rgba(13,18,64,0.08);
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(13,18,64,0.06), 0 8px 24px -8px rgba(13,18,64,0.08);
-  font-size: clamp(18px, 2vw, 26px);
+  font-size: clamp(28px, 3.5vw, 48px);
   font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--ink);
-  opacity: 0.5;
-  transition: opacity 0.15s;
+  letter-spacing: -0.04em;
+  color: rgba(13,18,64,0.22);
+  transition: color 0.15s;
 }
-.cov-chip:hover { opacity: 0.85; }
+.cov-chip:hover { color: rgba(13,18,64,0.45); }
 @media (max-width: 900px) {
   .cov-types { grid-template-columns: repeat(2, 1fr); }
 }
