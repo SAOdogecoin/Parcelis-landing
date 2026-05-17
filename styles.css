@@ -3691,11 +3691,11 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 /* ============ social proof / testimonials ============ */
 .social-proof {
   padding: clamp(96px, 10vw, 140px) 0;
-  background: var(--surface);
+  background: #fff;
 }
 .soc-head {
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 64px;
 }
 .soc-head h2 {
   font-size: clamp(32px, 4vw, 52px);
@@ -3703,53 +3703,66 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   letter-spacing: -0.03em;
   color: var(--ink);
 }
-.testi-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.testi-featured {
+  max-width: 780px;
+  margin: 0 auto;
+  background: var(--surface);
+  border-radius: 24px;
+  padding: clamp(48px, 6vw, 80px) clamp(40px, 6vw, 80px);
+  position: relative;
+  overflow: hidden;
 }
-.testi-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 36px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  box-shadow: 0 1px 3px rgba(13,18,64,0.05), 0 8px 24px -8px rgba(13,18,64,0.10);
-  margin: 0;
-}
-.testi-stars {
-  color: #f59e0b;
-  font-size: 13px;
-  letter-spacing: 3px;
-}
-.testi-card p {
-  font-size: 18px;
+.testi-quote-mark {
+  font-size: 160px;
+  font-weight: 700;
+  line-height: 0.8;
   color: var(--ink);
-  line-height: 1.7;
-  flex: 1;
-  margin: 0;
+  opacity: 0.06;
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  font-family: Georgia, serif;
+  pointer-events: none;
+  user-select: none;
 }
-.testi-footer {
+.testi-quote-text {
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  margin: 0 0 40px;
+  position: relative;
+}
+.testi-featured-footer {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
+  align-items: center;
+  gap: 16px;
   font-style: normal;
   border-top: 1px solid var(--hair);
-  padding-top: 20px;
-  margin-top: auto;
+  padding-top: 32px;
 }
-.testi-footer strong {
-  font-size: 14px;
+.testi-avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  display: grid; place-items: center;
+  flex-shrink: 0;
+  letter-spacing: 0;
+}
+.testi-featured-footer strong {
+  font-size: 16px;
   font-weight: 600;
   color: var(--ink);
+  display: block;
+  margin-bottom: 3px;
 }
-.testi-footer span {
-  font-size: 13px;
+.testi-featured-footer span {
+  font-size: 14px;
   color: var(--muted);
-}
-@media (max-width: 860px) {
-  .testi-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
 }
 
 /* ============ homepage — process video ============ */
