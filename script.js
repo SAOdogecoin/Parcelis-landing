@@ -32,7 +32,7 @@ document.documentElement.classList.add('js-anim');
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0, rootMargin: '0px' });
+  }, { threshold: 0.12 });
 
   // Wait for paint, then force a layout commit on all .reveal elements
   // so the browser registers opacity:0 before any IO fires.
@@ -183,7 +183,7 @@ document.documentElement.classList.add('js-anim');
   };
   const io = new IntersectionObserver(
     (entries) => entries.forEach(e => { if (e.isIntersecting) { run(); io.unobserve(el); } }),
-    { threshold: 0 }
+    { threshold: 0.12 }
   );
   io.observe(el);
 })();
