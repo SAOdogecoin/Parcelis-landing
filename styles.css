@@ -1265,7 +1265,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 .nav-v2 .nav-links a:hover { background: rgba(255,255,255,0.06); color: #fff; }
 .nav-v2 .nav-links a.active { background: rgba(255,255,255,0.1); color: #fff; }
 .nav-v2 .btn-link { color: #fff; }
-.nav-v2 .btn-primary { background: #fff; color: var(--dark); height: 44px; padding: 0 22px; font-weight: 500; }
+.nav-v2 .btn-primary { background: #fff; color: #000; height: 44px; padding: 0 22px; font-weight: 500; }
 .nav-v2 .btn-primary:hover { background: rgba(255,255,255,0.9); }
 
 /* ============ hero v2 — centered ============ */
@@ -1308,7 +1308,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
   display: flex; justify-content: center; gap: 14px; margin-top: 56px; flex-wrap: wrap;
 }
 .hero-v2 .btn-primary {
-  background: #fff; color: var(--dark);
+  background: #fff; color: #000;
   height: 72px; padding: 0 44px;
   font-weight: 500; font-size: 18px;
   box-shadow: 0 0 80px -10px rgba(255,255,255,0.3);
@@ -1751,7 +1751,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 .cta-big .pill {
   display: inline-flex; align-items: center; gap: 10px;
   margin-top: 44px;
-  background: #fff; color: var(--dark);
+  background: #fff; color: #000;
   height: 56px; padding: 0 32px;
   border-radius: 999px;
   font-weight: 500; font-size: 16px;
