@@ -2968,36 +2968,21 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   .wc-col { padding: 28px 24px; }
 }
 
-/* ============ coverage limits bar ============ */
+/* ============ coverage limits line ============ */
 .cov-limits-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px 24px;
+  text-align: center;
   margin: 36px auto 0;
-  padding: 20px 36px;
-  background: rgba(13,18,64,0.05);
-  border-radius: 10px;
-  border: 1px solid rgba(13,18,64,0.07);
   max-width: 640px;
 }
 .cov-limits-eyebrow {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-family: var(--font-mono);
-  white-space: nowrap;
+  display: none;
 }
 .cov-limits-stat {
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--ink);
-  font-family: var(--font-mono);
-  letter-spacing: 0.04em;
-  white-space: nowrap;
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  letter-spacing: 0;
 }
 
 /* ============ coverage section internal divider ============ */
