@@ -2965,52 +2965,32 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 
 /* ============ carriers section ============ */
 .carriers-section {
-  padding: clamp(96px, 10vw, 140px) 0;
+  padding: clamp(72px, 8vw, 108px) 0;
   background: #fff;
 }
-.carrier-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-.carrier-card {
-  background: var(--surface);
-  border-radius: 14px;
-  padding: 36px 20px 28px;
-  text-align: center;
-  border: 1px solid var(--hair);
-}
-.carrier-logo-box {
-  height: 88px;
+.carrier-strip {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  gap: clamp(32px, 5vw, 72px);
+  flex-wrap: wrap;
+  margin-top: 48px;
 }
-.carrier-logo {
-  max-height: 80px;
-  max-width: 160px;
+.cs-logo {
+  height: clamp(32px, 4vw, 52px);
   width: auto;
+  max-width: 160px;
   object-fit: contain;
+  filter: grayscale(1) brightness(0.8) opacity(0.6);
+  transition: filter 0.25s ease;
 }
-.carrier-card h3 {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-  margin-bottom: 8px;
-}
-.carrier-card p {
-  font-size: 15px;
+.cs-logo:hover { filter: grayscale(0) brightness(1) opacity(1); }
+.cs-plus {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
   color: var(--muted);
-  line-height: 1.6;
-  margin: 0;
-}
-@media (max-width: 700px) {
-  .carrier-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 440px) {
-  .carrier-grid { grid-template-columns: 1fr; }
+  white-space: nowrap;
 }
 
 /* ============ licensed sub-paragraph ============ */
