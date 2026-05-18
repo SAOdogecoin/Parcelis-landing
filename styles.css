@@ -1756,7 +1756,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
   line-height: 1.05;
 }
 .cta-big h2 em { color: rgba(255,255,255,0.6); font-style: italic; font-weight: 600; }
-.cta-big .sub { color: var(--on-dark-muted); margin: 18px auto 0; max-width: 56ch; font-size: 17px; }
+.cta-big .sub { color: var(--on-dark-muted); margin: 18px auto 0; max-width: 56ch; font-size: clamp(18px, 1.6vw, 22px); }
 .cta-big .pill {
   display: inline-flex; align-items: center; gap: 10px;
   margin-top: 44px;
@@ -3202,7 +3202,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 /* ============ cta-big sub ============ */
 .cta-big .sub {
   color: rgba(255,255,255,0.72);
-  font-size: 18px;
+  font-size: clamp(18px, 1.6vw, 22px);
   margin: 18px auto 0;
   max-width: 52ch;
 }
