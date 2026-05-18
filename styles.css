@@ -2720,6 +2720,26 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   line-height: 1.6;
 }
 
+.faq-more {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--hair);
+}
+.faq-more a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  opacity: 0.55;
+  transition: opacity 0.2s;
+}
+.faq-more a:hover {
+  opacity: 1;
+}
+
 
 /* ============ comparison table cleanup ============ */
 .ct-wrap, .compare-table .ct-wrap {
