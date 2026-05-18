@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Parcelis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=104" />
+<!-- BEGIN PLERDY CODE -->
+<script type="text/javascript" data-plerdy_code='1'>
+    var _protocol="https:"==document.location.protocol?"https://":"http://";
+    _site_hash_code = "8f93c0df6291d58962df1dd53c977215",_suid=76657, plerdyScript=document.createElement("script");
+    plerdyScript.setAttribute("defer",""),plerdyScript.dataset.plerdymainscript="plerdymainscript",
+    plerdyScript.src="https://a.plerdy.com/public/js/click/main.js?v="+Math.random();
+    var plerdymainscript=document.querySelector("[data-plerdymainscript='plerdymainscript']");
+    plerdymainscript&&plerdymainscript.parentNode.removeChild(plerdymainscript);
+    try{document.head.appendChild(plerdyScript)}catch(t){console.log(t,"unable add script tag")}
+</script>
+<!-- END PLERDY CODE -->
+<style>
+/* ===== ABOUT PAGE ===== */
+
+/* Full-bleed hero with royal blue gradient + grid overlay */
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy-800);
+  padding: 0;
+  isolation: isolate;
+  min-height: clamp(480px, 52vw, 720px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.about-hero::before {
+  content: "";
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(900px 500px at 90% 0%, rgba(100,105,255,0.45), transparent 55%),
+    radial-gradient(700px 400px at 0% 100%, rgba(30,32,153,0.6), transparent 60%),
+    var(--navy-800);
+}
+.about-hero-grid {
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse 100% 100% at 50% 0%, black 50%, transparent 100%);
+}
+.about-hero-inner {
+  position: relative; z-index: 1;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(120px, 14vw, 200px) clamp(20px, 3vw, 48px) clamp(80px, 8vw, 120px);
+}
+.about-hero-label {
+  font-size: 15px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.01em;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.about-hero h1 {
+  color: #fff;
+  font-size: clamp(48px, 7vw, 100px);
+  line-height: 1.0;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+  max-width: 14ch;
+}
+.about-hero h1 em {
+  font-style: normal;
+  color: rgba(255,255,255,0.45);
+}
+.about-hero-sub {
+  margin-top: 28px;
+  font-size: clamp(17px, 1.5vw, 20px);
+  color: rgba(255,255,255,0.65);
+  max-width: 52ch;
+  line-height: 1.55;
+}
+
+/* ===== MISSION STATEMENT ===== */
+.about-mission {
+  background: var(--bg);
+  padding: clamp(80px, 9vw, 140px) 0;
+}
+.about-mission-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 48px);
+  text-align: center;
+}
+.about-mission-label {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+.about-mission-statement {
+  font-size: clamp(28px, 3.8vw, 52px);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.about-mission-statement em {
+  font-style: normal;
+  color: var(--navy-700);
+}
+.about-mission-body {
+  margin-top: 36px;
+  font-size: clamp(17px, 1.4vw, 19px);
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 64ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== STATS ===== */
+.about-stats {
+  background: var(--surface);
+  padding: clamp(72px, 8vw, 120px) 0;
+}
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 48px);
+}
+.about-stat-card {
+  background: var(--bg);
+  border-radius: 20px;
+  padding: clamp(36px, 4vw, 56px) clamp(28px, 3vw, 44px);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+.about-stat-num {
+  font-size: clamp(44px, 5.5vw, 72px);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.about-stat-num span {
+  color: var(--navy-700);
+}
+.about-stat-label {
+  margin-top: 14px;
+  font-size: clamp(16px, 1.3vw, 18px);
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* ===== WHY CHOOSE ===== */
+.about-why {
+  background: var(--bg);
+  padding: clamp(80px, 9vw, 140px) 0;
+}
+.about-why-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 48px);
+}
+.about-why-head {
+  text-align: center;
+  margin-bottom: clamp(56px, 6vw, 80px);
+}
+.about-why-head h2 {
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+}
+.about-why-head p {
+  margin-top: 18px;
+  font-size: clamp(16px, 1.3vw, 18px);
+  color: var(--muted);
+  max-width: 56ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 72px;
+}
+.about-why-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.about-why-ic {
+  color: var(--navy-700);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.about-why-copy {}
+.about-why-copy h3 {
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.about-why-copy p {
+  font-size: clamp(15px, 1.2vw, 17px);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ===== CARRIERS ===== */
+.about-carriers {
+  background: var(--surface);
+  padding: clamp(72px, 8vw, 120px) 0;
+}
+.about-carriers-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 48px);
+  text-align: center;
+}
+.about-carriers-head h2 {
+  font-size: clamp(30px, 3.4vw, 48px);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+}
+.about-carriers-head p {
+  margin-top: 16px;
+  font-size: clamp(16px, 1.3vw, 18px);
+  color: var(--muted);
+  max-width: 52ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-carrier-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(32px, 5vw, 80px);
+  flex-wrap: wrap;
+  margin-top: clamp(48px, 5vw, 72px);
+}
+.about-carrier-name {
+  font-size: clamp(20px, 2.2vw, 30px);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  opacity: 0.65;
+  transition: opacity .15s ease;
+}
+.about-carrier-name:hover { opacity: 1; }
+
+/* ===== ADVANTAGE ===== */
+.about-advantage {
+  background: var(--bg);
+  padding: clamp(80px, 9vw, 140px) 0;
+}
+.about-advantage-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 48px);
+}
+.about-advantage-head {
+  text-align: center;
+  margin-bottom: clamp(56px, 6vw, 80px);
+}
+.about-advantage-head h2 {
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+}
+.about-advantage-head p {
+  margin-top: 18px;
+  font-size: clamp(16px, 1.3vw, 18px);
+  color: var(--muted);
+  max-width: 54ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-advantage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.about-adv-card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: clamp(32px, 3.5vw, 48px);
+}
+.about-adv-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.about-adv-ic {
+  color: var(--navy-700);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.about-adv-title {
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+.about-adv-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.about-adv-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: clamp(15px, 1.1vw, 16px);
+  color: var(--muted);
+  line-height: 1.5;
+}
+.about-adv-check {
+  color: var(--navy-700);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ===== TRUST ===== */
+.about-trust {
+  background: var(--navy-800);
+  padding: clamp(80px, 9vw, 140px) 0;
+  position: relative;
+  overflow: hidden;
+}
+.about-trust::before {
+  content: "";
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(800px 400px at 90% 50%, rgba(69,72,217,0.35), transparent 60%),
+    radial-gradient(600px 300px at 10% 80%, rgba(30,32,153,0.4), transparent 55%);
+  pointer-events: none;
+}
+.about-trust-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 48px);
+  position: relative; z-index: 1;
+}
+.about-trust-head {
+  text-align: center;
+  margin-bottom: clamp(56px, 6vw, 80px);
+}
+.about-trust-head h2 {
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.03em;
+}
+.about-trust-head p {
+  margin-top: 18px;
+  font-size: clamp(16px, 1.3vw, 18px);
+  color: rgba(255,255,255,0.6);
+  max-width: 54ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.about-trust-item {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: clamp(24px, 3vw, 36px);
+}
+.about-trust-ic {
+  color: rgba(255,255,255,0.6);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.about-trust-copy h3 {
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.about-trust-copy p {
+  font-size: clamp(15px, 1.1vw, 17px);
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .about-why-grid { grid-template-columns: 1fr; gap: 36px; }
+  .about-advantage-grid { grid-template-columns: 1fr; }
+  .about-trust-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .about-stats-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- =================== NAV =================== -->
+<header class="nav nav-v2">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="Parcelis home">
+      <img class="brand-logo" src="assets/Logo.png" alt="Parcelis" />
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="how-it-works.html">Product</a>
+      <a href="pricing.html">Pricing</a>
+      <div class="nav-dropdown-wrap">
+        <a href="resources.html" class="nav-dropdown-trigger">Resources <svg class="nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="resources.html">Blog</a>
+          <div class="dd-divider"></div>
+          <a href="faq.html">FAQ</a>
+          <a href="roi-calculator.html">ROI Calculator</a>
+        </div>
+      </div>
+      <a href="about.html" class="active">About</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-link btn-sm" href="#">Log in</a>
+      <a class="btn btn-primary btn-sm" href="#">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- =================== HERO =================== -->
+<section class="about-hero">
+  <div class="about-hero-grid"></div>
+  <div class="about-hero-inner">
+    <div class="about-hero-label reveal">Built for e-commerce</div>
+    <h1 class="reveal" data-delay="1">Built for<br/>merchants.<br/><em>Backed by<br/>real insurance.</em></h1>
+    <p class="about-hero-sub reveal" data-delay="2">Parcelis is a technology-driven protection platform that turns shipping risk into a revenue stream — with zero claims work for merchants.</p>
+  </div>
+</section>
+
+<!-- =================== MISSION =================== -->
+<section class="about-mission">
+  <div class="about-mission-inner">
+    <div class="about-mission-label reveal">Our mission</div>
+    <p class="about-mission-statement reveal" data-delay="1">
+      Help every e-commerce brand deliver<br/><em>peace of mind</em> at every doorstep.
+    </p>
+    <p class="about-mission-body reveal" data-delay="2">
+      Package loss and damage shouldn't be merchants' problems to solve. We built Parcelis to take claims entirely off your plate — customers get fast, fair resolutions; you get protected revenue and a better post-purchase experience. Powered by InsureShip, the licensed carrier behind our protection, this is real, regulated insurance — not a tech workaround.
+    </p>
+  </div>
+</section>
+
+<!-- =================== STATS =================== -->
+<section class="about-stats">
+  <div class="about-stats-grid">
+    <div class="about-stat-card reveal" data-delay="1">
+      <div class="about-stat-num"><span>5</span>–7 days</div>
+      <div class="about-stat-label">Average claim resolution time.<br/>Customers file, we close it.</div>
+    </div>
+    <div class="about-stat-card reveal" data-delay="2">
+      <div class="about-stat-num">$<span>25k</span></div>
+      <div class="about-stat-label">Maximum coverage per shipment.<br/>Across all major carriers.</div>
+    </div>
+    <div class="about-stat-card reveal" data-delay="3">
+      <div class="about-stat-num"><span>0</span> fees</div>
+      <div class="about-stat-label">Free to install and operate.<br/>You earn a revenue share.</div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== WHY CHOOSE =================== -->
+<section class="about-why">
+  <div class="about-why-inner">
+    <div class="about-why-head">
+      <h2 class="reveal">Why leading brands<br/>choose Parcelis</h2>
+      <p class="reveal" data-delay="1">Four pillars that set us apart from carrier insurance and store credit alternatives.</p>
+    </div>
+    <div class="about-why-grid">
+
+      <div class="about-why-item reveal" data-delay="1">
+        <div class="about-why-ic">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="about-why-copy">
+          <h3>Insurance expertise</h3>
+          <p>Powered by InsureShip with DOI licenses across all operating states. Real regulated insurance — not a store credit policy or tech workaround that leaves customers underprotected.</p>
+        </div>
+      </div>
+
+      <div class="about-why-item reveal" data-delay="2">
+        <div class="about-why-ic">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div class="about-why-copy">
+          <h3>Merchant trust</h3>
+          <p>Merchants never touch a claim. Customers file directly, professional adjusters handle it end-to-end. You get a notification when it closes — that's the entire workflow on your side.</p>
+        </div>
+      </div>
+
+      <div class="about-why-item reveal" data-delay="3">
+        <div class="about-why-ic">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <div class="about-why-copy">
+          <h3>Seamless integration</h3>
+          <p>One-click install from the Shopify App Store. Native plugins for WooCommerce, BigCommerce, Magento, and NEXT Commerce. A custom API for headless storefronts. Protection appears at checkout automatically.</p>
+        </div>
+      </div>
+
+      <div class="about-why-item reveal" data-delay="4">
+        <div class="about-why-ic">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <div class="about-why-copy">
+          <h3>Global coverage</h3>
+          <p>All major domestic and international carriers — USPS, UPS, FedEx, DHL — plus regional and international carriers. No geographic limitations. Coverage is applied automatically at checkout.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== CARRIERS =================== -->
+<section class="about-carriers">
+  <div class="about-carriers-inner">
+    <div class="about-carriers-head">
+      <h2 class="reveal">Comprehensive carrier coverage</h2>
+      <p class="reveal" data-delay="1">Every major shipping carrier, automatically detected at checkout. No manual configuration needed.</p>
+    </div>
+    <div class="about-carrier-logos reveal" data-delay="2">
+      <span class="about-carrier-name">USPS</span>
+      <span class="about-carrier-name">UPS</span>
+      <span class="about-carrier-name">FedEx</span>
+      <span class="about-carrier-name">DHL</span>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ADVANTAGE =================== -->
+<section class="about-advantage">
+  <div class="about-advantage-inner">
+    <div class="about-advantage-head">
+      <h2 class="reveal">The Parcelis advantage</h2>
+      <p class="reveal" data-delay="1">Three dimensions where Parcelis outperforms carrier insurance and manual claims handling.</p>
+    </div>
+    <div class="about-advantage-grid">
+
+      <div class="about-adv-card reveal" data-delay="1">
+        <div class="about-adv-card-head">
+          <div class="about-adv-ic">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="2"/>
+              <path d="M16 8h4l3 5v3h-7V8z"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <div class="about-adv-title">Hassle-free protection</div>
+        </div>
+        <ul class="about-adv-list">
+          <li>
+            <svg class="about-adv-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Customers opt in at checkout — you keep a revenue share
+          </li>
+          <li>
+            <svg class="about-adv-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Claims filed directly through Parcelis portal in under 2 minutes
+          </li>
+          <li>
+            <svg class="about-adv-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Carrier data pulled automatically — no documentation chasing
+          </li>
+          <li>
+            <svg class="about-adv-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            5–7 day resolution — not the 30–60 days of carrier insurance
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-adv-card reveal" data-delay="2">
+        <div class="about-adv-card-head">
+          <div class="about-adv-ic">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+          </div>
+          <div class="about-adv-title">Operational efficiency</div>
+        </div>
+        <ul class="about-adv-list">
+          <li>
+            <svg class="about-adv-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Zero merchant involvement in the claims process
+          </li>
+          <li>
+            <svg class="about-adv-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            No more eating the cost of lost or stolen packages
+          </li>
+          <li>
+            <svg class="about-adv-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Real-time dashboard — see every protected order at a glance
+          </li>
+          <li>
+            <svg class="about-adv-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            No setup fees, no monthly minimums, no long-term contracts
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-adv-card reveal" data-delay="3">
+        <div class="about-adv-card-head">
+          <div class="about-adv-ic">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <div class="about-adv-title">True partnership</div>
+        </div>
+        <ul class="about-adv-list">
+          <li>
+            <svg class="about-adv-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            You earn a revenue share on every protected order placed
+          </li>
+          <li>
+            <svg class="about-adv-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Branded claims portal keeps your customer experience intact
+          </li>
+          <li>
+            <svg class="about-adv-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Dedicated merchant success support from onboarding onward
+          </li>
+          <li>
+            <svg class="about-adv-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Month-to-month — no lock-in, no penalty for leaving
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== TRUST =================== -->
+<section class="about-trust">
+  <div class="about-trust-inner">
+    <div class="about-trust-head">
+      <h2 class="reveal">Built on trust and transparency</h2>
+      <p class="reveal" data-delay="1">The foundation that makes Parcelis the standard for e-commerce package protection.</p>
+    </div>
+    <div class="about-trust-grid">
+
+      <div class="about-trust-item reveal" data-delay="1">
+        <div class="about-trust-ic">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+        </div>
+        <div class="about-trust-copy">
+          <h3>Regulatory compliance</h3>
+          <p>InsureShip holds DOI licenses in all operating states. Full regulatory oversight — every policy is compliant, every claim is legally protected.</p>
+        </div>
+      </div>
+
+      <div class="about-trust-item reveal" data-delay="2">
+        <div class="about-trust-ic">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <polyline points="23 11 17 17 14 14"/>
+          </svg>
+        </div>
+        <div class="about-trust-copy">
+          <h3>Customer confidence</h3>
+          <p>Customers know exactly what they're paying for and what's covered. Transparent policies, fast payouts, and a smooth claims experience build long-term loyalty.</p>
+        </div>
+      </div>
+
+      <div class="about-trust-item reveal" data-delay="3">
+        <div class="about-trust-ic">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+        </div>
+        <div class="about-trust-copy">
+          <h3>Operational excellence</h3>
+          <p>Professional adjusters, automated carrier data retrieval, and a merchant dashboard built for clarity. Everything works without you lifting a finger.</p>
+        </div>
+      </div>
+
+      <div class="about-trust-item reveal" data-delay="4">
+        <div class="about-trust-ic">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <div class="about-trust-copy">
+          <h3>Industry leadership</h3>
+          <p>Setting the standard for e-commerce package protection through real insurance infrastructure, merchant-first economics, and a claims experience that outperforms every alternative.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== CTA =================== -->
+<section class="cta-big">
+  <div class="wrap">
+    <h2>Ready to protect your shipments?</h2>
+    <p class="sub">Install Parcelis in minutes — no setup fees, no contracts, no claims work for you.</p>
+    <a class="pill" href="#">Get Started Free <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    <div class="explore">
+      <a href="how-it-works.html">See how it works <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="contact.html">Talk to our team <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =================== FOOTER =================== -->
+<footer class="footer-v2">
+  <div class="wrap">
+    <div class="footer-card">
+      <div>
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="assets/Logo.png" alt="Parcelis" />
+        </a>
+        <p class="blurb">Turn package protection into profit. Zero hassle. Real insurance.</p>
+        <p class="trust-strip">Licensed package protection backed by InsureShip.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <p class="footer-copyright">© 2026 PARCELIS. All rights reserved.</p>
+      </div>
+      <div>
+        <h3>Product</h3>
+        <ul>
+          <li><a href="how-it-works.html">Product</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="roi-calculator.html">Risk Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Get Parcelis</a></li>
+          <li><a href="resources.html">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Affiliate Program</a></li>
+        </ul>
+        <h3 style="margin-top: 36px;">Contact</h3>
+        <ul>
+          <li>
+            <a href="mailto:hello@myparcelis.com" class="footer-email-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              hello@myparcelis.com
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js?v=23"></script>
+<script src="tweaks.js?v=3"></script>
+</body>
+</html>
