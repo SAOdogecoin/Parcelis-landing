@@ -3790,9 +3790,9 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   object-fit: contain;
 }
 .ic-logo-woo { height: 26px; }
-.ic-logo-wide { height: 42px; max-width: 180px; }
+.ic-logo-wide { height: 52px; max-width: 200px; }
 .ic-logo-magento { height: 32px; max-width: 130px; }
-.ic-logo-next { height: 30px; max-width: 120px; }
+.ic-logo-next { height: 40px; max-width: 140px; }
 .ig-logo {
   height: 34px;
   width: auto;
