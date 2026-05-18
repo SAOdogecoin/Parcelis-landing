@@ -148,11 +148,27 @@
   letter-spacing: -0.04em;
   line-height: 1;
 }
+.about-stat-unit {
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 600;
+  color: var(--navy-700);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-top: 4px;
+}
 .about-stat-label {
-  margin-top: 14px;
-  font-size: clamp(16px, 1.3vw, 18px);
+  margin-top: 18px;
+  font-size: 15px;
   color: var(--muted);
-  line-height: 1.45;
+  line-height: 1.55;
+}
+.about-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy-700);
+  margin-bottom: 20px;
 }
 
 /* ===== WHY CHOOSE ===== */
@@ -448,8 +464,9 @@
 <!-- =================== MISSION =================== -->
 <section class="about-mission">
   <div class="about-mission-inner">
+    <div class="about-eyebrow reveal">Our Story</div>
     <p class="about-mission-statement reveal" data-delay="1">
-      Help every e-commerce brand deliver<br/><em>peace of mind</em> at every doorstep.
+      Help every <span style="white-space:nowrap">e-commerce</span> brand deliver<br/><em>peace of mind</em> at every doorstep.
     </p>
     <p class="about-mission-body reveal" data-delay="2">
       Package loss and damage shouldn't be merchants' problems to solve. We built Parcelis to take claims entirely off your plate — customers get fast, fair resolutions; you get protected revenue and a better post-purchase experience. Powered by InsureShip, the licensed carrier behind our protection, this is real, regulated insurance — not a tech workaround.
@@ -461,15 +478,18 @@
 <section class="about-stats">
   <div class="about-stats-grid">
     <div class="about-stat-card reveal" data-delay="1">
-      <div class="about-stat-num">5–7 days</div>
+      <div class="about-stat-num">5–7</div>
+      <div class="about-stat-unit">days</div>
       <div class="about-stat-label">Average claim resolution time. Customers file, we close it.</div>
     </div>
     <div class="about-stat-card reveal" data-delay="2">
       <div class="about-stat-num">$25k</div>
+      <div class="about-stat-unit">USD</div>
       <div class="about-stat-label">Maximum coverage per shipment. Across all major carriers.</div>
     </div>
     <div class="about-stat-card reveal" data-delay="3">
-      <div class="about-stat-num">0 fees</div>
+      <div class="about-stat-num">0</div>
+      <div class="about-stat-unit">fees</div>
       <div class="about-stat-label">Free to install and operate. You earn a revenue share.</div>
     </div>
   </div>
