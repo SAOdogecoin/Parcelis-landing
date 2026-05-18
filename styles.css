@@ -2963,6 +2963,18 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   .wc-col { padding: 28px 24px; }
 }
 
+/* ============ carrier strip merged into coverage section ============ */
+.cov-carrier-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(32px, 5vw, 72px);
+  flex-wrap: wrap;
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--hair);
+}
+
 /* ============ carriers section ============ */
 .carriers-section {
   padding: clamp(72px, 8vw, 108px) 0;
