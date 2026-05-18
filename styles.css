@@ -1233,16 +1233,16 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 /* ============ nav v2 ============ */
 .nav-v2 {
   position: fixed; top: 0; left: 0; right: 0; z-index: 50;
-  background: transparent !important;
+  background: var(--navy-700) !important;
   color: #fff;
   border-bottom: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  transition: background .25s ease;
+  transition: background .3s ease;
 }
 .nav-v2.scrolled {
   background:
-    radial-gradient(700px 160px at 100% 50%, rgba(69,72,217,0.5) 0%, transparent 60%),
+    radial-gradient(700px 160px at 100% 50%, rgba(69,72,217,0.4) 0%, transparent 60%),
     var(--navy-800) !important;
   border-bottom: none !important;
   backdrop-filter: none !important;
@@ -1250,7 +1250,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 }
 .nav-v2.nav-opaque {
   background:
-    radial-gradient(700px 160px at 100% 50%, rgba(69,72,217,0.5) 0%, transparent 60%),
+    radial-gradient(700px 160px at 100% 50%, rgba(69,72,217,0.4) 0%, transparent 60%),
     var(--navy-800) !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
@@ -2721,19 +2721,20 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 
 .faq-more {
-  margin-top: 40px;
-  padding-top: 32px;
+  margin-top: 48px;
+  padding-top: 40px;
   border-top: 1px solid var(--hair);
+  text-align: center;
 }
 .faq-more a {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 15px;
+  gap: 8px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--ink);
   text-decoration: none;
-  opacity: 0.55;
+  opacity: 0.6;
   transition: opacity 0.2s;
 }
 .faq-more a:hover {
