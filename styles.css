@@ -2964,7 +2964,26 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   border-radius: 12px;
   padding: 36px 32px;
 }
-.wc-col-left { background: var(--surface); }
+.wc-col-left {
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+.wc-col-left::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  bottom: -100px;
+  right: -80px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(72px);
+  background: radial-gradient(circle, rgba(139,92,246,0.26) 0%, rgba(99,102,241,0.13) 45%, transparent 70%);
+  z-index: 0;
+}
+.wc-col-left .wc-col-title,
+.wc-col-left .wc-list { position: relative; z-index: 1; }
 .wc-col-right { background: rgba(13,18,64,0.04); }
 .wc-col-title {
   font-size: 22px;
