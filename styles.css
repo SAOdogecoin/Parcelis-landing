@@ -2963,6 +2963,14 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   .wc-col { padding: 28px 24px; }
 }
 
+/* ============ coverage section internal divider ============ */
+.cov-divider {
+  border: none;
+  border-top: 1px solid var(--hair);
+  margin: 64px 0;
+}
+.coverage-section .wc-grid { margin-top: 0; }
+
 /* ============ carrier strip merged into coverage section ============ */
 .cov-carrier-strip {
   display: flex;
