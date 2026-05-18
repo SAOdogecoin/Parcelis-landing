@@ -7,7 +7,64 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=102" />
+<link rel="stylesheet" href="styles.css?v=104" />
+<style>
+/* ===== PRODUCT PAGE ANIMATIONS ===== */
+
+/* Hero stagger */
+.hiw-hero h1 { opacity: 0; transform: translateY(28px); animation: hiw-fade-up 0.7s cubic-bezier(.22,1,.36,1) 0.1s forwards; }
+.hiw-hero .sub { opacity: 0; transform: translateY(22px); animation: hiw-fade-up 0.7s cubic-bezier(.22,1,.36,1) 0.28s forwards; }
+.hiw-hero .hero-cta { opacity: 0; transform: translateY(18px); animation: hiw-fade-up 0.65s cubic-bezier(.22,1,.36,1) 0.44s forwards; }
+@keyframes hiw-fade-up {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Step icons float */
+@keyframes hiw-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.hiw-step-card:hover .hiw-step-ic { animation: hiw-float 2s ease-in-out infinite; }
+
+/* Step card hover lift */
+.hiw-step-card {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.hiw-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px -8px rgba(44,46,179,0.18);
+}
+
+/* Step number count-up shimmer */
+.hiw-step-num-lg {
+  transition: color 0.2s ease;
+}
+.hiw-step-outer:hover .hiw-step-num-lg {
+  color: var(--navy-700);
+}
+
+/* Integration card hover */
+.ic-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px -6px rgba(44,46,179,0.14);
+}
+
+/* Live badge pulse */
+@keyframes hiw-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+.ic-live::before {
+  display: inline-block;
+  animation: hiw-pulse 2s ease-in-out infinite;
+}
+
+/* FAQ item reveal */
+.faq-item { transition: background 0.15s ease; }
+</style>
 <!-- BEGIN PLERDY CODE -->
 <script type="text/javascript" data-plerdy_code='1'>
     var _protocol="https:"==document.location.protocol?"https://":"http://";
@@ -64,11 +121,11 @@
 <!-- =================== STEP CARDS (dark, extends hero) =================== -->
 <section class="hiw-steps-dark">
   <div class="wrap">
-    <div class="hiw-steps-dark-head">
+    <div class="hiw-steps-dark-head reveal">
       <h2>How Parcelis Works</h2>
     </div>
     <div class="hiw-steps-grid">
-      <div class="hiw-step-outer">
+      <div class="hiw-step-outer reveal" data-delay="1">
         <div class="hiw-step-num-lg">01</div>
         <div class="hiw-step-card">
           <div class="hiw-step-ic">
@@ -78,7 +135,7 @@
           <p>Connect Parcelis via our Shopify, WooCommerce, or API integration in minutes. No coding, no contracts — just instant coverage for your customers.</p>
         </div>
       </div>
-      <div class="hiw-step-outer">
+      <div class="hiw-step-outer reveal" data-delay="2">
         <div class="hiw-step-num-lg">02</div>
         <div class="hiw-step-card">
           <div class="hiw-step-ic">
@@ -88,7 +145,7 @@
           <p>At checkout, customers can opt-in to protect their order against loss, damage, or theft — giving them confidence to complete their purchase.</p>
         </div>
       </div>
-      <div class="hiw-step-outer">
+      <div class="hiw-step-outer reveal" data-delay="3">
         <div class="hiw-step-num-lg">03</div>
         <div class="hiw-step-card">
           <div class="hiw-step-ic">
@@ -98,7 +155,7 @@
           <p>If a package goes missing or arrives damaged, customers submit claims directly through our self-service portal. Our team resolves every claim in 5–7 days.</p>
         </div>
       </div>
-      <div class="hiw-step-outer">
+      <div class="hiw-step-outer reveal" data-delay="4">
         <div class="hiw-step-num-lg">04</div>
         <div class="hiw-step-card">
           <div class="hiw-step-ic">
@@ -115,11 +172,11 @@
 <!-- =================== VIDEO SECTION =================== -->
 <section class="hiw-video-section">
   <div class="wrap">
-    <div class="hiw-video-head">
+    <div class="hiw-video-head reveal">
       <h2>See Parcelis in action.</h2>
       <p>From install to first payout — shipping protection that runs itself.</p>
     </div>
-    <div class="hiw-video-wrap">
+    <div class="hiw-video-wrap reveal" data-delay="1">
       <iframe src="https://www.youtube.com/embed/TkN1HsoIGhc" title="Parcelis — How it works" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </div>
@@ -128,11 +185,11 @@
 <!-- =================== INTEGRATIONS =================== -->
 <section class="integrations-compact" id="integrations">
   <div class="wrap">
-    <div class="ic-head">
+    <div class="ic-head reveal">
       <h2>Plugs into every store.</h2>
     </div>
     <div class="ic-grid">
-      <div class="ic-card">
+      <div class="ic-card reveal" data-delay="1">
         <div class="ic-logo-box"><img src="assets/Shopify.svg" alt="Shopify" class="ic-logo"></div>
         <div class="ic-name-row">
           <span class="ic-title">Shopify</span>
@@ -141,7 +198,7 @@
         <p>One-click via Shopify App Store.</p>
         <a class="ic-link" href="#">Install app →</a>
       </div>
-      <div class="ic-card">
+      <div class="ic-card reveal" data-delay="2">
         <div class="ic-logo-box"><img src="assets/Next.png" alt="NEXT Commerce" class="ic-logo ic-logo-next"></div>
         <div class="ic-name-row">
           <span class="ic-title">NEXT Commerce</span>
@@ -150,7 +207,7 @@
         <p>Checkout-level integration.</p>
         <a class="ic-link" href="#">Install →</a>
       </div>
-      <div class="ic-card">
+      <div class="ic-card reveal" data-delay="3">
         <div class="ic-logo-box"><img src="assets/Woo.svg" alt="WooCommerce" class="ic-logo ic-logo-woo"></div>
         <div class="ic-name-row">
           <span class="ic-title">WooCommerce</span>
@@ -159,7 +216,7 @@
         <p>Plugin for WordPress.</p>
         <a class="ic-link" href="#">Get plugin →</a>
       </div>
-      <div class="ic-card">
+      <div class="ic-card reveal" data-delay="4">
         <div class="ic-logo-box"><img src="assets/bigcommerce.svg" alt="BigCommerce" class="ic-logo ic-logo-wide"></div>
         <div class="ic-name-row">
           <span class="ic-title">BigCommerce</span>
@@ -168,7 +225,7 @@
         <p>Native integration.</p>
         <a class="ic-link" href="#">Install →</a>
       </div>
-      <div class="ic-card">
+      <div class="ic-card reveal" data-delay="5">
         <div class="ic-logo-box"><img src="assets/magento.svg" alt="Magento" class="ic-logo ic-logo-magento"></div>
         <div class="ic-name-row">
           <span class="ic-title">Magento</span>
@@ -177,7 +234,7 @@
         <p>Adobe Commerce extension.</p>
         <a class="ic-link" href="#">Install extension →</a>
       </div>
-      <div class="ic-card">
+      <div class="ic-card reveal" data-delay="6">
         <div class="ic-logo-box"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
         <div class="ic-name-row">
           <span class="ic-title">Custom API</span>
@@ -193,27 +250,27 @@
 <!-- =================== FAQ =================== -->
 <section class="faq-v2" id="faq">
   <div class="wrap">
-    <div class="faq-head">
+    <div class="faq-head reveal">
       <h2>Questions.</h2>
     </div>
     <div class="faq-list">
-      <details class="faq-item" open>
+      <details class="faq-item reveal" data-delay="1" open>
         <summary>Do I need to do anything when a claim is filed?<span class="faq-x"></span></summary>
         <div class="faq-ans">No. Customers file directly through our portal. Parcelis handles resolution end-to-end — you get a notification when it's closed.</div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item reveal" data-delay="2">
         <summary>What carriers are covered?<span class="faq-x"></span></summary>
         <div class="faq-ans">All major carriers — USPS, UPS, FedEx, DHL — plus regional and international carriers. Coverage is detected automatically at checkout based on the shipping method selected.</div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item reveal" data-delay="3">
         <summary>How does the customer file a claim?<span class="faq-x"></span></summary>
         <div class="faq-ans">Through a branded claims portal hosted by Parcelis. It takes under 2 minutes to submit. No merchant involvement required.</div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item reveal" data-delay="4">
         <summary>How long does resolution take?<span class="faq-x"></span></summary>
         <div class="faq-ans">5–7 business days. Professional adjusters handle the review. Carrier data is pulled automatically so your customer doesn't have to chase documentation.</div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item reveal" data-delay="5">
         <summary>What does it cost?<span class="faq-x"></span></summary>
         <div class="faq-ans">Free to install. No setup fee. Customers pay the premium at checkout — you keep a share on every protected order.</div>
       </details>
