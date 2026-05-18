@@ -20,49 +20,50 @@
 </script>
 <!-- END PLERDY CODE -->
 <style>
-  /* ── Contact hero ─────────────────────────────── */
+  /* ── Hero ─────────────────────────────────────── */
   .contact-hero {
-    background: var(--navy-700);
-    color: #fff;
-    padding: clamp(100px, 10vw, 148px) 0 clamp(64px, 7vw, 96px);
+    background: var(--surface);
+    padding: clamp(96px, 10vw, 148px) 0 clamp(64px, 7vw, 96px);
     text-align: center;
+    border-bottom: 1px solid var(--hair);
   }
   .contact-hero h1 {
     font-size: clamp(40px, 6vw, 72px);
     font-weight: 700;
     letter-spacing: -0.035em;
     line-height: 1.05;
+    color: var(--ink);
     margin-bottom: 20px;
   }
   .contact-hero p {
-    font-size: clamp(18px, 2vw, 22px);
-    color: rgba(255,255,255,0.65);
-    max-width: 480px;
+    font-size: clamp(18px, 1.6vw, 22px);
+    color: var(--muted);
+    max-width: 48ch;
     line-height: 1.6;
     margin: 0 auto;
   }
 
-  /* ── Contact body layout ──────────────────────── */
+  /* ── Body layout ──────────────────────────────── */
   .contact-body {
     padding: clamp(72px, 8vw, 120px) 0 clamp(96px, 10vw, 140px);
   }
   .contact-layout {
     display: grid;
-    grid-template-columns: 1fr 1.6fr;
-    gap: clamp(48px, 6vw, 96px);
+    grid-template-columns: 1fr 1.8fr;
+    gap: clamp(48px, 7vw, 112px);
     align-items: start;
   }
 
-  /* ── Left: info column ────────────────────────── */
+  /* ── Left info ────────────────────────────────── */
   .contact-info h2 {
-    font-size: clamp(24px, 2.8vw, 34px);
+    font-size: clamp(22px, 2.6vw, 32px);
     font-weight: 700;
     letter-spacing: -0.025em;
     line-height: 1.2;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
   .contact-info > p {
-    font-size: 18px;
+    font-size: clamp(18px, 1.6vw, 20px);
     color: var(--muted);
     line-height: 1.65;
     margin-bottom: 52px;
@@ -72,43 +73,37 @@
     flex-direction: column;
     gap: 36px;
   }
-  .contact-reach-item {
+  .cr-item {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
   }
-  .contact-reach-item .cr-label {
+  .cr-item .cr-label {
     font-size: 14px;
     font-weight: 500;
     color: var(--muted);
   }
-  .contact-reach-item .cr-val {
+  .cr-item .cr-val {
     font-size: 19px;
     font-weight: 600;
     color: var(--ink);
   }
-  .contact-reach-item .cr-val a {
+  .cr-item .cr-val a {
     color: inherit;
     text-decoration: none;
     border-bottom: 1px solid var(--hair);
     transition: border-color 0.2s;
   }
-  .contact-reach-item .cr-val a:hover {
-    border-color: var(--ink);
-  }
-  .contact-reach-item .cr-sub {
+  .cr-item .cr-val a:hover { border-color: var(--ink); }
+  .cr-item .cr-sub {
     font-size: 15px;
     color: var(--muted);
   }
 
-  /* ── Right: form ──────────────────────────────── */
-  .contact-form-wrap {
-    padding-top: 4px;
-  }
+  /* ── Form ─────────────────────────────────────── */
   .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 0;
   }
   .cf-row {
     display: grid;
@@ -145,29 +140,26 @@
   .cf-field input::placeholder,
   .cf-field textarea::placeholder {
     color: var(--muted);
-    opacity: 0.45;
+    opacity: 0.4;
   }
   .cf-field select {
     cursor: pointer;
     color: var(--muted);
     opacity: 0.7;
   }
-  .cf-field select.filled {
-    color: var(--ink);
-    opacity: 1;
-  }
+  .cf-field select.filled { color: var(--ink); opacity: 1; }
   .cf-field textarea {
     resize: none;
     min-height: 130px;
     line-height: 1.6;
   }
-  .cf-submit {
-    margin-top: 44px;
+  .cf-actions {
+    margin-top: 40px;
     display: flex;
     align-items: center;
     gap: 24px;
   }
-  .cf-submit button {
+  .cf-actions button {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -177,74 +169,61 @@
     border-radius: 100px;
     padding: 15px 34px;
     font-family: var(--font-sans);
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
   }
-  .cf-submit button:hover {
-    background: var(--navy-700);
-  }
-  .cf-submit .cf-note {
-    font-size: 15px;
+  .cf-actions button:hover { background: var(--navy-700); }
+  .cf-actions .cf-note {
+    font-size: 16px;
     color: var(--muted);
   }
 
-  /* ── Other ways section ───────────────────────── */
+  /* ── Other ways ───────────────────────────────── */
   .contact-alt {
-    padding: clamp(64px, 6vw, 96px) 0;
+    padding: clamp(72px, 7vw, 104px) 0;
+    background: var(--surface);
     border-top: 1px solid var(--hair);
   }
   .contact-alt-head {
     text-align: center;
-    margin-bottom: 56px;
+    margin-bottom: 64px;
   }
   .contact-alt-head h2 {
-    font-size: clamp(26px, 3vw, 38px);
+    font-size: clamp(28px, 3.2vw, 42px);
     font-weight: 700;
     letter-spacing: -0.025em;
     margin-bottom: 12px;
   }
   .contact-alt-head p {
-    font-size: 18px;
+    font-size: clamp(18px, 1.6vw, 20px);
     color: var(--muted);
   }
   .contact-alt-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0;
+    gap: 48px;
   }
-  .contact-alt-item {
-    padding: 0 40px 0 0;
-    border-right: 1px solid var(--hair);
-  }
-  .contact-alt-item:last-child {
-    border-right: none;
-    padding-right: 0;
-    padding-left: 40px;
-  }
-  .contact-alt-item:nth-child(2) {
-    padding-left: 40px;
-  }
-  .contact-alt-item svg {
+  .ca-item svg {
     color: var(--ink);
     margin-bottom: 20px;
     display: block;
   }
-  .contact-alt-item h3 {
-    font-size: 20px;
+  .ca-item h3 {
+    font-size: 21px;
     font-weight: 600;
-    letter-spacing: -0.01em;
-    margin-bottom: 8px;
+    letter-spacing: -0.015em;
+    margin-bottom: 10px;
   }
-  .contact-alt-item p {
-    font-size: 16px;
+  .ca-item p {
+    font-size: 17px;
     color: var(--muted);
-    line-height: 1.55;
+    line-height: 1.6;
     margin-bottom: 20px;
   }
-  .contact-alt-item a.alt-link {
-    font-size: 15px;
+  .ca-item a.ca-link {
+    font-size: 16px;
     font-weight: 500;
     color: var(--ink);
     text-decoration: none;
@@ -255,35 +234,13 @@
     padding-bottom: 2px;
     transition: border-color 0.2s;
   }
-  .contact-alt-item a.alt-link:hover {
-    border-color: var(--ink);
-  }
+  .ca-item a.ca-link:hover { border-color: var(--ink); }
 
   /* ── Responsive ───────────────────────────────── */
   @media (max-width: 768px) {
-    .contact-layout {
-      grid-template-columns: 1fr;
-    }
-    .cf-row {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-    .contact-alt-grid {
-      grid-template-columns: 1fr;
-      gap: 48px;
-    }
-    .contact-alt-item {
-      border-right: none;
-      padding: 0 0 48px;
-      border-bottom: 1px solid var(--hair);
-    }
-    .contact-alt-item:last-child {
-      border-bottom: none;
-      padding: 0;
-    }
-    .contact-alt-item:nth-child(2) {
-      padding-left: 0;
-    }
+    .contact-layout { grid-template-columns: 1fr; }
+    .cf-row { grid-template-columns: 1fr; }
+    .contact-alt-grid { grid-template-columns: 1fr; gap: 40px; }
   }
 </style>
 </head>
@@ -326,28 +283,27 @@
   </div>
 </section>
 
-<!-- =================== CONTACT BODY =================== -->
+<!-- =================== FORM =================== -->
 <section class="contact-body">
   <div class="wrap">
     <div class="contact-layout">
 
-      <!-- Left: info -->
+      <!-- Left -->
       <div class="contact-info reveal">
         <h2>We'll get back to you within 24–48 hours.</h2>
         <p>Use the form for general inquiries, partnership questions, or technical issues. For urgent support, email us directly.</p>
-
         <div class="contact-reach">
-          <div class="contact-reach-item">
+          <div class="cr-item">
             <span class="cr-label">Email</span>
             <span class="cr-val"><a href="mailto:hello@myparcelis.com">hello@myparcelis.com</a></span>
             <span class="cr-sub">General inquiries</span>
           </div>
-          <div class="contact-reach-item">
+          <div class="cr-item">
             <span class="cr-label">Support</span>
             <span class="cr-val"><a href="mailto:support@myparcelis.com">support@myparcelis.com</a></span>
             <span class="cr-sub">Account &amp; technical issues</span>
           </div>
-          <div class="contact-reach-item">
+          <div class="cr-item">
             <span class="cr-label">Response time</span>
             <span class="cr-val">24–48 hours</span>
             <span class="cr-sub">Monday – Friday</span>
@@ -356,7 +312,7 @@
       </div>
 
       <!-- Right: form -->
-      <div class="contact-form-wrap reveal" data-delay="2">
+      <div class="reveal" data-delay="2">
         <form class="contact-form" action="#" method="POST">
           <div class="cf-row">
             <div class="cf-field">
@@ -390,7 +346,7 @@
             <label for="cf-message">Message</label>
             <textarea id="cf-message" name="message" placeholder="Tell us how we can help..." required></textarea>
           </div>
-          <div class="cf-submit">
+          <div class="cf-actions">
             <button type="submit">
               Send message
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -412,37 +368,33 @@
       <p>Not a form person? Reach us directly or find answers yourself.</p>
     </div>
     <div class="contact-alt-grid">
-
-      <div class="contact-alt-item reveal" data-delay="1">
+      <div class="ca-item reveal" data-delay="1">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         <h3>Email directly</h3>
         <p>Reach our team at any time. Best for detailed technical questions.</p>
-        <a href="mailto:hello@myparcelis.com" class="alt-link">
+        <a href="mailto:hello@myparcelis.com" class="ca-link">
           hello@myparcelis.com
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
       </div>
-
-      <div class="contact-alt-item reveal" data-delay="2">
+      <div class="ca-item reveal" data-delay="2">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
         <h3>Get Parcelis</h3>
         <p>Install in minutes from the Shopify App Store or your platform.</p>
-        <a href="#" class="alt-link">
+        <a href="#" class="ca-link">
           Install now
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
       </div>
-
-      <div class="contact-alt-item reveal" data-delay="3">
+      <div class="ca-item reveal" data-delay="3">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         <h3>Browse the FAQ</h3>
         <p>Quick answers to the most common questions about coverage and claims.</p>
-        <a href="faq.html" class="alt-link">
+        <a href="faq.html" class="ca-link">
           View all questions
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
       </div>
-
     </div>
   </div>
 </section>
