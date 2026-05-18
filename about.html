@@ -122,6 +122,34 @@
 .about-stats {
   background: var(--surface);
   padding: clamp(72px, 8vw, 120px) 0;
+  position: relative;
+  overflow: hidden;
+}
+.about-stats::before,
+.about-stats::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+}
+.about-stats::before {
+  width: 560px;
+  height: 560px;
+  top: -140px;
+  left: -80px;
+  background: radial-gradient(circle, rgba(99,102,241,0.13) 0%, rgba(44,46,179,0.07) 50%, transparent 70%);
+}
+.about-stats::after {
+  width: 480px;
+  height: 480px;
+  bottom: -120px;
+  right: -60px;
+  background: radial-gradient(circle, rgba(139,92,246,0.11) 0%, rgba(44,46,179,0.06) 50%, transparent 70%);
+}
+.about-stats-wrap {
+  position: relative;
+  z-index: 1;
 }
 .about-stats-grid {
   display: grid;
@@ -493,6 +521,7 @@
 
 <!-- =================== STATS =================== -->
 <section class="about-stats">
+  <div class="about-stats-wrap">
   <div class="about-stats-header reveal">
     <h2>By the numbers</h2>
     <p>Fast claims, serious coverage, zero cost to merchants. Here's what Parcelis delivers.</p>
@@ -513,6 +542,7 @@
       <div class="about-stat-unit">fees</div>
       <div class="about-stat-label">Free to install and operate. You earn a revenue share.</div>
     </div>
+  </div>
   </div>
 </section>
 
