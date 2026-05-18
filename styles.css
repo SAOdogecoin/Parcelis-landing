@@ -2862,12 +2862,15 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .ic-live.ic-avail { color: var(--muted); }
 
 /* ============ More than protection section ============ */
+.more-than-section {
+  padding: clamp(96px, 10vw, 140px) 0;
+  background: var(--surface);
+}
 .mt-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-top: 56px;
-  margin-bottom: 72px;
 }
 .mt-card {
   background: #fff;
