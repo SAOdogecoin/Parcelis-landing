@@ -2866,6 +2866,11 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   padding: clamp(96px, 10vw, 140px) 0;
   background: var(--surface);
 }
+.more-than-section .sub {
+  font-size: 20px;
+  color: var(--muted);
+  line-height: 1.6;
+}
 .mt-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
