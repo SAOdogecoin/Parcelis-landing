@@ -2971,6 +2971,37 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 .coverage-section .wc-grid { margin-top: 0; }
 
+/* ============ exclusions card (single full-width) ============ */
+.wc-excl {
+  background: rgba(13,18,64,0.04);
+  border-radius: 12px;
+  padding: 36px 40px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.wc-excl .wc-col-title { border-bottom: 1px solid var(--hair); padding-bottom: 18px; margin-bottom: 24px; }
+.wc-excl-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 14px;
+}
+.cov-limits {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--hair);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .wc-excl { padding: 28px 24px; }
+  .wc-excl-list { grid-template-columns: 1fr; }
+}
+
 /* ============ carrier strip merged into coverage section ============ */
 .cov-carrier-strip {
   display: flex;
