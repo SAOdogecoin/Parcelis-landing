@@ -1774,7 +1774,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 }
 .cta-big .explore a {
   color: rgba(255,255,255,0.7);
-  font-size: 14.5px;
+  font-size: clamp(17px, 1.4vw, 20px);
   display: inline-flex; align-items: center; gap: 6px;
   transition: color .15s ease;
 }
