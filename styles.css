@@ -2039,7 +2039,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 .ic-row { display: flex; align-items: center; justify-content: space-between; }
 .ic-name { font-weight: 700; font-size: 22px; color: var(--ink); letter-spacing: -0.02em; }
-.ic-title { font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: -0.01em; }
+.ic-title { font-weight: 700; font-size: 21px; color: var(--ink); letter-spacing: -0.01em; }
 .ic-name-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .ic-live {
   font-family: var(--font-mono);
@@ -2048,7 +2048,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   font-weight: 500;
 }
 .ic-card p {
-  font-size: 20px; color: var(--muted); line-height: 1.55;
+  font-size: 15px; color: var(--muted); line-height: 1.55;
   margin: 0;
 }
 @media (max-width: 900px) {
@@ -2853,7 +2853,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .ic-link {
   color: var(--ink);
   font-weight: 500;
-  font-size: 13.5px;
+  font-size: 21px;
   margin-top: 8px;
   display: inline-block;
 }
