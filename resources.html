@@ -20,142 +20,143 @@
 </script>
 <!-- END PLERDY CODE -->
 <style>
-/* ── Blog page ───────────────────────────────────── */
+
+/* ── White nav override (this page only) ─────────── */
+.nav-v2.nav-white,
+.nav-v2.nav-white.scrolled {
+  background: #fff !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+}
+.nav-v2.nav-white .brand,
+.nav-v2.nav-white .nav-links a,
+.nav-v2.nav-white .nav-dropdown-trigger,
+.nav-v2.nav-white .btn-link {
+  color: var(--ink) !important;
+}
+.nav-v2.nav-white .nav-links a:hover,
+.nav-v2.nav-white .btn-link:hover {
+  background: rgba(0,0,0,0.05) !important;
+  color: var(--ink) !important;
+}
+.nav-v2.nav-white .nav-links a.active {
+  background: var(--ink) !important;
+  color: #fff !important;
+}
+.nav-v2.nav-white .btn-primary {
+  background: var(--ink) !important;
+  color: #fff !important;
+}
+.nav-v2.nav-white .btn-primary:hover {
+  background: #333 !important;
+}
+.nav-v2.nav-white .brand-logo {
+  filter: brightness(0);
+}
+
+/* ── Blog page layout ─────────────────────────────── */
+body { background: #fff; }
+
 .blog-page {
+  min-height: 100vh;
   background: #fff;
-  padding: clamp(56px, 6vw, 88px) 0 clamp(96px, 10vw, 140px);
+  padding-top: 96px; /* fixed nav height */
+}
+
+/* Page header */
+.blog-page-header {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(40px, 5vw, 72px) clamp(20px, 3vw, 48px) 0;
+}
+.blog-page-title {
+  font-size: clamp(44px, 6vw, 80px);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.blog-page-sub {
+  margin-top: 14px;
+  font-size: clamp(16px, 1.3vw, 18px);
+  color: var(--muted);
 }
 
 /* Filter tabs */
+.blog-filters-wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 48px);
+  margin-top: clamp(32px, 4vw, 48px);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
 .blog-filters {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 56px;
-  flex-wrap: wrap;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
-.blog-filter-btn {
-  padding: 10px 22px;
-  border-radius: 100px;
-  border: 1.5px solid var(--hair);
-  background: transparent;
-  font-family: var(--font-sans);
-  font-size: 16px;
+.blog-filters::-webkit-scrollbar { display: none; }
+.blog-filter-tab {
+  padding: 12px 18px 14px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
   cursor: pointer;
-  transition: all 0.15s;
+  white-space: nowrap;
+  transition: color .15s, border-color .15s;
+  font-family: var(--font-sans);
+  margin-bottom: -1px;
 }
-.blog-filter-btn:hover {
-  border-color: var(--navy-700);
-  color: var(--navy-700);
-}
-.blog-filter-btn.active {
-  background: var(--navy-800);
-  border-color: var(--navy-800);
-  color: #fff;
+.blog-filter-tab:hover { color: var(--ink); }
+.blog-filter-tab.active {
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom-color: var(--ink);
 }
 
-/* Card grid */
-.blog-grid {
+/* Main layout */
+.blog-body {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 48px);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: 1fr 320px;
+  gap: clamp(48px, 5vw, 80px);
+  padding-top: clamp(40px, 4vw, 56px);
+  padding-bottom: clamp(80px, 8vw, 120px);
+  align-items: start;
 }
 
-/* Card */
-.blog-card {
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--hair);
-  background: #fff;
-  transition: box-shadow 0.2s, transform 0.2s;
-  cursor: pointer;
+/* Article list */
+.blog-list {}
+
+.blog-article {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 28px;
+  padding: clamp(28px, 3vw, 40px) 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
   text-decoration: none;
-  display: block;
   color: inherit;
 }
-.blog-card:hover {
-  box-shadow: 0 8px 32px -8px rgba(13,18,64,0.16);
-  transform: translateY(-2px);
-}
+.blog-article:first-child { padding-top: 0; }
+.blog-article:last-child { border-bottom: none; }
+.blog-article:hover .ba-title { color: var(--navy-700); }
 
-/* Card thumbnail */
-.bc-thumb {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.bc-thumb-bg {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(600px 400px at 80% 20%, rgba(69,72,217,0.6) 0%, transparent 55%),
-    radial-gradient(500px 500px at 0% 100%, rgba(10,13,58,0.9) 0%, transparent 55%),
-    linear-gradient(135deg, #1e2099 0%, #141a7a 60%, #0a0d3a 100%);
-}
-.bc-thumb-text {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 16px 20px;
-  color: #fff;
-  font-size: clamp(14px, 1.6vw, 17px);
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-}
-.bc-category-badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  z-index: 2;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 5px 12px;
-  border-radius: 100px;
-}
-
-/* Card body */
-.bc-body {
-  padding: 24px;
-}
-.bc-title {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  line-height: 1.35;
-  color: var(--ink);
-  margin-bottom: 10px;
-}
-.bc-excerpt {
-  font-size: 15px;
-  color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: 20px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.bc-meta {
+/* Article left */
+.ba-left {}
+.ba-author {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
-  color: var(--muted);
+  margin-bottom: 12px;
 }
-.bc-avatar {
-  width: 24px;
-  height: 24px;
+.ba-avatar {
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: var(--navy-800);
   color: #fff;
@@ -166,38 +167,153 @@
   justify-content: center;
   flex-shrink: 0;
 }
-.bc-meta-dot {
-  width: 3px;
-  height: 3px;
+.ba-author-name {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 500;
+}
+.ba-category {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  background: rgba(0,0,0,0.06);
+  padding: 2px 10px;
+  border-radius: 100px;
+}
+.ba-title {
+  font-size: clamp(17px, 1.6vw, 20px);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  margin-bottom: 10px;
+  transition: color .15s;
+}
+.ba-excerpt {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.ba-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+.ba-meta-dot {
+  width: 3px; height: 3px;
   border-radius: 50%;
   background: var(--muted);
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
-/* Sidebar layout option (not used, keeping grid) */
+/* Article thumbnail */
+.ba-thumb {
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 3/2;
+  position: relative;
+  flex-shrink: 0;
+  align-self: start;
+  margin-top: 4px;
+}
+.ba-thumb-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(500px 300px at 80% 20%, rgba(69,72,217,0.55), transparent 60%),
+    linear-gradient(135deg, #1e2099 0%, #0a0d3a 100%);
+}
+.ba-thumb-text {
+  position: relative; z-index: 1;
+  padding: 14px;
+  color: rgba(255,255,255,0.75);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
 
-/* No results */
-.blog-empty {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 80px 20px;
+/* ── Sidebar ──────────────────────────────────────── */
+.blog-sidebar {
+  position: sticky;
+  top: 120px;
+}
+.sidebar-heading {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+.sidebar-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.sidebar-post {
+  display: block;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  text-decoration: none;
+  color: inherit;
+}
+.sidebar-post:first-child { padding-top: 0; }
+.sidebar-post:last-child { border-bottom: none; }
+.sidebar-post:hover .sp-title { color: var(--navy-700); }
+.sp-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.sp-badge {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--ink);
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.sp-dot {
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: var(--muted);
+  opacity: 0.5;
+}
+.sp-author {
+  font-size: 12.5px;
   color: var(--muted);
-  font-size: 18px;
+}
+.sp-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  transition: color .15s;
 }
 
+/* ── Responsive ───────────────────────────────────── */
 @media (max-width: 900px) {
-  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .blog-body { grid-template-columns: 1fr; }
+  .blog-sidebar { position: static; }
 }
-@media (max-width: 580px) {
-  .blog-grid { grid-template-columns: 1fr; }
-  .blog-filter-btn { font-size: 15px; padding: 9px 18px; }
+@media (max-width: 600px) {
+  .blog-article { grid-template-columns: 1fr; }
+  .ba-thumb { display: none; }
 }
 </style>
 </head>
 <body>
 
 <!-- =================== NAV =================== -->
-<header class="nav nav-v2">
+<header class="nav nav-v2 nav-white">
   <div class="wrap nav-inner">
     <a class="brand" href="index.html" aria-label="Parcelis home">
       <img class="brand-logo" src="assets/Logo.png" alt="Parcelis" />
@@ -223,163 +339,203 @@
   </div>
 </header>
 
-<main>
+<main class="blog-page">
 
-<!-- =================== HERO =================== -->
-<section class="page-hero-v2 page-hero-short page-hero-plain">
-  <div class="wrap">
-    <h1>Blog.</h1>
-    <p class="sub">Guides, comparisons, and industry news for ecommerce merchants who ship.</p>
+  <!-- Page Header -->
+  <div class="blog-page-header">
+    <h1 class="blog-page-title">Blog</h1>
+    <p class="blog-page-sub">Guides, comparisons, and industry news for merchants who ship.</p>
   </div>
-</section>
 
-<!-- =================== BLOG =================== -->
-<section class="blog-page">
-  <div class="wrap">
-
-    <!-- Filters -->
+  <!-- Filter tabs -->
+  <div class="blog-filters-wrap">
     <div class="blog-filters">
-      <button class="blog-filter-btn active" data-filter="all">All</button>
-      <button class="blog-filter-btn" data-filter="Comparisons">Comparisons</button>
-      <button class="blog-filter-btn" data-filter="Guides">Guides</button>
-      <button class="blog-filter-btn" data-filter="Industry News">Industry News</button>
+      <button class="blog-filter-tab active" data-filter="all">All</button>
+      <button class="blog-filter-tab" data-filter="Comparisons">Comparisons</button>
+      <button class="blog-filter-tab" data-filter="Guides">Guides</button>
+      <button class="blog-filter-tab" data-filter="Industry News">Industry News</button>
     </div>
+  </div>
 
-    <!-- Grid -->
-    <div class="blog-grid" id="blog-grid">
+  <!-- Content + Sidebar -->
+  <div class="blog-body">
 
-      <a class="blog-card" href="#" data-category="Comparisons">
-        <div class="bc-thumb">
-          <div class="bc-thumb-bg"></div>
-          <div class="bc-thumb-text">Route vs Navidium</div>
-          <span class="bc-category-badge">Comparisons</span>
-        </div>
-        <div class="bc-body">
-          <div class="bc-title">Route vs Navidium: Full-Service Protection vs Self-Insurance for Ecommerce</div>
-          <div class="bc-excerpt">An in-depth comparison of Route and Navidium covering pricing models, risk exposure, claim handling, and which approach works at scale.</div>
-          <div class="bc-meta">
-            <div class="bc-avatar">P</div>
-            <span>Parcelis Team</span>
-            <span class="bc-meta-dot"></span>
+    <!-- Article list -->
+    <div class="blog-list" id="blog-list">
+
+      <a class="blog-article" href="#" data-category="Comparisons">
+        <div class="ba-left">
+          <div class="ba-author">
+            <div class="ba-avatar">P</div>
+            <span class="ba-author-name">Parcelis Team</span>
+            <span class="ba-category">Comparisons</span>
+          </div>
+          <div class="ba-title">Route vs Navidium: Full-Service Protection vs Self-Insurance for Ecommerce</div>
+          <div class="ba-excerpt">An in-depth comparison of Route and Navidium covering pricing models, risk exposure, claim handling, and which approach works at scale.</div>
+          <div class="ba-meta">
             <span>March 4, 2026</span>
-            <span class="bc-meta-dot"></span>
+            <span class="ba-meta-dot"></span>
             <span>12 min read</span>
           </div>
         </div>
+        <div class="ba-thumb">
+          <div class="ba-thumb-bg"></div>
+          <div class="ba-thumb-text">Route vs Navidium</div>
+        </div>
       </a>
 
-      <a class="blog-card" href="#" data-category="Comparisons">
-        <div class="bc-thumb">
-          <div class="bc-thumb-bg"></div>
-          <div class="bc-thumb-text">Parcelis vs Route</div>
-          <span class="bc-category-badge">Comparisons</span>
-        </div>
-        <div class="bc-body">
-          <div class="bc-title">Parcelis vs Route: Which Shipping Protection Platform Is Right for Your Store?</div>
-          <div class="bc-excerpt">A detailed comparison of Parcelis and Route covering pricing, claim resolution speed, merchant control, and customer experience for DTC brands.</div>
-          <div class="bc-meta">
-            <div class="bc-avatar">P</div>
-            <span>Parcelis Team</span>
-            <span class="bc-meta-dot"></span>
-            <span>February 28, 2026</span>
-            <span class="bc-meta-dot"></span>
-            <span>10 min read</span>
+      <a class="blog-article" href="#" data-category="Guides">
+        <div class="ba-left">
+          <div class="ba-author">
+            <div class="ba-avatar">P</div>
+            <span class="ba-author-name">Parcelis Team</span>
+            <span class="ba-category">Guides</span>
           </div>
-        </div>
-      </a>
-
-      <a class="blog-card" href="#" data-category="Comparisons">
-        <div class="bc-thumb">
-          <div class="bc-thumb-bg"></div>
-          <div class="bc-thumb-text">Parcelis vs Navidium</div>
-          <span class="bc-category-badge">Comparisons</span>
-        </div>
-        <div class="bc-body">
-          <div class="bc-title">Parcelis vs Navidium: Insurance-Backed vs Self-Insured Shipping Protection</div>
-          <div class="bc-excerpt">Understand the key differences between Parcelis's insurance-backed model and Navidium's self-insured approach to shipping protection.</div>
-          <div class="bc-meta">
-            <div class="bc-avatar">P</div>
-            <span>Parcelis Team</span>
-            <span class="bc-meta-dot"></span>
-            <span>February 20, 2026</span>
-            <span class="bc-meta-dot"></span>
-            <span>10 min read</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="blog-card" href="#" data-category="Comparisons">
-        <div class="bc-thumb">
-          <div class="bc-thumb-bg"></div>
-          <div class="bc-thumb-text">Parcelis vs InsureShip</div>
-          <span class="bc-category-badge">Comparisons</span>
-        </div>
-        <div class="bc-body">
-          <div class="bc-title">Parcelis vs InsureShip: Modern vs Traditional Shipping Insurance</div>
-          <div class="bc-excerpt">How does Parcelis's modern Shopify-native approach compare to InsureShip's traditional shipping insurance model? A detailed breakdown.</div>
-          <div class="bc-meta">
-            <div class="bc-avatar">P</div>
-            <span>Parcelis Team</span>
-            <span class="bc-meta-dot"></span>
-            <span>February 10, 2026</span>
-            <span class="bc-meta-dot"></span>
-            <span>9 min read</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="blog-card" href="#" data-category="Guides">
-        <div class="bc-thumb">
-          <div class="bc-thumb-bg" style="background: radial-gradient(600px 400px at 80% 20%, rgba(16,185,129,0.5) 0%, transparent 55%), radial-gradient(500px 500px at 0% 100%, rgba(10,13,58,0.9) 0%, transparent 55%), linear-gradient(135deg, #064e3b 0%, #065f46 60%, #0a0d3a 100%);"></div>
-          <div class="bc-thumb-text">Reduce Chargebacks with Shipping Protection</div>
-          <span class="bc-category-badge">Guides</span>
-        </div>
-        <div class="bc-body">
-          <div class="bc-title">How Shipping Protection Reduces Chargebacks for Ecommerce Merchants</div>
-          <div class="bc-excerpt">A practical guide to reducing shipping-related chargebacks with proactive protection strategies, real cost breakdowns, and step-by-step implementation.</div>
-          <div class="bc-meta">
-            <div class="bc-avatar">P</div>
-            <span>Parcelis Team</span>
-            <span class="bc-meta-dot"></span>
+          <div class="ba-title">How Shipping Protection Reduces Chargebacks for Ecommerce Merchants</div>
+          <div class="ba-excerpt">A practical guide to reducing shipping-related chargebacks with proactive protection strategies, real cost breakdowns, and step-by-step implementation.</div>
+          <div class="ba-meta">
             <span>March 1, 2026</span>
-            <span class="bc-meta-dot"></span>
+            <span class="ba-meta-dot"></span>
             <span>8 min read</span>
           </div>
         </div>
+        <div class="ba-thumb">
+          <div class="ba-thumb-bg" style="background: radial-gradient(500px 300px at 80% 20%, rgba(16,185,129,0.5), transparent 60%), linear-gradient(135deg, #064e3b 0%, #0a0d3a 100%);"></div>
+          <div class="ba-thumb-text">Reduce Chargebacks</div>
+        </div>
       </a>
 
-      <a class="blog-card" href="#" data-category="Industry News">
-        <div class="bc-thumb">
-          <div class="bc-thumb-bg" style="background: radial-gradient(600px 400px at 80% 20%, rgba(245,158,11,0.45) 0%, transparent 55%), radial-gradient(500px 500px at 0% 100%, rgba(10,13,58,0.9) 0%, transparent 55%), linear-gradient(135deg, #78350f 0%, #92400e 60%, #0a0d3a 100%);"></div>
-          <div class="bc-thumb-text">5 Shipping Protection Trends for 2026</div>
-          <span class="bc-category-badge">Industry News</span>
-        </div>
-        <div class="bc-body">
-          <div class="bc-title">5 Shipping Protection Trends Every Merchant Should Watch in 2026</div>
-          <div class="bc-excerpt">From AI-powered claims to embedded insurance and merchant-first revenue models, here are the trends reshaping e-commerce shipping protection.</div>
-          <div class="bc-meta">
-            <div class="bc-avatar">P</div>
-            <span>Parcelis Team</span>
-            <span class="bc-meta-dot"></span>
+      <a class="blog-article" href="#" data-category="Industry News">
+        <div class="ba-left">
+          <div class="ba-author">
+            <div class="ba-avatar">P</div>
+            <span class="ba-author-name">Parcelis Team</span>
+            <span class="ba-category">Industry News</span>
+          </div>
+          <div class="ba-title">5 Shipping Protection Trends Every Merchant Should Watch in 2026</div>
+          <div class="ba-excerpt">From AI-powered claims to embedded insurance and merchant-first revenue models, here are the trends reshaping e-commerce shipping protection.</div>
+          <div class="ba-meta">
             <span>March 3, 2026</span>
-            <span class="bc-meta-dot"></span>
+            <span class="ba-meta-dot"></span>
             <span>7 min read</span>
           </div>
+        </div>
+        <div class="ba-thumb">
+          <div class="ba-thumb-bg" style="background: radial-gradient(500px 300px at 80% 20%, rgba(245,158,11,0.45), transparent 60%), linear-gradient(135deg, #78350f 0%, #0a0d3a 100%);"></div>
+          <div class="ba-thumb-text">2026 Trends</div>
+        </div>
+      </a>
+
+      <a class="blog-article" href="#" data-category="Comparisons">
+        <div class="ba-left">
+          <div class="ba-author">
+            <div class="ba-avatar">P</div>
+            <span class="ba-author-name">Parcelis Team</span>
+            <span class="ba-category">Comparisons</span>
+          </div>
+          <div class="ba-title">Parcelis vs Route: Which Shipping Protection Platform Is Right for Your Store?</div>
+          <div class="ba-excerpt">A detailed comparison of Parcelis and Route covering pricing, claim resolution speed, merchant control, and customer experience for DTC brands.</div>
+          <div class="ba-meta">
+            <span>February 28, 2026</span>
+            <span class="ba-meta-dot"></span>
+            <span>10 min read</span>
+          </div>
+        </div>
+        <div class="ba-thumb">
+          <div class="ba-thumb-bg"></div>
+          <div class="ba-thumb-text">Parcelis vs Route</div>
+        </div>
+      </a>
+
+      <a class="blog-article" href="#" data-category="Comparisons">
+        <div class="ba-left">
+          <div class="ba-author">
+            <div class="ba-avatar">P</div>
+            <span class="ba-author-name">Parcelis Team</span>
+            <span class="ba-category">Comparisons</span>
+          </div>
+          <div class="ba-title">Parcelis vs Navidium: Insurance-Backed vs Self-Insured Shipping Protection</div>
+          <div class="ba-excerpt">Understand the key differences between Parcelis's insurance-backed model and Navidium's self-insured approach to shipping protection.</div>
+          <div class="ba-meta">
+            <span>February 20, 2026</span>
+            <span class="ba-meta-dot"></span>
+            <span>10 min read</span>
+          </div>
+        </div>
+        <div class="ba-thumb">
+          <div class="ba-thumb-bg"></div>
+          <div class="ba-thumb-text">Parcelis vs Navidium</div>
+        </div>
+      </a>
+
+      <a class="blog-article" href="#" data-category="Comparisons">
+        <div class="ba-left">
+          <div class="ba-author">
+            <div class="ba-avatar">P</div>
+            <span class="ba-author-name">Parcelis Team</span>
+            <span class="ba-category">Comparisons</span>
+          </div>
+          <div class="ba-title">Parcelis vs InsureShip: Modern vs Traditional Shipping Insurance</div>
+          <div class="ba-excerpt">How does Parcelis's modern Shopify-native approach compare to InsureShip's traditional shipping insurance model? A detailed breakdown for growing merchants.</div>
+          <div class="ba-meta">
+            <span>February 10, 2026</span>
+            <span class="ba-meta-dot"></span>
+            <span>9 min read</span>
+          </div>
+        </div>
+        <div class="ba-thumb">
+          <div class="ba-thumb-bg"></div>
+          <div class="ba-thumb-text">Parcelis vs InsureShip</div>
         </div>
       </a>
 
     </div>
-  </div>
-</section>
 
-<!-- =================== CTA =================== -->
-<section class="cta-big">
-  <div class="wrap">
-    <h2>Ready to protect your customers?</h2>
-    <p class="sub">Join the merchants who've chosen the smarter way to deliver confidence with every shipment.</p>
-    <a class="pill" href="#">Get Parcelis <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    <!-- Sidebar -->
+    <aside class="blog-sidebar">
+      <h3 class="sidebar-heading">Popular posts</h3>
+      <div class="sidebar-posts">
+
+        <a href="#" class="sidebar-post">
+          <div class="sp-meta-row">
+            <span class="sp-badge">Comparisons</span>
+            <span class="sp-dot"></span>
+            <span class="sp-author">Parcelis Team</span>
+          </div>
+          <div class="sp-title">Route vs Navidium: Full-Service Protection vs Self-Insurance</div>
+        </a>
+
+        <a href="#" class="sidebar-post">
+          <div class="sp-meta-row">
+            <span class="sp-badge">Guides</span>
+            <span class="sp-dot"></span>
+            <span class="sp-author">Parcelis Team</span>
+          </div>
+          <div class="sp-title">How Shipping Protection Reduces Chargebacks</div>
+        </a>
+
+        <a href="#" class="sidebar-post">
+          <div class="sp-meta-row">
+            <span class="sp-badge">Comparisons</span>
+            <span class="sp-dot"></span>
+            <span class="sp-author">Parcelis Team</span>
+          </div>
+          <div class="sp-title">Parcelis vs Route: Which Platform Is Right for Your Store?</div>
+        </a>
+
+        <a href="#" class="sidebar-post">
+          <div class="sp-meta-row">
+            <span class="sp-badge">Industry News</span>
+            <span class="sp-dot"></span>
+            <span class="sp-author">Parcelis Team</span>
+          </div>
+          <div class="sp-title">5 Shipping Protection Trends Every Merchant Should Watch in 2026</div>
+        </a>
+
+      </div>
+    </aside>
+
   </div>
-</section>
 
 </main>
 
@@ -442,16 +598,16 @@
 <script src="tweaks.js?v=3"></script>
 <script>
 // Blog filter
-const filterBtns = document.querySelectorAll('.blog-filter-btn');
-const cards = document.querySelectorAll('.blog-card');
+const filterTabs = document.querySelectorAll('.blog-filter-tab');
+const articles   = document.querySelectorAll('.blog-article');
 
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    cards.forEach(card => {
-      card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+filterTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    filterTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const filter = tab.dataset.filter;
+    articles.forEach(a => {
+      a.style.display = (filter === 'all' || a.dataset.category === filter) ? '' : 'none';
     });
   });
 });
