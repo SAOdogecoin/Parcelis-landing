@@ -2900,6 +2900,69 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   .mt-grid { grid-template-columns: 1fr; }
 }
 
+/* ============ built for efficiency section ============ */
+.bfe-section {
+  padding: clamp(96px, 10vw, 140px) 0;
+  background: var(--surface);
+}
+.bfe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 860px) {
+  .bfe-grid { grid-template-columns: 1fr; }
+}
+
+/* ============ what's covered section ============ */
+.wc-section {
+  padding: clamp(96px, 10vw, 140px) 0;
+  background: #fff;
+}
+.wc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 56px;
+}
+.wc-col {
+  border-radius: 12px;
+  padding: 36px 32px;
+}
+.wc-col-left { background: var(--surface); }
+.wc-col-right { background: rgba(13,18,64,0.04); }
+.wc-col-title {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  padding-bottom: 18px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--hair);
+}
+.wc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.wc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 17px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.wc-ic-yes { color: #22c55e; flex-shrink: 0; margin-top: 1px; }
+.wc-ic-no  { color: #ef4444; flex-shrink: 0; margin-top: 1px; }
+@media (max-width: 700px) {
+  .wc-grid { grid-template-columns: 1fr; }
+  .wc-col { padding: 28px 24px; }
+}
+
 /* ============ carriers section ============ */
 .carriers-section {
   padding: clamp(96px, 10vw, 140px) 0;
