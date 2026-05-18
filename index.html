@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=102" />
+<link rel="stylesheet" href="styles.css?v=103" />
 <link rel="preload" as="image" href="assets/Hero background.jpg" />
 <!-- BEGIN PLERDY CODE -->
 <script type="text/javascript" data-plerdy_code='1'>
@@ -233,6 +233,10 @@
         <p>Global coverage, auto-detected at checkout.</p>
       </div>
     </div>
+    <div class="cov-limits-bar reveal" data-delay="5">
+      <span class="cov-limits-eyebrow">Coverage limit per claim</span>
+      <span class="cov-limits-stat">Up to $2,500 per box · $25,000 per shipment</span>
+    </div>
     <hr class="cov-divider">
     <div class="wc-excl reveal">
       <div class="wc-col-title">Standard Exclusions</div>
@@ -243,7 +247,6 @@
         <li class="wc-item"><span class="wc-ic-no"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg></span>Return-to-sender situations</li>
         <li class="wc-item"><span class="wc-ic-no"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg></span>Packages still in retailer possession</li>
       </ul>
-      <div class="cov-limits">Up to $2,500 per box · $25,000 per shipment</div>
     </div>
     <div class="cov-carrier-strip reveal" data-delay="5">
       <img src="assets/USPS.png" alt="USPS" class="cs-logo">
@@ -448,6 +451,34 @@
     <p class="sub">Join the merchants who've chosen the smarter way to deliver confidence with every shipment.</p>
     <a class="pill" href="#">Get Parcelis <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
   </div>
+  <!-- Decorative truck silhouette -->
+  <svg class="cta-truck-deco" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 230" aria-hidden="true">
+    <!-- Trailer body -->
+    <rect x="0" y="28" width="330" height="158" rx="10" fill="white"/>
+    <!-- Cab -->
+    <path d="M330 78 L330 186 L480 186 L480 104 Q480 78 456 78 Z" fill="white"/>
+    <!-- Windshield -->
+    <path d="M342 86 L342 148 L448 148 L448 95 Q448 86 440 86 Z" fill="rgba(0,0,0,0.4)"/>
+    <!-- Exhaust stack -->
+    <rect x="455" y="36" width="10" height="44" rx="5" fill="white"/>
+    <!-- Door line on cab -->
+    <line x1="390" y1="86" x2="390" y2="186" stroke="rgba(0,0,0,0.15)" stroke-width="3"/>
+    <!-- Trailer doors -->
+    <line x1="165" y1="28" x2="165" y2="186" stroke="rgba(0,0,0,0.12)" stroke-width="3"/>
+    <!-- Rear wheels (dual) -->
+    <circle cx="94" cy="198" r="32" fill="white"/>
+    <circle cx="94" cy="198" r="15" fill="rgba(0,0,0,0.35)"/>
+    <circle cx="134" cy="198" r="24" fill="white"/>
+    <circle cx="134" cy="198" r="11" fill="rgba(0,0,0,0.3)"/>
+    <!-- Front trailer axle -->
+    <circle cx="258" cy="198" r="32" fill="white"/>
+    <circle cx="258" cy="198" r="15" fill="rgba(0,0,0,0.35)"/>
+    <!-- Cab drive wheel -->
+    <circle cx="430" cy="198" r="32" fill="white"/>
+    <circle cx="430" cy="198" r="15" fill="rgba(0,0,0,0.35)"/>
+    <!-- Ground line -->
+    <line x1="0" y1="228" x2="540" y2="228" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  </svg>
 </section>
 
 <!-- =================== FOOTER =================== -->

@@ -2968,6 +2968,38 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   .wc-col { padding: 28px 24px; }
 }
 
+/* ============ coverage limits bar ============ */
+.cov-limits-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 36px auto 0;
+  padding: 20px 36px;
+  background: rgba(13,18,64,0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(13,18,64,0.07);
+  max-width: 640px;
+}
+.cov-limits-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+.cov-limits-stat {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
 /* ============ coverage section internal divider ============ */
 .cov-divider {
   border: none;
@@ -3130,6 +3162,17 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 @media (max-width: 900px) {
   .pt-card-single { grid-template-columns: 1fr; }
+}
+
+/* ============ cta-big truck decoration ============ */
+.cta-truck-deco {
+  position: absolute;
+  bottom: 0;
+  right: clamp(16px, 4vw, 72px);
+  width: clamp(220px, 28vw, 440px);
+  opacity: 0.065;
+  pointer-events: none;
+  user-select: none;
 }
 
 /* ============ cta-big sub ============ */
