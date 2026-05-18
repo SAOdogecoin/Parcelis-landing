@@ -1727,11 +1727,9 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 /* ============ big CTA + brand strip + dark footer ============ */
 .cta-big {
   background-color: var(--dark);
-  background-image:
-    linear-gradient(to right, var(--dark) 35%, rgba(13,18,64,0.82) 58%, rgba(13,18,64,0.4) 100%),
-    url('assets/Hero\ background.jpg');
-  background-size: cover, auto 135%;
-  background-position: center, right -40px bottom;
+  background-image: url('assets/CTA\ background.png');
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   color: #fff;
   padding: clamp(60px, 8vw, 120px) 0;
