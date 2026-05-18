@@ -1273,7 +1273,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
   background:
     radial-gradient(ellipse 100% 55% at 50% 0%, rgba(0,210,255,0.22) 0%, transparent 60%),
     linear-gradient(90deg, #1e2099 0%, rgba(30,32,153,0.4) 60%, rgba(30,32,153,0.1) 100%),
-    url("assets/hero-truck.jpg") right 40% / cover no-repeat,
+    url("assets/Hero background.jpg") right 40% / cover no-repeat,
     #1e2099;
   color: #fff;
   position: relative;
@@ -2039,6 +2039,8 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 .ic-row { display: flex; align-items: center; justify-content: space-between; }
 .ic-name { font-weight: 700; font-size: 22px; color: var(--ink); letter-spacing: -0.02em; }
+.ic-title { font-weight: 700; font-size: 17px; color: var(--ink); letter-spacing: -0.01em; }
+.ic-name-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .ic-live {
   font-family: var(--font-mono);
   font-size: 12px;
@@ -3782,13 +3784,15 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 /* integration card logos — full brand colors */
 .ic-logo {
-  height: 26px;
+  height: 36px;
   width: auto;
-  max-width: 140px;
+  max-width: 150px;
   object-fit: contain;
 }
-.ic-logo-woo { height: 38px; }
-.ic-logo-wide { height: 22px; max-width: 155px; }
+.ic-logo-woo { height: 26px; }
+.ic-logo-wide { height: 42px; max-width: 180px; }
+.ic-logo-magento { height: 32px; max-width: 130px; }
+.ic-logo-next { height: 30px; max-width: 120px; }
 .ig-logo {
   height: 34px;
   width: auto;
