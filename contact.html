@@ -22,7 +22,7 @@
 <style>
   /* ── Hero ─────────────────────────────────────── */
   .contact-hero {
-    background: var(--bg);
+    background: var(--surface);
     padding: clamp(96px, 10vw, 148px) 0 clamp(64px, 7vw, 96px);
     text-align: center;
   }
@@ -44,7 +44,14 @@
 
   /* ── Body layout ──────────────────────────────── */
   .contact-body {
+    background: var(--surface);
     padding: clamp(72px, 8vw, 120px) 0 clamp(96px, 10vw, 140px);
+  }
+  .contact-form-card {
+    background: var(--bg);
+    border-radius: 20px;
+    padding: clamp(40px, 5vw, 64px);
+    box-shadow: 0 2px 8px rgba(13,18,64,0.05), 0 16px 48px -8px rgba(13,18,64,0.08);
   }
   .contact-layout {
     display: grid;
@@ -183,7 +190,6 @@
   .contact-alt {
     padding: clamp(72px, 7vw, 104px) 0;
     background: var(--surface);
-    border-top: 1px solid var(--hair);
   }
   .contact-alt-head {
     text-align: center;
@@ -311,7 +317,7 @@
       </div>
 
       <!-- Right: form -->
-      <div class="reveal" data-delay="2">
+      <div class="contact-form-card reveal" data-delay="2">
         <form class="contact-form" action="#" method="POST">
           <div class="cf-row">
             <div class="cf-field">

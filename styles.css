@@ -1264,7 +1264,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
 .nav-v2 .nav-links a { color: rgba(255,255,255,0.85); padding: 10px 16px; border-radius: 999px; font-size: 18px; transition: background .15s ease, color .15s ease; }
 .nav-v2 .nav-links a:hover { background: rgba(255,255,255,0.06); color: #fff; }
 .nav-v2 .nav-links a.active { background: rgba(255,255,255,0.1); color: #fff; }
-.nav-v2 .btn-link { color: #fff; }
+.nav-v2 .btn-link { color: #fff; font-size: 18px; }
 .nav-v2 .btn-primary { background: #fff; color: #000; height: 44px; padding: 0 22px; font-weight: 500; }
 .nav-v2 .btn-primary:hover { background: rgba(255,255,255,0.9); }
 
