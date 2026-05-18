@@ -155,9 +155,27 @@
 }
 .about-stat-label {
   margin-top: 18px;
-  font-size: 15px;
+  font-size: clamp(15px, 1.2vw, 18px);
   color: var(--muted);
   line-height: 1.55;
+}
+.about-stats-header {
+  max-width: var(--max);
+  margin: 0 auto clamp(40px, 4vw, 60px);
+  padding: 0 clamp(20px, 3vw, 48px);
+}
+.about-stats-header h2 {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.about-stats-header p {
+  font-size: clamp(15px, 1.2vw, 18px);
+  color: var(--muted);
+  max-width: 52ch;
+  line-height: 1.6;
 }
 .about-eyebrow {
   font-size: 16px;
@@ -473,6 +491,10 @@
 
 <!-- =================== STATS =================== -->
 <section class="about-stats">
+  <div class="about-stats-header reveal">
+    <h2>By the numbers</h2>
+    <p>Fast claims, serious coverage, zero cost to merchants. Here's what Parcelis delivers.</p>
+  </div>
   <div class="about-stats-grid">
     <div class="about-stat-card reveal" data-delay="1">
       <div class="about-stat-num">5–7</div>
