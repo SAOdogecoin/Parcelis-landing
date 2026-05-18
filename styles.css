@@ -1729,7 +1729,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
   background-color: var(--dark);
   background-image: url('assets/CTA\ background.png');
   background-size: cover;
-  background-position: center 75%;
+  background-position: center bottom;
   background-repeat: no-repeat;
   color: #fff;
   padding: clamp(60px, 8vw, 120px) 0;
