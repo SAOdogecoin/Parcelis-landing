@@ -165,13 +165,12 @@ input[type=range]::-moz-range-thumb {
 }
 .risk-metric:last-of-type { border-bottom: none; }
 .risk-metric-label {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: rgba(255,255,255,0.5);
   margin-bottom: 6px;
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
 }
 .risk-metric-value {
   font-size: clamp(28px, 3vw, 42px);
@@ -199,12 +198,11 @@ input[type=range]::-moz-range-thumb {
   margin-bottom: 16px;
 }
 .risk-total-label {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
   color: rgba(255,107,107,0.85);
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   margin-bottom: 8px;
 }
 .risk-total-value {
@@ -233,12 +231,11 @@ input[type=range]::-moz-range-thumb {
   border-radius: 12px;
 }
 .risk-parcelis-label {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
   color: rgba(74,222,128,0.8);
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   margin-bottom: 8px;
 }
 .risk-parcelis-value {
@@ -517,31 +514,31 @@ input[type=range]::-moz-range-thumb {
 </section>
 
 <!-- =================== COMPARE =================== -->
-<section class="risk-compare-section">
+<section class="claims-compare" style="background: #fff;">
   <div class="wrap">
-    <div class="cov-head reveal">
+    <div class="cc-head reveal">
       <h2>Self-insurance vs. Parcelis.</h2>
       <p>What changes when you stop absorbing losses and let Parcelis carry the risk.</p>
     </div>
-    <div class="risk-compare-grid">
-      <div class="risk-compare-col without reveal" data-delay="1">
-        <div class="risk-compare-title">Self-insuring</div>
-        <ul class="risk-compare-list">
-          <li><span class="risk-ic-bad"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>You pay every claim out of pocket</li>
-          <li><span class="risk-ic-bad"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Your team handles every support ticket</li>
-          <li><span class="risk-ic-bad"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>30–60 day carrier claim lag</li>
-          <li><span class="risk-ic-bad"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Cash flow hit on every lost package</li>
-          <li><span class="risk-ic-bad"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>No coverage cap — unlimited liability</li>
+    <div class="cc-grid">
+      <div class="cc-col cc-bad reveal" data-delay="1">
+        <div class="cc-col-label">Self-insuring</div>
+        <ul class="cc-list">
+          <li><span class="cc-ic cc-ic-bad"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>You pay every claim out of pocket</li>
+          <li><span class="cc-ic cc-ic-bad"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Your team handles every support ticket</li>
+          <li><span class="cc-ic cc-ic-bad"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>30–60 day carrier claim lag</li>
+          <li><span class="cc-ic cc-ic-bad"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>Cash flow hit on every lost package</li>
+          <li><span class="cc-ic cc-ic-bad"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>No coverage cap — unlimited liability</li>
         </ul>
       </div>
-      <div class="risk-compare-col with reveal" data-delay="2">
-        <div class="risk-compare-title">With Parcelis</div>
-        <ul class="risk-compare-list">
-          <li><span class="risk-ic-good"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-12"/></svg></span>Parcelis pays every covered claim</li>
-          <li><span class="risk-ic-good"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-12"/></svg></span>Customers file directly — zero CS overhead</li>
-          <li><span class="risk-ic-good"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-12"/></svg></span>5–7 day average resolution</li>
-          <li><span class="risk-ic-good"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-12"/></svg></span>No cash flow impact — your margin stays intact</li>
-          <li><span class="risk-ic-good"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-12"/></svg></span>Up to $2,500 per box · $25,000 per shipment</li>
+      <div class="cc-col cc-good reveal" data-delay="2">
+        <div class="cc-col-label">With Parcelis</div>
+        <ul class="cc-list">
+          <li><span class="cc-ic cc-ic-good"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-12"/></svg></span>Parcelis pays every covered claim</li>
+          <li><span class="cc-ic cc-ic-good"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-12"/></svg></span>Customers file directly — zero CS overhead</li>
+          <li><span class="cc-ic cc-ic-good"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-12"/></svg></span>5–7 day average resolution</li>
+          <li><span class="cc-ic cc-ic-good"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-12"/></svg></span>No cash flow impact — your margin stays intact</li>
+          <li><span class="cc-ic cc-ic-good"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-12"/></svg></span>Up to $2,500 per box · $25,000 per shipment</li>
         </ul>
       </div>
     </div>
