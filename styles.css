@@ -3149,17 +3149,6 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   .pt-card-single { grid-template-columns: 1fr; }
 }
 
-/* ============ cta-big truck decoration ============ */
-.cta-truck-deco {
-  position: absolute;
-  bottom: 0;
-  right: clamp(16px, 4vw, 72px);
-  width: clamp(220px, 28vw, 440px);
-  opacity: 0.065;
-  pointer-events: none;
-  user-select: none;
-}
-
 /* ============ cta-big sub ============ */
 .cta-big .sub {
   color: rgba(255,255,255,0.72);
