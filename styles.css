@@ -2035,6 +2035,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   border-radius: 10px;
   padding: 22px 24px;
   display: flex; flex-direction: column; gap: 12px;
+  min-height: 230px;
   box-shadow: 0 2px 4px rgba(13,18,64,0.06), 0 24px 48px -20px rgba(13,18,64,0.22);
 }
 .ic-row { display: flex; align-items: center; justify-content: space-between; }
@@ -2854,7 +2855,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   color: var(--ink);
   font-weight: 500;
   font-size: 21px;
-  margin-top: 8px;
+  margin-top: auto;
   display: inline-block;
 }
 .ic-link:hover { color: var(--navy-700); }
@@ -3781,6 +3782,12 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   margin: 0 auto 36px;
   line-height: 1.6;
   text-align: center;
+}
+/* fixed-height logo box so brand name aligns across all cards */
+.ic-logo-box {
+  height: 56px;
+  display: flex;
+  align-items: center;
 }
 /* integration card logos — full brand colors */
 .ic-logo {
