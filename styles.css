@@ -3024,16 +3024,36 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   .wc-excl-list { grid-template-columns: 1fr; }
 }
 
-/* ============ carrier strip merged into coverage section ============ */
+/* ============ carrier head + strip ============ */
+.cov-carrier-head {
+  text-align: center;
+  border-top: 1px solid var(--hair);
+  padding-top: 64px;
+  margin-top: 64px;
+}
+.cov-carrier-head h3 {
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.cov-carrier-head p {
+  font-size: 19px;
+  color: var(--muted);
+  max-width: 56ch;
+  margin: 0 auto;
+  line-height: 1.6;
+}
 .cov-carrier-strip {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: clamp(32px, 5vw, 72px);
   flex-wrap: wrap;
-  margin-top: 48px;
-  padding-top: 40px;
-  border-top: 1px solid var(--hair);
+  margin-top: 40px;
+  padding-top: 0;
+  border-top: none;
 }
 
 /* ============ carriers section ============ */
