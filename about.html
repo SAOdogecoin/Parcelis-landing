@@ -900,5 +900,18 @@
 
 <script src="script.js?v=23"></script>
 <script src="tweaks.js?v=3"></script>
+<script>
+(function(){
+  var hero = document.querySelector('.about-hero');
+  if (!hero) return;
+  function onScroll() {
+    var y = window.scrollY;
+    if (y < hero.offsetHeight * 1.5) {
+      hero.style.backgroundPositionY = 'calc(top + ' + (y * 0.35) + 'px)';
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>
 </body>
 </html>
