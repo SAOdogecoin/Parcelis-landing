@@ -95,7 +95,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 
 section { padding: calc(220px * var(--density)) 0; position: relative; }
 section.tight { padding: calc(64px * var(--density)) 0; }
-section.hero-v2, section.page-hero-v2 { padding-top: clamp(320px, 28vw, 480px); padding-bottom: clamp(200px, 22vw, 360px); }
+section.page-hero-v2 { padding-top: clamp(320px, 28vw, 480px); padding-bottom: clamp(200px, 22vw, 360px); }
 section.page-hero-short { padding-top: clamp(140px, 12vw, 200px) !important; padding-bottom: clamp(40px, 4vw, 60px) !important; }
 section.page-hero-plain {
   background: var(--surface) !important;
@@ -1282,7 +1282,10 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
     #1e2099;
   color: #fff;
   position: relative;
-  padding: clamp(340px, 30vw, 480px) 0 clamp(220px, 28vw, 400px);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
   margin-top: -96px;
   overflow: hidden;
   isolation: isolate;
