@@ -4876,10 +4876,9 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 /* panel top bar — mirrors main .nav-inner exactly */
 .nav-panel-topbar {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  height: 72px;
-  padding: 0 clamp(20px, 3vw, 48px);
+  padding: 16px clamp(20px, 3vw, 48px) 20px;
   flex-shrink: 0;
 }
 .nav-panel-topbar .brand { color: #fff; }
