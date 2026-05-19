@@ -278,10 +278,12 @@ document.documentElement.classList.add('js-anim');
   panel.className = 'nav-panel';
   panel.innerHTML = `
     <div class="nav-panel-topbar">
-      <a class="nav-panel-logo" href="index.html">
-        <img src="assets/Logo.png" alt="Parcelis" />
+      <a class="brand" href="index.html" aria-label="Parcelis home">
+        <img class="brand-logo" src="assets/Logo.png" alt="Parcelis" />
       </a>
-      <button class="nav-panel-close" aria-label="Close menu">✕</button>
+      <button class="nav-panel-close" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
     <div class="nav-panel-body">
       <a class="nav-panel-item" href="how-it-works.html">Product</a>
