@@ -4871,7 +4871,6 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   padding: 0 24px;
   height: 72px;
   flex-shrink: 0;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 .nav-panel-logo {
   display: flex; align-items: center; gap: 10px;
@@ -4906,15 +4905,16 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   font-weight: 500;
   padding: 18px 24px;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
   cursor: pointer;
   transition: background 0.15s;
-  background: none; border-left: none; border-right: none; border-top: none;
+  background: none;
+  border: none;
   border-bottom: 1px solid rgba(255,255,255,0.07);
   width: 100%; text-align: left;
   font-family: var(--font-sans, inherit);
   letter-spacing: -0.01em;
 }
+.nav-panel-item:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
 .nav-panel-item:hover { background: rgba(255,255,255,0.04); }
 .nav-panel-item svg { transition: transform 0.2s ease; flex-shrink: 0; }
 .nav-panel-item.expanded svg { transform: rotate(90deg); }
@@ -4943,13 +4943,12 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 .nav-panel-footer {
   padding: 24px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 12px;
-  border-top: 1px solid rgba(255,255,255,0.07);
   flex-shrink: 0;
 }
 .nav-panel-footer .btn {
-  width: 100%; text-align: center; justify-content: center;
+  flex: 1; text-align: center; justify-content: center;
   height: 52px; font-size: 17px; border-radius: 999px;
 }
 .nav-panel-btn-ghost {
