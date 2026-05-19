@@ -4883,6 +4883,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
   flex-shrink: 0;
 }
 .nav-panel-topbar .brand { color: #fff; }
+.nav-panel-topbar .brand-logo { height: 40px; width: auto; display: block; }
 .nav-panel-close {
   width: 36px; height: 36px;
   border-radius: 50%;
