@@ -4903,7 +4903,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 /* panel body */
 .nav-panel-body {
   flex: 1;
-  padding: 16px 0;
+  padding: 40px 0 16px;
   overflow-y: auto;
 }
 .nav-panel-item {
