@@ -1282,7 +1282,7 @@ h1 em, h2 em, h3 em, .hero h1 em, .page-hero h1 em {
     #1e2099;
   color: #fff;
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh + 192px);
   display: flex;
   align-items: center;
   padding: 120px 0 80px;
