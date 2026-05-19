@@ -253,3 +253,60 @@ document.documentElement.classList.add('js-anim');
     }
   });
 })();
+
+// --- mobile hamburger nav ---
+(() => {
+  const nav = document.querySelector('.nav-v2');
+  if (!nav) return;
+
+  // Create hamburger button
+  const burger = document.createElement('button');
+  burger.className = 'nav-hamburger';
+  burger.setAttribute('aria-label', 'Open menu');
+  burger.innerHTML = '<span></span><span></span><span></span>';
+  nav.querySelector('.nav-inner').appendChild(burger);
+
+  // Create overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'nav-panel-overlay';
+  document.body.appendChild(overlay);
+
+  // Create slide-in panel
+  const panel = document.createElement('div');
+  panel.className = 'nav-panel';
+  panel.innerHTML = `
+    <div class="nav-panel-links">
+      <a href="how-it-works.html">Product</a>
+      <a href="pricing.html">Pricing</a>
+      <div class="nav-panel-label">Resources</div>
+      <div class="nav-panel-sub">
+        <a href="resources.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="roi-calculator.html">Self-Insurance Risk</a>
+      </div>
+      <a href="about.html">About</a>
+    </div>
+    <div class="nav-panel-cta">
+      <a class="btn btn-ghost nav-panel-login" href="#">Log in</a>
+      <a class="btn btn-primary" href="#">Get Started</a>
+    </div>
+  `;
+  document.body.appendChild(panel);
+
+  function open() {
+    burger.classList.add('open');
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    burger.classList.remove('open');
+    panel.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  burger.addEventListener('click', () => panel.classList.contains('open') ? close() : open());
+  overlay.addEventListener('click', close);
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+})();
