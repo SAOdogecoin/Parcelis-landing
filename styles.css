@@ -4977,7 +4977,7 @@ section:not(.hero-v2):not(.page-hero-v2) .wrap {
 }
 .nav-panel-btn-ghost:hover { background: rgba(255,255,255,0.06) !important; }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .nav-v2 .nav-links { display: none !important; }
   .nav-v2 .nav-cta { display: none !important; }
   .nav-hamburger { display: flex !important; }
