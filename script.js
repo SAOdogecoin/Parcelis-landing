@@ -259,54 +259,76 @@ document.documentElement.classList.add('js-anim');
   const nav = document.querySelector('.nav-v2');
   if (!nav) return;
 
-  // Create hamburger button
+  const chevronSvg = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 6 15 12 9 18"/></svg>`;
+
+  // Hamburger button
   const burger = document.createElement('button');
   burger.className = 'nav-hamburger';
   burger.setAttribute('aria-label', 'Open menu');
   burger.innerHTML = '<span></span><span></span><span></span>';
   nav.querySelector('.nav-inner').appendChild(burger);
 
-  // Create overlay
+  // Overlay
   const overlay = document.createElement('div');
   overlay.className = 'nav-panel-overlay';
   document.body.appendChild(overlay);
 
-  // Create slide-in panel
+  // Full panel
   const panel = document.createElement('div');
   panel.className = 'nav-panel';
   panel.innerHTML = `
-    <div class="nav-panel-links">
-      <a href="how-it-works.html">Product</a>
-      <a href="pricing.html">Pricing</a>
-      <div class="nav-panel-label">Resources</div>
-      <div class="nav-panel-sub">
+    <div class="nav-panel-topbar">
+      <a class="nav-panel-logo" href="index.html">
+        <img src="assets/Logo.png" alt="Parcelis" />
+      </a>
+      <button class="nav-panel-close" aria-label="Close menu">✕</button>
+    </div>
+    <div class="nav-panel-body">
+      <a class="nav-panel-item" href="how-it-works.html">Product</a>
+      <a class="nav-panel-item" href="pricing.html">Pricing</a>
+      <button class="nav-panel-item nav-panel-toggle" data-target="resources-sub">
+        Resources ${chevronSvg}
+      </button>
+      <div class="nav-panel-submenu" id="resources-sub">
         <a href="resources.html">Blog</a>
         <a href="faq.html">FAQ</a>
         <a href="roi-calculator.html">Self-Insurance Risk</a>
       </div>
-      <a href="about.html">About</a>
+      <a class="nav-panel-item" href="about.html">About</a>
     </div>
-    <div class="nav-panel-cta">
-      <a class="btn btn-ghost nav-panel-login" href="#">Log in</a>
+    <div class="nav-panel-footer">
+      <a class="btn nav-panel-btn-ghost" href="#">Log in</a>
       <a class="btn btn-primary" href="#">Get Started</a>
     </div>
   `;
   document.body.appendChild(panel);
 
-  function open() {
+  function openPanel() {
     burger.classList.add('open');
     panel.classList.add('open');
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
-  function close() {
+  function closePanel() {
     burger.classList.remove('open');
     panel.classList.remove('open');
     overlay.classList.remove('open');
     document.body.style.overflow = '';
   }
 
-  burger.addEventListener('click', () => panel.classList.contains('open') ? close() : open());
-  overlay.addEventListener('click', close);
-  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+  // Submenu toggle
+  panel.querySelectorAll('.nav-panel-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const sub = panel.querySelector('#' + btn.dataset.target);
+      const isOpen = sub.classList.contains('open');
+      panel.querySelectorAll('.nav-panel-submenu').forEach(s => s.classList.remove('open'));
+      panel.querySelectorAll('.nav-panel-toggle').forEach(b => b.classList.remove('expanded'));
+      if (!isOpen) { sub.classList.add('open'); btn.classList.add('expanded'); }
+    });
+  });
+
+  burger.addEventListener('click', () => panel.classList.contains('open') ? closePanel() : openPanel());
+  overlay.addEventListener('click', closePanel);
+  panel.querySelector('.nav-panel-close').addEventListener('click', closePanel);
+  panel.querySelectorAll('.nav-panel-body a').forEach(a => a.addEventListener('click', closePanel));
 })();
